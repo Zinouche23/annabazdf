@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عنابة — طبقات من الزمن</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  :root{
+    --ink:#101f29;
+    --ink-2:#16303d;
+    --limestone:#eee6d4;
+    --limestone-2:#e2d8bf;
+    --rust:#a1502c;
+    --rust-2:#c76a3e;
+    --teal:#1b6a63;
+    --gold:#c69a4d;
+    --line: rgba(238,230,212,0.16);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--limestone);
+    color:var(--ink);
+    font-family:'Cairo', sans-serif;
+    overflow-x:hidden;
+  }
+  h1,h2,h3, .disp{
+    font-family:'Amiri', serif;
+  }
+  .mono{ font-family:'IBM Plex Mono', monospace; direction:ltr; unicode-bidi: isolate; }
+
+  ::selection{ background:var(--rust); color:var(--limestone); }
+
+  /* ---------- Strata rail (signature element) ---------- */
+  #rail{
+    position:fixed;
+    left:14px; top:50%; transform:translateY(-50%);
+    z-index:50;
+    display:flex; flex-direction:column; align-items:center;
+    gap:0;
+  }
+  #rail .seg{
+    width:2px; height:52px; background:var(--line);
+    position:relative;
+  }
+  #rail .seg:first-child{ height:0; }
+  #rail .node{
+    display:flex; align-items:center; gap:10px;
+    cursor:pointer;
+  }
+  #rail .dot{
+    width:11px; height:11px; border-radius:50%;
+    background:var(--limestone-2); border:2px solid var(--ink-2);
+    opacity:.45; transition:all .35s ease;
+    flex-shrink:0;
+  }
+  #rail .label{
+    font-size:11px; letter-spacing:.03em; color:var(--ink-2);
+    opacity:0; transform:translateX(-8px);
+    transition:all .35s ease; white-space:nowrap;
+    background:var(--limestone); padding:2px 8px; border-radius:3px;
+  }
+  #rail .node.active .dot{
+    opacity:1; background:var(--rust); border-color:var(--rust);
+    box-shadow:0 0 0 4px rgba(161,80,44,0.15);
+    transform:scale(1.15);
+  }
+  #rail .node.active .label{ opacity:1; transform:translateX(0); color:var(--rust); font-weight:600;}
+  @media (max-width:860px){ #rail{ display:none; } }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100svh;
+    background:
+      radial-gradient(ellipse at 30% 15%, rgba(198,154,77,0.16), transparent 55%),
+      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 60%, #1d4a49 100%);
+    color:var(--limestone);
+    position:relative;
+    display:flex; flex-direction:column; justify-content:center;
+    padding: 8vh 8vw;
+    overflow:hidden;
+  }
+  .hero .skyline{
+    position:absolute; inset:auto 0 0 0; height:32%;
+    opacity:.5;
+  }
+  .hero .skyline svg{ width:100%; height:100%; display:block; }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; direction:ltr; unicode-bidi:isolate;
+    font-size:12px; letter-spacing:.18em; color:var(--gold);
+    text-transform:uppercase; margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(3.2rem, 11vw, 8.5rem);
+    line-height:1;
+    font-weight:700;
+    background:linear-gradient(180deg, var(--limestone) 0%, var(--gold) 120%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero .sub{
+    margin-top:20px; max-width:640px;
+    font-size:clamp(1.05rem, 2vw, 1.35rem);
+    color:#cfd8d3; line-height:1.9; font-weight:300;
+  }
+  .hero .coords{
+    margin-top:40px; display:flex; gap:28px; flex-wrap:wrap;
+  }
+  .hero .coords div{ font-size:12px; color:var(--gold); }
+  .hero .coords span{ display:block; color:var(--limestone); font-size:14px; margin-top:4px; font-family:'Cairo'; }
+  .scrolldown{
+    position:absolute; bottom:34px; right:8vw;
+    display:flex; align-items:center; gap:10px;
+    color:var(--limestone); opacity:.65; font-size:12px;
+  }
+  .scrolldown .arrow{
+    width:1px; height:34px; background:var(--limestone);
+    position:relative; overflow:hidden;
+  }
+  .scrolldown .arrow::after{
+    content:''; position:absolute; top:-100%; right:-1px; width:1px; height:100%;
+    background:var(--gold);
+    animation:flow 1.8s ease-in-out infinite;
+  }
+  @keyframes flow{ to{ top:100%; } }
+
+  /* ---------- Intro ---------- */
+  .intro{
+    padding:110px 9vw 90px;
+    max-width:1000px; margin:0 auto;
+  }
+  .intro .kicker{
+    font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate;
+    color:var(--rust); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  }
+  .intro h2{ font-size:clamp(1.8rem,4vw,2.6rem); margin-top:14px; color:var(--ink); }
+  .intro p{ margin-top:26px; font-size:1.08rem; line-height:2.1; color:#3a3226; font-weight:300; }
+  .intro .stats{ display:flex; gap:0; margin-top:52px; border-top:1px solid rgba(16,31,41,0.15); }
+  .intro .stat{ flex:1; padding:22px 18px 0; border-left:1px solid rgba(16,31,41,0.15); }
+  .intro .stat:first-child{ padding-right:0; }
+  .intro .stat b{ display:block; font-family:'Amiri'; font-size:1.8rem; color:var(--rust); }
+  .intro .stat span{ font-size:12.5px; color:#5c5340; }
+
+  /* ---------- Era sections ---------- */
+  .era{ position:relative; padding:70px 9vw 30px; }
+  .era-head{
+    display:flex; align-items:baseline; gap:18px; max-width:1100px; margin:0 auto 46px;
+    border-bottom:2px solid var(--ink); padding-bottom:18px;
+  }
+  .era-head .tag{
+    font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate;
+    font-size:12px; padding:5px 10px; border-radius:3px;
+    color:var(--limestone); white-space:nowrap;
+  }
+  .era-head h2{ font-size:clamp(1.5rem,3.4vw,2.2rem); color:var(--ink); }
+  .era-head .era-sub{ margin-right:auto; font-size:13px; color:#6b6248; font-weight:300; }
+
+  .era.roman{ background:var(--limestone); }
+  .era.roman .tag{ background:var(--rust); }
+  .era.islamic{ background:#e6ded0; }
+  .era.islamic .tag{ background:var(--gold); }
+  .era.colonial{ background:var(--limestone); }
+  .era.colonial .tag{ background:var(--teal); }
+  .era.today{ background:var(--ink); color:var(--limestone); }
+  .era.today .tag{ background:var(--gold); color:var(--ink); }
+  .era.today .era-head{ border-bottom-color:var(--limestone); }
+  .era.today .era-head h2{ color:var(--limestone); }
+  .era.today .era-sub{ color:#a9b6ae; }
+
+  .cards{
+    max-width:1100px; margin:0 auto; display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:26px;
+    padding-bottom:20px;
+  }
+  .card{
+    background:rgba(255,255,255,0.55);
+    border:1px solid rgba(16,31,41,0.12);
+    border-radius:6px; padding:26px 24px;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .era.today .card{ background:rgba(238,230,212,0.06); border-color:rgba(238,230,212,0.16); }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 14px 34px rgba(16,31,41,0.14); }
+  .card h3{ font-size:1.25rem; margin-bottom:12px; }
+  .era.roman .card h3, .era.colonial .card h3{ color:var(--rust); }
+  .era.islamic .card h3{ color:#8a6a1f; }
+  .era.today .card h3{ color:var(--gold); }
+  .card p{ font-size:.95rem; line-height:1.85; font-weight:300; opacity:.92; }
+  .card .meta{ margin-top:16px; font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; font-size:11px; opacity:.55; }
+
+  /* ---------- Map ---------- */
+  .mapsec{ padding:90px 9vw; background:var(--ink-2); color:var(--limestone); }
+  .mapsec .era-head{ border-bottom-color:rgba(238,230,212,0.25); }
+  .mapsec .era-head h2{ color:var(--limestone); }
+  .mapsec .era-head .era-sub{ color:#a9b6ae; }
+  #map{
+    max-width:1100px; margin:0 auto; height:460px; border-radius:6px;
+    filter:sepia(8%) saturate(85%);
+    border:1px solid rgba(238,230,212,0.2);
+  }
+  .leaflet-popup-content{ font-family:'Cairo'; direction:rtl; text-align:right; }
+
+  /* ---------- Practical ---------- */
+  .practical{ padding:90px 9vw 120px; max-width:1100px; margin:0 auto; }
+  .practical .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:0; margin-top:40px; border-top:1px solid rgba(16,31,41,0.15); }
+  .practical .item{ padding:24px 22px; border-left:1px solid rgba(16,31,41,0.15); border-bottom:1px solid rgba(16,31,41,0.15); }
+  .practical .item h4{ font-family:'Amiri'; color:var(--rust); font-size:1.1rem; margin-bottom:10px; }
+  .practical .item p{ font-size:.92rem; line-height:1.85; font-weight:300; color:#3a3226; }
+
+  footer{
+    background:var(--ink); color:#93a49c; text-align:center;
+    padding:36px 20px; font-size:12.5px; font-weight:300;
+  }
+  footer b{ color:var(--gold); font-family:'Amiri'; }
+
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .scrolldown .arrow::after{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="rail">
+  <div class="node" data-target="#era-roman"><span class="dot"></span><span class="label">روماني</span></div>
+  <div class="seg"></div>
+  <div class="node" data-target="#era-islamic"><span class="dot"></span><span class="label">عثماني</span></div>
+  <div class="seg"></div>
+  <div class="node" data-target="#era-colonial"><span class="dot"></span><span class="label">استعماري</span></div>
+  <div class="seg"></div>
+  <div class="node" data-target="#era-today"><span class="dot"></span><span class="label">اليوم</span></div>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">ANNABA · 36.900°N 7.767°E · WILAYA 23</div>
+  <h1>عنابة</h1>
+  <p class="sub">مدينة قامت طبقةً فوق طبقة: من هيبون الرومانية إلى مرفأ اليوم، على أطراف جبل الأدوغ وشاطئ يمتد بلا انقطاع.</p>
+  <div class="coords">
+    <div>الاسم القديم<span>بونة</span></div>
+    <div>اللقب<span>لؤلؤة الشرق الجزائري</span></div>
+    <div>المرتبة<span>ثاني أهم مدن الشرق الجزائري بعد قسنطينة</span></div>
+  </div>
+  <div class="skyline"><svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+    <path d="M0,200 L0,140 L60,120 L90,140 L130,90 L170,140 L230,110 L260,140 L340,60 L400,140 L470,100 L520,140 L610,70 L650,140 L740,130 L790,90 L850,140 L930,115 L980,140 L1060,80 L1120,140 L1200,120 L1200,200 Z" fill="#0b1a22"/>
+  </svg></div>
+  <div class="scrolldown"><span>انزل عبر الزمن</span><div class="arrow"></div></div>
+</section>
+
+<section class="intro reveal">
+  <div class="kicker">INTRODUCTION</div>
+  <h2>مدينة تُقرأ كطبقات أرضية</h2>
+  <p>عنابة ليست موقعًا سياحيًا واحدًا، بل حفرة تنقيب مفتوحة: أنقاض هيبون الرومانية تحت الأرض، وقباب عثمانية فوقها، وشارع استعماري فرنسي واسع يقطع وسط المدينة، وحياة يومية جزائرية تعلو كل ذلك اليوم على واجهة بحرية متوسطية. هذا الدليل يأخذك عبر هذه الطبقات، الواحدة تلو الأخرى، تمامًا كما تُقرأ في موقع أثري.</p>
+  <div class="stats">
+    <div class="stat"><b>القرن 12 ق.م</b><span>تأسيس هيبون الفينيقية</span></div>
+    <div class="stat"><b>2-3</b><span>أيام كافية لاستكشاف المدينة وشواطئها</span></div>
+    <div class="stat"><b>49 كم²</b><span>مساحة المدينة الحالية</span></div>
+  </div>
+</section>
+
+<section class="era roman" id="era-roman">
+  <div class="era-head">
+    <span class="tag">ROMAN · 12th c. BC – 5th c. AD</span>
+    <h2>الطبقة الرومانية</h2>
+    <span class="era-sub">هيبون ريجيوس</span>
+  </div>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>آثار هيبون (هيبون ريجيوس)</h3>
+      <p>مدينة أسسها الفينيقيون قرابة القرن الثاني عشر قبل الميلاد، ثم ازدهرت في العهد الروماني كميناء مهم. يضم الموقع بقايا فيلات رومانية، وواحدًا من أكبر المنتديات (الفورم) الرومانية في شمال أفريقيا، إلى جانب مسرح روماني ومدرج. كان القديس أوغسطين أسقفًا على المدينة حتى وفاته عام 430م.</p>
+      <div class="meta">El Hadjar · Route de l'Université</div>
+    </div>
+    <div class="card reveal">
+      <h3>متحف هيبون</h3>
+      <p>متحف صغير قرب الموقع الأثري وبازيليكا القديس أوغسطين، يضم مجموعة كبيرة من القطع الأثرية والفسيفساء التي توثق تاريخ المدينة منذ العصور القديمة. يُمنع التصوير والتدخين داخله.</p>
+      <div class="meta">near Basilica of St. Augustine</div>
+    </div>
+    <div class="card reveal">
+      <h3>بازيليكا القديس أوغسطين</h3>
+      <p>بُنيت بين 1881 و1900 على تلة تطل على أنقاض هيبون و"بازيليكا السلام" القديمة التي توفي فيها القديس أوغسطين أثناء حصار الوندال للمدينة. تضم تمثالًا للقديس يحتوي على أحد عظامه، وتُعد أهم وجهة للحج المسيحي في شمال أفريقيا.</p>
+      <div class="meta">36.882°N 7.745°E</div>
+    </div>
+  </div>
+</section>
+
+<section class="era islamic" id="era-islamic">
+  <div class="era-head">
+    <span class="tag">OTTOMAN · 1522–1830</span>
+    <h2>الطبقة العثمانية</h2>
+    <span class="era-sub">جامع الباي والقصبة</span>
+  </div>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>جامع الباي</h3>
+      <p>يعود بناؤه إلى العهد العثماني في فترة صالح باي، حاكم قسنطينة وعنابة بين 1775 و1792، وهو نسخة مطابقة للجامع الكبير في العاصمة، وكان مصلى للأتراك الحنفيين حتى عام 1832. مصنّف تراثًا وطنيًا.</p>
+    </div>
+    <div class="card reveal">
+      <h3>زاوية سيدي إبراهيم التومي</h3>
+      <p>زاوية ومصلى بُني بأمر من علي باي حاكم تونس على شكل قبة، تكريمًا للشيخ إبراهيم التومي أحد أقطاب الصوفية في عنابة، وكانت في القديم ملجأً للمريدين والصوفيين وعابري السبيل وطلاب العلم. مصنّفة تراثًا وطنيًا.</p>
+    </div>
+    <div class="card reveal">
+      <h3>القصبة القديمة</h3>
+      <p>حي قديم يحتوي على منازل كبيرة بقاعات وحدائق واسعة، وتُمارَس فيه صناعات تقليدية كالفخار والجلود والنقش والطرابيش والسجاد، ويستضيف مهرجان "القصبة البدوية" السنوي.</p>
+    </div>
+  </div>
+</section>
+
+<section class="era colonial" id="era-colonial">
+  <div class="era-head">
+    <span class="tag">FRENCH ERA · 1832–1962</span>
+    <h2>الطبقة الاستعمارية</h2>
+    <span class="era-sub">وسط المدينة الأوروبي</span>
+  </div>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>كور الثورة</h3>
+      <p>الشارع الرئيسي الذي رُسم في العهد الاستعماري الفرنسي كمحور للمدينة الأوروبية، ولا يزال حتى اليوم قلب عنابة النابض بالمقاهي والمحلات والحركة اليومية لسكانها.</p>
+    </div>
+    <div class="card reveal">
+      <h3>مقبرة حرب العظام</h3>
+      <p>مقبرة تعود إلى الحرب العالمية الثانية، وهي من بين المواقع التاريخية المتناثرة في المدينة التي تروي حقبة القرن العشرين في عنابة.</p>
+    </div>
+  </div>
+</section>
+
+<section class="era today" id="era-today">
+  <div class="era-head">
+    <span class="tag">TODAY</span>
+    <h2>عنابة اليوم</h2>
+    <span class="era-sub">الساحل، الجبل، الأعياد</span>
+  </div>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>شواطئ عنابة</h3>
+      <p>شواطئ ذهبية ومياه صافية تجعل من عنابة وجهة صيفية مفضلة لشرق الجزائر، أبرزها شاطئ عين عشير، وشاطئ النصر، وشاطئ الحارس، مجهزة بمراكز ترفيهية.</p>
+    </div>
+    <div class="card reveal">
+      <h3>سرايدي وجبل الأدوغ</h3>
+      <p>منطقة جبلية بغابات خضراء وهواء نقي، تُتيح رحلة بالتلفريك للصعود إلى قمة الجبل والتمتع بمناظر بانورامية على المدينة والبحر، ووجهة مفضّلة للسياحة الجبلية والاستجمام.</p>
+    </div>
+    <div class="card reveal">
+      <h3>مهرجانات المدينة</h3>
+      <p>تستضيف عنابة على مدار السنة مهرجانات متنوعة منها مهرجان الفولكلور، ومهرجان هيبون، ومهرجان الملّوف، ومهرجان القصبة البدوية، ما يجعلها مدينة نابضة بالفعاليات الثقافية.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mapsec">
+  <div class="era-head">
+    <span class="tag">MAP</span>
+    <h2>خريطة المعالم</h2>
+    <span class="era-sub">اضغط على أي علامة لمعرفة المزيد</span>
+  </div>
+  <div id="map"></div>
+</section>
+
+<section class="practical reveal">
+  <div class="kicker">PRACTICAL</div>
+  <h2>معلومات عملية</h2>
+  <div class="grid">
+    <div class="item"><h4>أفضل مدة للزيارة</h4><p>يومان إلى ثلاثة أيام كافية لاستكشاف أبرز معالم المدينة، إضافة إلى يوم للاستمتاع بالشواطئ.</p></div>
+    <div class="item"><h4>أفضل وقت للزيارة</h4><p>الصيف هو موسم الذروة بسبب الشواطئ، أما زيارة الآثار والمواقع الأثرية فتُفضَّل في الصباح الباكر أو أواخر النهار تجنبًا للازدحام والحر.</p></div>
+    <div class="item"><h4>التنقل</h4><p>سيارات الأجرة متوفرة بسهولة داخل المدينة وللوصول إلى المواقع الأثرية المحيطة مثل هيبون.</p></div>
+    <div class="item"><h4>نصيحة</h4><p>اجمع بين زيارة بازيليكا القديس أوغسطين وأنقاض هيبون في نفس الجولة، فالموقعان متجاوران ويطل أحدهما على الآخر.</p></div>
+  </div>
+</section>
+
+<footer>
+  عنابة — <b>لؤلؤة الشرق الجزائري</b> · دليل سياحي غير رسمي لأغراض تعريفية
+</footer>
+
+<script>
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  },{ threshold:0.12 });
+  revealEls.forEach(el=>io.observe(el));
+
+  // rail scrollspy
+  const nodes = document.querySelectorAll('#rail .node');
+  const sections = Array.from(nodes).map(n=>document.querySelector(n.dataset.target));
+  nodes.forEach(n=>{
+    n.addEventListener('click', ()=>{
+      document.querySelector(n.dataset.target).scrollIntoView({behavior:'smooth'});
+    });
+  });
+  const railObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const idx = sections.indexOf(entry.target);
+      if(entry.isIntersecting && idx>-1){
+        nodes.forEach(n=>n.classList.remove('active'));
+        nodes[idx].classList.add('active');
+      }
+    });
+  },{ rootMargin:'-45% 0px -45% 0px' });
+  sections.forEach(s=>{ if(s) railObserver.observe(s); });
+
+  // map
+  try{
+    const map = L.map('map',{ scrollWheelZoom:false }).setView([36.888, 7.755], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:'&copy; OpenStreetMap contributors', maxZoom:18
+    }).addTo(map);
+
+    const spots = [
+      {lat:36.882, lng:7.745, name:"بازيليكا القديس أوغسطين", desc:"بُنيت 1881-1900 فوق تلة تطل على هيبون."},
+      {lat:36.884, lng:7.747, name:"أنقاض هيبون ريجيوس", desc:"مدينة رومانية-فينيقية، فورم ومسرح ومتحف مجاور."},
+      {lat:36.900, lng:7.767, name:"كور الثورة", desc:"الشارع الرئيسي لوسط المدينة الاستعماري."},
+      {lat:36.828, lng:7.723, name:"سرايدي وجبل الأدوغ", desc:"منطقة جبلية وغابات، رحلة تلفريك ومناظر بانورامية."},
+      {lat:36.912, lng:7.775, name:"شاطئ عين عشير", desc:"من أشهر شواطئ عنابة الذهبية."},
+    ];
+    spots.forEach(s=>{
+      L.circleMarker([s.lat, s.lng], {radius:7, color:'#c69a4d', fillColor:'#a1502c', fillOpacity:0.9, weight:2})
+        .addTo(map)
+        .bindPopup(`<b>${s.name}</b><br>${s.desc}`);
+    });
+  }catch(e){ console.error(e); }
+</script>
+</body>
+</html>
