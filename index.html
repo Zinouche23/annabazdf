@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">عنابة | annabazdf.com</title>
+<meta name="description" id="pageDesc" content="عنابة، جوهرة الشرق الجزائري — annabazdf.com">
+<meta property="og:title" id="ogTitle" content="عنابة | annabazdf.com">
+<meta property="og:site_name" content="annabazdf.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#070d12;
+    --ink-2:#0c161d;
+    --sea:#0e2f3a;
+    --sea-light:#1c5566;
+    --gold:#d9a441;
+    --gold-soft:#f0c877;
+    --terracotta:#b8542f;
+    --sand:#e9dcc2;
+    --fog:#9fb3ba;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--sand);
+    font-family:'Almarai', sans-serif;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.eyebrow,.brand{font-family:'Cairo', sans-serif;}
+
+  ::selection{background:var(--gold);color:var(--ink);}
+
+  /* subtle texture */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(217,164,65,0.06), transparent 40%),
+      radial-gradient(circle at 85% 75%, rgba(184,84,47,0.08), transparent 45%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  header{
+    position:fixed; top:0; right:0; left:0;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:22px 6%;
+    z-index:100;
+    background:linear-gradient(to bottom, rgba(7,13,18,0.9), transparent);
+    backdrop-filter:blur(2px);
+  }
+  .brand{font-weight:900; font-size:1.3rem; color:var(--sand); letter-spacing:1px;}
+  .brand span{color:var(--gold);}
+  .brand-domain{
+    display:block; font-family:'Almarai',sans-serif; font-weight:400; font-size:0.62rem;
+    color:var(--fog); letter-spacing:1.5px; margin-top:2px;
+  }
+  nav a{
+    color:var(--fog); text-decoration:none; margin-inline-start:38px;
+    font-size:0.92rem; font-weight:700; transition:color .25s;
+  }
+  nav a:first-child{margin-inline-start:0;}
+  nav a:hover{color:var(--gold-soft);}
+  nav a.active{color:var(--gold-soft);}
+
+  .header-right{display:flex; align-items:center; gap:22px;}
+  .lang-switch{
+    display:flex; align-items:center; gap:2px;
+    background:rgba(233,220,194,0.06); border:1px solid rgba(233,220,194,0.18);
+    border-radius:99px; padding:3px;
+  }
+  .lang-switch button{
+    background:transparent; border:none; cursor:pointer;
+    color:var(--fog); font-family:'Cairo',sans-serif; font-weight:800;
+    font-size:0.72rem; letter-spacing:0.5px; padding:6px 12px; border-radius:99px;
+    transition:all .2s;
+  }
+  .lang-switch button:hover{color:var(--sand);}
+  .lang-switch button.active{background:var(--gold); color:var(--ink);}
+
+  .donate-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:linear-gradient(90deg, var(--terracotta), var(--gold));
+    color:var(--ink); font-family:'Cairo',sans-serif; font-weight:800;
+    font-size:0.82rem; padding:9px 20px; border-radius:99px; text-decoration:none;
+    transition:filter .2s;
+    white-space:nowrap;
+  }
+  .donate-btn:hover{filter:brightness(1.1);}
+
+  @media(max-width:900px){
+    .header-right{gap:10px;}
+    .brand-domain{display:none;}
+    .lang-switch button{padding:5px 9px; font-size:0.62rem;}
+    nav{
+      display:flex; flex-direction:column;
+      position:fixed; top:0; inset-inline-end:0; height:100vh; width:min(78vw,320px);
+      background:var(--ink-2); border-inline-start:1px solid rgba(233,220,194,0.12);
+      padding:100px 32px 32px; gap:6px;
+      transform:translateX(110%);
+      transition:transform .35s cubic-bezier(.22,.61,.36,1);
+      z-index:150;
+      box-shadow:-20px 0 60px rgba(0,0,0,0.4);
+    }
+    html[dir="rtl"] nav{transform:translateX(-110%);}
+    nav.mobile-open{transform:translateX(0) !important;}
+    nav a{
+      margin-inline-start:0; padding:16px 4px; font-size:1.05rem;
+      border-bottom:1px solid rgba(233,220,194,0.08);
+    }
+    .nav-scrim{
+      display:none; position:fixed; inset:0; background:rgba(7,13,18,0.6);
+      z-index:90; backdrop-filter:blur(2px);
+    }
+    .nav-scrim.show{display:block;}
+    .hamburger{
+      display:flex; flex-direction:column; justify-content:center; gap:5px;
+      width:38px; height:38px; background:rgba(233,220,194,0.06);
+      border:1px solid rgba(233,220,194,0.18); border-radius:10px;
+      cursor:pointer; z-index:160; position:relative;
+    }
+    .hamburger span{
+      display:block; width:18px; height:2px; margin:0 auto;
+      background:var(--sand); transition:all .25s;
+    }
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  }
+  @media(min-width:901px){
+    .hamburger{display:none;}
+  }
+  @media(max-width:560px){
+    .donate-btn span.dtext{display:none;}
+  }
+
+  /* DONATE SECTION */
+  .donate-section{
+    background:linear-gradient(120deg, var(--sea) 0%, #142a30 100%);
+    border-bottom:1px solid rgba(233,220,194,0.08);
+  }
+  .donate-box{
+    max-width:820px; margin:0 auto; text-align:center;
+  }
+  .donate-box .eyebrow{justify-content:center;}
+  .donate-box h2{
+    font-size:clamp(1.9rem,3.6vw,2.8rem); font-weight:800; color:var(--sand);
+    margin-top:8px;
+  }
+  .donate-box p{color:var(--fog); margin-top:18px; font-size:1.05rem; line-height:1.9;}
+  .donate-actions{
+    display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:36px;
+  }
+  .donate-tiers{
+    display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:14px;
+  }
+  .donate-tier{
+    background:rgba(233,220,194,0.06); border:1px solid rgba(217,164,65,0.3);
+    color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800;
+    padding:16px 28px; cursor:pointer; transition:all .2s; text-decoration:none;
+    display:inline-flex; flex-direction:column; align-items:center; gap:4px;
+  }
+  .donate-tier:hover{border-color:var(--gold); background:rgba(217,164,65,0.1);}
+  .donate-tier .amt{font-size:1.3rem; color:var(--gold-soft);}
+  .donate-tier .lbl{font-size:0.72rem; color:var(--fog); font-weight:400; font-family:'Almarai',sans-serif;}
+  .donate-note{margin-top:28px; font-size:0.82rem; color:var(--fog);}
+
+  /* DONATE MODAL */
+  .donate-modal-overlay{
+    position:fixed; inset:0; z-index:9998; background:rgba(7,13,18,0.85);
+    display:none; align-items:center; justify-content:center; padding:24px;
+    backdrop-filter:blur(3px);
+  }
+  .donate-modal-overlay.open{display:flex;}
+  .donate-modal{
+    background:var(--ink-2); border:1px solid rgba(217,164,65,0.3);
+    max-width:440px; width:100%; padding:38px 32px; position:relative;
+  }
+  .donate-modal .dm-close{
+    position:absolute; top:14px; inset-inline-end:14px;
+    background:none; border:none; color:var(--fog); font-size:1.4rem; cursor:pointer;
+  }
+  .donate-modal .dm-close:hover{color:var(--gold-soft);}
+  .donate-modal h3{color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800; font-size:1.3rem; margin-bottom:16px;}
+  .donate-modal p{color:var(--fog); font-size:0.95rem; line-height:1.8; margin-bottom:22px;}
+  .donate-options{display:flex; flex-direction:column; gap:10px;}
+  .donate-options a{
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(233,220,194,0.06); border:1px solid rgba(233,220,194,0.15);
+    color:var(--sand); text-decoration:none; padding:14px 18px;
+    font-weight:700; font-size:0.92rem; transition:all .2s;
+  }
+  .donate-options a:hover{border-color:var(--gold); color:var(--gold-soft);}
+
+  section{position:relative; z-index:1;}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:0 6%;
+    position:relative;
+    overflow:hidden;
+    background:var(--ink);
+  }
+  .hero-bg{position:absolute; inset:0; z-index:0;}
+  .hero-bg img{
+    width:100%; height:100%; object-fit:cover;
+    filter:saturate(0.9) brightness(0.6);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0; z-index:1;
+    background:
+      linear-gradient(180deg, rgba(7,13,18,0.55) 0%, rgba(7,13,18,0.9) 78%, var(--ink) 100%),
+      linear-gradient(120deg, rgba(14,47,58,0.75) 0%, rgba(7,13,18,0.85) 65%);
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0; z-index:2;
+    background:
+      repeating-linear-gradient(115deg, rgba(233,220,194,0.035) 0 2px, transparent 2px 120px);
+    pointer-events:none;
+  }
+  .hero > *:not(.hero-bg){position:relative; z-index:3;}
+  .eyebrow{
+    color:var(--gold); font-weight:700; font-size:0.95rem;
+    letter-spacing:3px; margin-bottom:18px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);}
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 6rem);
+    font-weight:900; line-height:1.05; color:var(--sand);
+    max-width:16ch;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg, var(--gold-soft), var(--terracotta));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.lead{
+    margin-top:26px; max-width:560px; font-size:1.15rem; line-height:2;
+    color:var(--fog); font-weight:400;
+  }
+  .hero-stats{
+    display:flex; gap:48px; margin-top:56px; flex-wrap:wrap;
+  }
+  .hero-stats div{border-inline-start:2px solid var(--terracotta); padding-inline-start:16px;}
+  .hero-stats b{display:block; font-family:'Cairo',sans-serif; font-size:1.8rem; color:var(--gold-soft); font-weight:800;}
+  .hero-stats span{font-size:0.85rem; color:var(--fog);}
+  .scroll-cue{
+    position:absolute; bottom:36px; right:6%;
+    color:var(--fog); font-size:0.8rem; display:flex; align-items:center; gap:10px;
+  }
+  .scroll-cue::after{
+    content:""; width:1px; height:38px; background:linear-gradient(var(--gold), transparent);
+    animation:drop 2.2s infinite;
+  }
+  @keyframes drop{0%{opacity:0;transform:translateY(-6px);}50%{opacity:1;}100%{opacity:0;transform:translateY(10px);}}
+
+  /* SECTION SHELL */
+  .wrap{max-width:1180px; margin:0 auto; padding:120px 6%;}
+  .section-head{max-width:640px; margin-bottom:64px;}
+  .section-head h2{
+    font-size:clamp(1.9rem,3.6vw,3rem); font-weight:800; color:var(--sand);
+  }
+  .section-head p{color:var(--fog); margin-top:16px; font-size:1.05rem; line-height:1.9;}
+
+  /* DEEP HISTORY */
+  .deep-history{background:var(--ink); border-bottom:1px solid rgba(233,220,194,0.08);}
+  .era-list{display:flex; flex-direction:column; gap:2px; background:rgba(233,220,194,0.08); border:1px solid rgba(233,220,194,0.08);}
+  .era{background:var(--ink-2); padding:34px 32px; display:grid; grid-template-columns:150px 1fr; gap:28px;}
+  .era-side{display:flex; flex-direction:column; gap:6px;}
+  .era-side .era-num{font-family:'Cairo',sans-serif; font-weight:900; font-size:1.6rem; color:var(--gold);}
+  .era-side .era-span{font-family:'Cairo',sans-serif; font-weight:800; font-size:0.85rem; color:var(--terracotta); line-height:1.5;}
+  .era-main h3{color:var(--sand); font-size:1.25rem; font-weight:700; margin-bottom:12px;}
+  .era-main p{color:var(--fog); line-height:2; font-size:0.97rem;}
+  .era-main p + p{margin-top:12px;}
+  @media(max-width:680px){
+    .era{grid-template-columns:1fr; gap:12px;}
+    .era-side{flex-direction:row; align-items:baseline; gap:14px;}
+  }
+
+  /* NEWS */
+  .news{background:var(--ink); border-bottom:1px solid rgba(233,220,194,0.08);}
+  .news-head{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    margin-bottom:44px;
+  }
+  .news-title-group h2{font-size:clamp(1.9rem,3.6vw,3rem); font-weight:800; color:var(--sand);}
+  .news-title-group p{color:var(--fog); margin-top:10px; font-size:1rem;}
+  .live-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(217,164,65,0.1); border:1px solid rgba(217,164,65,0.35);
+    color:var(--gold-soft); font-family:'Cairo',sans-serif; font-weight:800;
+    font-size:0.8rem; padding:8px 16px; border-radius:99px; margin-inline-start:14px;
+  }
+  .live-dot{display:inline-block; vertical-align:middle; width:8px; height:8px; border-radius:50%; background:var(--terracotta); animation:pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.25;}}
+  .news-actions{display:flex; align-items:center; gap:14px;}
+  .refresh-btn{
+    background:transparent; border:1px solid rgba(233,220,194,0.25); color:var(--sand);
+    font-family:'Almarai',sans-serif; font-weight:700; font-size:0.85rem;
+    padding:10px 20px; border-radius:99px; cursor:pointer; transition:all .25s;
+  }
+  .refresh-btn:hover{border-color:var(--gold); color:var(--gold-soft);}
+  .news-updated{font-size:0.78rem; color:var(--fog);}
+  .news-carousel{
+    position:relative; overflow:hidden;
+    border:1px solid rgba(233,220,194,0.08); background:var(--ink-2);
+    transition:opacity .3s ease;
+  }
+  .news-carousel.ng-fade{opacity:0;}
+  .nc-track{display:flex; transition:transform .65s cubic-bezier(.65,0,.35,1);}
+  .nc-slide{
+    flex:0 0 100%; min-width:0; box-sizing:border-box;
+    padding:26px 30px; display:flex; gap:20px; align-items:flex-start;
+    text-decoration:none; transition:background .25s;
+  }
+  .nc-slide:hover{background:#101c24;}
+  .nc-dots{display:flex; justify-content:center; gap:7px; padding:16px 0 20px; background:var(--ink-2);}
+  .nc-dot{
+    width:7px; height:7px; border-radius:50%; background:rgba(233,220,194,0.25);
+    cursor:pointer; transition:all .3s; border:none; padding:0;
+  }
+  .nc-dot.active{background:var(--gold); width:22px; border-radius:4px;}
+  .nc-arrow{
+    position:absolute; top:38%; transform:translateY(-50%);
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(7,13,18,0.55); border:1px solid rgba(233,220,194,0.2);
+    color:var(--sand); font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    transition:all .2s; z-index:5;
+  }
+  .nc-arrow:hover{background:rgba(7,13,18,0.85); border-color:var(--gold);}
+  .nc-arrow.prev{inset-inline-start:10px;}
+  .nc-arrow.next{inset-inline-end:10px;}
+  .news-idx{font-family:'Cairo',sans-serif; color:var(--terracotta); font-weight:800; font-size:1.4rem; min-width:2.4ch;}
+  .news-updated.pulse{animation:updatedPulse 1.2s ease;}
+  @keyframes updatedPulse{
+    0%{color:var(--gold-soft);}
+    100%{color:var(--fog);}
+  }
+  .news-body h4{color:var(--sand); font-size:1.05rem; font-weight:700; line-height:1.6;}
+  .news-meta{margin-top:8px; display:flex; gap:14px; font-size:0.8rem; color:var(--fog);}
+  .news-meta span{display:inline-flex; align-items:center; gap:6px;}
+  .news-state{padding:50px 28px; text-align:center; color:var(--fog); background:var(--ink-2); font-size:0.95rem;}
+  .news-state a{color:var(--gold-soft); font-weight:700;}
+  .news-skeleton{
+    height:78px; background:linear-gradient(90deg, var(--ink-2) 25%, #101c24 37%, var(--ink-2) 63%);
+    background-size:400% 100%; animation:shimmer 1.4s infinite;
+  }
+  @keyframes shimmer{0%{background-position:100% 0;}100%{background-position:0 0;}}
+
+  /* BULLETIN */
+  .bulletin{
+    background:var(--ink-2); border:1px solid rgba(217,164,65,0.2);
+    margin-bottom:56px; overflow:hidden;
+  }
+  .bulletin-top{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    padding:18px 26px; background:rgba(217,164,65,0.06); border-bottom:1px solid rgba(217,164,65,0.15);
+  }
+  .bulletin-top .b-name{font-family:'Cairo',sans-serif; font-weight:800; color:var(--gold-soft); font-size:0.95rem; letter-spacing:1px;}
+  .bulletin-top .b-date{color:var(--fog); font-size:0.85rem;}
+  .bulletin-lead{padding:30px 26px 10px;}
+  .bulletin-lead .b-kicker{
+    display:inline-block; background:var(--terracotta); color:var(--ink); font-family:'Cairo',sans-serif;
+    font-weight:800; font-size:0.72rem; padding:4px 12px; letter-spacing:1px; margin-bottom:14px;
+  }
+  .bulletin-lead h3{color:var(--sand); font-size:1.4rem; font-weight:800; line-height:1.6;}
+  .bulletin-lead p{color:var(--fog); margin-top:14px; line-height:2; font-size:0.98rem;}
+  .bulletin-source{display:inline-block; margin-top:14px; font-size:0.8rem; color:var(--gold-soft); text-decoration:none; border-bottom:1px dotted var(--gold-soft);}
+  .bulletin-items{padding:6px 26px 28px; display:flex; flex-direction:column; gap:20px;}
+  .b-item{border-top:1px solid rgba(233,220,194,0.08); padding-top:18px;}
+  .b-item .b-kicker-alt{
+    font-family:'Cairo',sans-serif; color:var(--terracotta); font-weight:800; font-size:0.75rem; letter-spacing:1px;
+  }
+  .b-item h4{color:var(--sand); font-size:1.05rem; font-weight:700; margin-top:8px;}
+  .b-item p{color:var(--fog); margin-top:8px; line-height:1.9; font-size:0.94rem;}
+  .bulletin-note{
+    padding:16px 26px; font-size:0.78rem; color:var(--fog); background:rgba(0,0,0,0.15);
+    border-top:1px solid rgba(233,220,194,0.08);
+  }
+  .more-news-title{
+    font-family:'Cairo',sans-serif; color:var(--sand); font-weight:700; font-size:1.05rem;
+    margin-bottom:20px; display:flex; align-items:center; gap:10px;
+  }
+
+  /* ORIGIN / TIMELINE */
+  .origin{background:var(--ink-2);}
+  .origin-media{
+    width:100%; margin-bottom:64px; border-radius:2px; overflow:hidden;
+    position:relative; aspect-ratio:16/7; border:1px solid rgba(233,220,194,0.1);
+  }
+  .origin-media img{width:100%; height:100%; object-fit:cover; display:block; filter:saturate(0.92);}
+  .origin-media .cap{
+    position:absolute; bottom:0; right:0; left:0;
+    background:linear-gradient(0deg, rgba(7,13,18,0.85), transparent);
+    color:var(--sand); font-size:0.85rem; padding:18px 22px 12px; font-weight:700;
+  }
+  .timeline{
+    display:flex; flex-direction:column; gap:0;
+    border-inline-start:2px solid rgba(217,164,65,0.3);
+    margin-inline-start:8px;
+  }
+  .t-item{position:relative; padding:0 0 52px 0; padding-inline-start:36px;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{
+    content:""; position:absolute; right:-7px; top:4px;
+    width:12px; height:12px; border-radius:50%;
+    background:var(--gold); box-shadow:0 0 0 4px rgba(217,164,65,0.15);
+  }
+  .t-era{color:var(--terracotta); font-family:'Cairo',sans-serif; font-weight:800; font-size:0.95rem; letter-spacing:1px;}
+  .t-item h3{margin-top:6px; font-size:1.3rem; color:var(--sand); font-weight:700;}
+  .t-item p{margin-top:8px; color:var(--fog); line-height:1.85; max-width:640px;}
+
+  /* LANDMARKS GRID */
+  .landmarks{background:var(--ink);}
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:2px; background:rgba(233,220,194,0.08);
+    border:1px solid rgba(233,220,194,0.08);
+  }
+  .card{
+    background:var(--ink-2); padding:0; transition:background .3s; overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .card:hover{background:#101c24;}
+  .card-img{width:100%; height:190px; object-fit:cover; display:block; filter:saturate(0.92);}
+  .card-body{padding:30px 30px 36px;}
+  .card .num{font-family:'Cairo',sans-serif; color:var(--terracotta); font-weight:800; font-size:0.85rem;}
+  .card h3{margin-top:14px; font-size:1.25rem; color:var(--sand); font-weight:700;}
+  .card p{margin-top:12px; color:var(--fog); line-height:1.85; font-size:0.96rem;}
+
+  /* INTRO SPLASH */
+  .intro-overlay{
+    position:fixed; inset:0; z-index:9999;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(28,85,102,0.4), transparent 60%),
+      linear-gradient(160deg, var(--ink) 0%, #0a1a21 100%);
+    padding:24px; transition:opacity .7s ease, visibility .7s ease;
+  }
+  .intro-overlay.intro-hide{opacity:0; visibility:hidden; pointer-events:none;}
+  .intro-eyebrow{
+    font-family:'Cairo',sans-serif; color:var(--gold); font-weight:700; font-size:0.9rem;
+    letter-spacing:4px; margin-bottom:22px;
+  }
+  .intro-title{
+    font-family:'Cairo',sans-serif; font-weight:900; line-height:1.3;
+    font-size:clamp(2rem,7vw,3.6rem);
+    background:linear-gradient(90deg, var(--gold-soft), var(--terracotta));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .intro-divider{width:64px; height:2px; background:var(--gold); margin:30px auto;}
+  .intro-sub{font-family:'Cairo',sans-serif; font-weight:800; font-size:clamp(1.1rem,3vw,1.5rem); color:var(--sand);}
+  .intro-enter{
+    margin-top:48px; display:inline-flex; align-items:center; gap:10px;
+    font-family:'Cairo',sans-serif; font-weight:800; font-size:0.95rem;
+    padding:15px 34px; background:linear-gradient(90deg, var(--gold), var(--gold-soft));
+    color:var(--ink); border:none; cursor:pointer; transition:filter .25s;
+  }
+  .intro-enter:hover{filter:brightness(1.08);}
+
+  /* VIDEOS */
+  .videos{background:var(--ink-2); border-bottom:1px solid rgba(233,220,194,0.08);}
+  .video-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px;}
+  .video-card{background:var(--ink); border:1px solid rgba(233,220,194,0.1);}
+  .video-frame{position:relative; width:100%; aspect-ratio:16/9; background:#000;}
+  .video-frame iframe{width:100%; height:100%; border:0; display:block;}
+  .video-card .vc-label{padding:18px 22px; color:var(--sand); font-weight:700; font-family:'Cairo',sans-serif; font-size:0.98rem;}
+
+  /* 3D VIEW */
+  .view3d{background:var(--ink); position:relative;}
+  .view3d .section-head{max-width:720px;}
+
+  /* BEACHES MARQUEE SECTION */
+  .beaches{background:var(--ink-2); overflow:hidden;}
+  .marquee-wrap{
+    position:relative; overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .marquee-track{
+    display:flex; gap:22px; width:max-content;
+    animation:marqueeScroll 46s linear infinite;
+  }
+  .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+  .marquee-card{
+    position:relative; flex:0 0 auto; width:320px; height:220px;
+    border-radius:14px; overflow:hidden; box-shadow:0 14px 32px rgba(0,0,0,0.4);
+  }
+  .marquee-card img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition:transform .6s ease;
+  }
+  .marquee-card:hover img{transform:scale(1.09);}
+  .marquee-card .mc-caption{
+    position:absolute; inset-inline:0; bottom:0; padding:16px 18px 14px;
+    background:linear-gradient(0deg, rgba(7,13,18,0.9), transparent);
+    color:var(--sand); font-weight:700; font-size:0.95rem;
+  }
+  @keyframes marqueeScroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media(max-width:560px){
+    .marquee-card{width:230px; height:160px;}
+  }
+  .view3d-frame{
+    position:relative; width:100%; aspect-ratio:16/9; max-height:640px;
+    border:1px solid rgba(217,164,65,0.25); overflow:hidden; background:var(--ink-2);
+  }
+  .view3d-frame iframe{width:100%; height:100%; border:0; display:block; filter:saturate(1.05);}
+  .view3d-badge{
+    position:absolute; top:18px; right:18px; z-index:2;
+    background:rgba(7,13,18,0.75); backdrop-filter:blur(4px);
+    color:var(--gold-soft); font-family:'Cairo',sans-serif; font-weight:800; font-size:0.78rem;
+    padding:8px 16px; border:1px solid rgba(217,164,65,0.3); border-radius:99px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .view3d-hint{
+    position:absolute; bottom:18px; right:18px; left:18px; z-index:2;
+    background:rgba(7,13,18,0.8); backdrop-filter:blur(4px);
+    color:var(--fog); font-size:0.82rem; padding:12px 18px;
+    border:1px solid rgba(233,220,194,0.12);
+  }
+  .view3d-actions{
+    display:flex; flex-wrap:wrap; gap:16px; margin-top:26px;
+  }
+  .btn-3d{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'Cairo',sans-serif; font-weight:800; font-size:0.9rem;
+    padding:14px 26px; text-decoration:none; transition:all .25s;
+  }
+  .btn-3d.primary{
+    background:linear-gradient(90deg, var(--gold), var(--gold-soft)); color:var(--ink);
+  }
+  .btn-3d.primary:hover{filter:brightness(1.08);}
+  .btn-3d.secondary{
+    border:1px solid rgba(233,220,194,0.3); color:var(--sand);
+  }
+  .btn-3d.secondary:hover{border-color:var(--gold); color:var(--gold-soft);}
+
+  /* ARTICLES */
+  .articles{background:var(--ink-2);}
+  .article-list{display:flex; flex-direction:column; gap:14px;}
+  .article{
+    background:var(--ink); border:1px solid rgba(233,220,194,0.1);
+  }
+  .article summary{
+    list-style:none; cursor:pointer; padding:26px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .article summary::-webkit-details-marker{display:none;}
+  .article summary .a-title{display:flex; align-items:baseline; gap:16px;}
+  .article summary .a-tag{
+    font-family:'Cairo',sans-serif; color:var(--terracotta); font-weight:800; font-size:0.8rem;
+    letter-spacing:1px; white-space:nowrap;
+  }
+  .article summary h3{color:var(--sand); font-size:1.15rem; font-weight:700;}
+  .article summary .a-teaser{color:var(--fog); font-size:0.88rem; margin-top:6px; display:block;}
+  .article summary .chev{
+    color:var(--gold); font-size:1.1rem; flex-shrink:0; transition:transform .3s;
+  }
+  .article[open] summary .chev{transform:rotate(180deg);}
+  .article-body{padding:0 28px 32px; color:var(--fog); line-height:2; font-size:0.98rem;}
+  .article-body p{margin-bottom:16px;}
+  .article-body p:last-child{margin-bottom:0;}
+
+  /* QUOTE / GOLD COAST */
+  .quote-band{
+    background:linear-gradient(120deg, var(--sea) 0%, #142a30 100%);
+    padding:100px 6%; text-align:center; position:relative;
+  }
+  .quote-band blockquote{
+    max-width:780px; margin:0 auto; font-family:'Cairo',sans-serif;
+    font-size:clamp(1.4rem,3vw,2.2rem); font-weight:700; color:var(--gold-soft);
+    line-height:1.6;
+  }
+  .quote-band cite{
+    display:block; margin-top:24px; font-style:normal; color:var(--fog); font-size:0.95rem;
+  }
+
+  /* ECONOMY / CULTURE split */
+  .split{
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+  }
+  .split .quote-band{grid-column:1 / -1;}
+  .split-panel{padding:90px 6%;}
+  .split-panel.a{background:var(--ink-2); border-inline-end:1px solid rgba(233,220,194,0.08);}
+  .split-panel.b{background:var(--ink);}
+  .split-img{
+    width:100%; height:200px; object-fit:cover; margin-bottom:28px;
+    border:1px solid rgba(233,220,194,0.1); filter:saturate(0.9);
+  }
+  .split-panel .tag{
+    display:inline-block; color:var(--terracotta); font-weight:800; font-size:0.85rem;
+    letter-spacing:2px; margin-bottom:16px; font-family:'Cairo',sans-serif;
+  }
+  .split-panel h3{font-size:1.8rem; color:var(--sand); font-weight:800; margin-bottom:18px;}
+  .split-panel p{color:var(--fog); line-height:1.95; font-size:1rem;}
+  .split-panel ul{margin-top:20px; display:flex; flex-direction:column; gap:10px;}
+  .split-panel li{color:var(--sand); font-weight:700; font-size:0.95rem; display:flex; align-items:center; gap:10px;}
+  .split-panel li::before{content:"◆"; color:var(--gold); font-size:0.6rem;}
+
+  @media(max-width:820px){
+    .split{grid-template-columns:1fr;}
+    .split-panel.a{border-inline-end:none; border-bottom:1px solid rgba(233,220,194,0.08);}
+  }
+
+  footer{
+    background:var(--ink-2); padding:60px 6% 32px; text-align:center;
+    border-top:1px solid rgba(233,220,194,0.08);
+  }
+  footer .brand{font-size:1.2rem; margin-bottom:10px;}
+  footer p{color:var(--fog); font-size:0.85rem; line-height:1.8;}
+  footer .credit{
+    margin-top:28px; font-size:0.8rem; color:var(--terracotta); font-weight:700;
+    letter-spacing:0.5px;
+  }
+  footer .domain{
+    margin-top:8px; font-size:0.75rem; color:var(--fog); letter-spacing:1px;
+  }
+
+  /* SURVEY SECTION */
+  .survey-section{background:var(--ink); border-bottom:1px solid rgba(233,220,194,0.08);}
+  .survey-box{max-width:680px; margin:0 auto;}
+  .survey-box .section-head{margin-bottom:40px; text-align:center; max-width:100%;}
+  .survey-box .section-head h2{justify-content:center;}
+  .survey-field{margin-bottom:26px;}
+  .survey-field label{
+    display:block; color:var(--sand); font-weight:700; font-size:0.98rem; margin-bottom:12px;
+  }
+  .survey-options{display:flex; flex-wrap:wrap; gap:10px;}
+  .survey-options label{
+    display:flex; align-items:center; gap:8px; margin-bottom:0; font-weight:400;
+    background:rgba(233,220,194,0.05); border:1px solid rgba(233,220,194,0.15);
+    padding:10px 16px; border-radius:99px; cursor:pointer; font-size:0.88rem;
+    color:var(--fog); transition:all .2s;
+  }
+  .survey-options input{accent-color:var(--gold);}
+  .survey-options label:has(input:checked){border-color:var(--gold); color:var(--sand); background:rgba(217,164,65,0.1);}
+  .survey-field textarea, .survey-field input[type="text"], .survey-field input[type="email"]{
+    width:100%; background:rgba(233,220,194,0.05); border:1px solid rgba(233,220,194,0.18);
+    color:var(--sand); padding:14px 16px; font-family:inherit; font-size:0.95rem; border-radius:6px;
+    resize:vertical;
+  }
+  .survey-field textarea:focus, .survey-field input:focus{outline:none; border-color:var(--gold);}
+  .survey-submit{
+    display:block; width:100%; background:linear-gradient(90deg, var(--terracotta), var(--gold));
+    color:var(--ink); font-family:'Cairo',sans-serif; font-weight:800; font-size:1rem;
+    padding:15px; border:none; border-radius:8px; cursor:pointer; transition:filter .2s;
+  }
+  .survey-submit:hover{filter:brightness(1.08);}
+  .survey-note{margin-top:16px; font-size:0.8rem; color:var(--fog); text-align:center;}
+  .survey-success{display:none; text-align:center; padding:40px 20px;}
+  .survey-success.show{display:block;}
+  .survey-success .icon{font-size:2.6rem; margin-bottom:14px;}
+  .survey-success h3{color:var(--sand); font-family:'Cairo',sans-serif; font-size:1.3rem; margin-bottom:10px;}
+  .survey-success p{color:var(--fog); font-size:0.92rem; line-height:1.8;}
+  html{scroll-behavior:smooth;}
+  section[id]{scroll-margin-top:96px;}
+  .nav-progress-bar{
+    position:fixed; top:0; inset-inline-start:0; height:3px; width:0;
+    background:linear-gradient(90deg, var(--terracotta), var(--gold));
+    z-index:10000; transition:width .15s linear;
+  }
+</style>
+</head>
+<body>
+<div class="nav-progress-bar" id="pageLoadingBar"></div>
+<script>document.documentElement.style.overflow='hidden';</script>
+
+<div class="intro-overlay" id="introOverlay">
+  <span class="intro-eyebrow" data-i18n="intro.eyebrow">أهلاً وسهلاً بكم</span>
+  <h1 class="intro-title" data-i18n="intro.title">مرحباً بكم في عنابة<br>جوهرة الشرق</h1>
+  <div class="intro-divider"></div>
+  <p class="intro-sub" data-i18n="intro.sub">قسمون زين الدين يرحب بكم</p>
+  <button class="intro-enter" onclick="enterSite()" data-i18n="intro.enter">دخول الموقع ↓</button>
+</div>
+<audio id="welcomeAudio" src="welcome.mp3" preload="auto"></audio>
+<script>
+  function enterSite(){
+    const intro = document.getElementById('introOverlay');
+    intro.classList.add('intro-hide');
+    document.documentElement.style.overflow = '';
+    const audio = document.getElementById('welcomeAudio');
+    if(audio){
+      audio.currentTime = 0;
+      audio.play().catch(function(){ /* تجاهل صامت إن منع المتصفح التشغيل */ });
+    }
+    setTimeout(() => intro.remove(), 800);
+  }
+</script>
+
+
+<header>
+  <div class="brand">عناب<span>ة</span><span class="brand-domain">WWW.ANNABAZDF.COM</span></div>
+  <nav>
+    <a href="#news" data-i18n="nav.news">الأخبار</a>
+    <a href="#history" data-i18n="nav.history">التاريخ</a>
+    <a href="#videos" data-i18n="nav.videos">فيديوهات</a>
+    <a href="#origin" data-i18n="nav.origin">الأصل</a>
+    <a href="#landmarks" data-i18n="nav.landmarks">المعالم</a>
+    <a href="#beaches" data-i18n="nav.beaches">الشواطئ</a>
+    <a href="#view3d">٣D</a>
+    <a href="#articles" data-i18n="nav.articles">مقالات</a>
+    <a href="#life" data-i18n="nav.life">الحياة</a>
+    <a href="#survey" data-i18n="nav.survey">استطلاع</a>
+  </nav>
+  <div class="header-right">
+    <div class="lang-switch" id="langSwitch">
+      <button type="button" data-lang="ar" class="active">AR</button>
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <a href="#donate" class="donate-btn" data-i18n="nav.donateBtn">💛 <span class="dtext">تبرّع</span></a>
+    <button type="button" class="hamburger" id="hamburgerBtn" aria-label="القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const nav = document.querySelector('header nav');
+    const hamburger = document.getElementById('hamburgerBtn');
+    const scrim = document.getElementById('navScrim');
+
+    function closeMobileNav(){
+      if(nav) nav.classList.remove('mobile-open');
+      if(hamburger) hamburger.classList.remove('open');
+      if(scrim) scrim.classList.remove('show');
+    }
+    function openMobileNav(){
+      if(nav) nav.classList.add('mobile-open');
+      if(hamburger) hamburger.classList.add('open');
+      if(scrim) scrim.classList.add('show');
+    }
+    if(hamburger){
+      hamburger.addEventListener('click', function(){
+        if(nav && nav.classList.contains('mobile-open')) closeMobileNav();
+        else openMobileNav();
+      });
+    }
+    if(scrim){ scrim.addEventListener('click', closeMobileNav); }
+
+    const navAnchors = document.querySelectorAll('a[href^="#"]');
+    navAnchors.forEach(function(a){
+      a.addEventListener('click', function(e){
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if(target){
+          e.preventDefault();
+          closeMobileNav();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+          try{ history.pushState(null, '', '#' + id); }catch(err){}
+        }
+      });
+    });
+
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const headerNavLinks = document.querySelectorAll('nav a[href^="#"]');
+    function updateActiveNav(){
+      let current = null;
+      const scrollPos = window.scrollY + 140;
+      sections.forEach(function(sec){
+        if(sec.offsetTop <= scrollPos) current = sec.id;
+      });
+      headerNavLinks.forEach(function(a){
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav, {passive:true});
+    updateActiveNav();
+
+    const bar = document.getElementById('pageLoadingBar');
+    function updateProgressBar(){
+      if(!bar) return;
+      const h = document.documentElement;
+      const scrollable = h.scrollHeight - h.clientHeight;
+      const pct = scrollable > 0 ? (h.scrollTop / scrollable) * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgressBar, {passive:true});
+    updateProgressBar();
+
+    if(location.hash){
+      const initial = document.getElementById(location.hash.slice(1));
+      if(initial){ setTimeout(function(){ initial.scrollIntoView({block:'start'}); }, 50); }
+    }
+  });
+</script>
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wilaya%20de%20annaba.jpg?width=1600" alt="منظر عام لمدينة عنابة">
+  </div>
+  <div class="eyebrow" data-i18n="hero.eyebrow">شمال شرق الجزائر — البحر الأبيض المتوسط</div>
+  <h1 data-i18n="hero.title">عنابة، <em>جوهرة</em><br>الشرق الجزائري</h1>
+  <p class="lead" data-i18n="hero.lead">
+    مدينة تحمل في اسمها عبق التاريخ، وفي سواحلها ذهب الرمال ونقاء المياه.
+    من ميناء «هيبون» الفينيقي النوميدي إلى صرح الصلب الأفريقي الكبير،
+    عنابة قصة امتدت أكثر من ثلاثين قرناً على ضفاف المتوسط.
+  </p>
+  <div class="hero-stats">
+    <div><b>٨٠ كم</b><span data-i18n="hero.stat1">شريط ساحلي</span></div>
+    <div><b data-i18n="hero.stat2b">القرن ١١ ق.م</b><span data-i18n="hero.stat2">تأسيس هيبون</span></div>
+    <div><b data-i18n="hero.stat3b">الرابعة</b><span data-i18n="hero.stat3">الأكبر جزائرياً سكاناً</span></div>
+    <div id="visitorStat" style="display:none;">
+      <b id="visitorCount"><span class="live-dot" style="margin-inline-end:6px;"></span>…</b>
+      <span data-i18n="hero.stat4">زائر لهذا الموقع</span>
+    </div>
+  </div>
+  <div class="scroll-cue" data-i18n="hero.scroll">تابع القراءة</div>
+</section>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <div class="news-head">
+      <div class="news-title-group">
+        <h2 data-i18n="news.title">الأخبار اليومية <span class="live-badge"><span class="live-dot"></span>مباشر</span></h2>
+        <p data-i18n="news.desc">كل ما يحدث حصرياً في مدينة عنابة، بتحديث مستمر: نشرة يومية مُحرَّرة + عناوين تتحدث تلقائياً في كل زيارة.</p>
+      </div>
+      <div class="news-actions">
+        <span class="news-updated" id="newsUpdated"></span>
+        <button class="refresh-btn" id="refreshNewsBtn" onclick="loadAnnabaNews()" data-i18n="news.refresh">تحديث الأخبار</button>
+      </div>
+    </div>
+    <div class="bulletin">
+      <div class="bulletin-top">
+        <span class="b-name" data-i18n="news.bname">نشرة عنابة اليوم</span>
+        <span class="b-date" data-i18n="news.bdate">الخميس ٢٣ يوليو ٢٠٢٦</span>
+      </div>
+      <div class="bulletin-lead">
+        <span class="b-kicker" data-i18n="news.kicker">عاجل</span>
+        <h3 data-i18n="news.lead.h3">حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة</h3>
+        <p data-i18n="news.lead.p1">
+          تواصل مصالح الحماية المدنية والجيش الوطني الشعبي منذ منتصف الأسبوع الماضي عمليات مكافحة حرائق غابية متفرقة اندلعت في المرتفعات الجبلية لبلدية سرايدي بولاية عنابة، وتوسّعت ليلة الثلاثاء الماضي بشكل حاد بفعل ارتفاع درجات الحرارة وهبوب رياح قوية، ما اضطر السلطات إلى إجلاء أكثر من مئة مريض من مؤسسة إعادة التأهيل الوظيفي بسرايدي نحو مستشفيي الحجار والبوني تحسّباً لاقتراب ألسنة اللهب من محيط المنشأة.
+        </p>
+        <p data-i18n="news.lead.p2">
+          كما لجأت مؤسسة سونلغاز إلى قطع الكهرباء والغاز احترازياً عن كامل بلدية سرايدي، فيما زار وزير الداخلية والجماعات المحلية والنقل، السعيد سعيود، المنطقة وأكد متابعة رئيس الجمهورية عبد المجيد تبون للملف بشكل آني، مع الإعلان عن تعويض كامل للمتضررين وإعادة بناء نحو ١٥٠ مسكناً متضرراً. وبعد السيطرة على جزء من الحرائق، شرعت السلطات في إعادة نقل المرضى تدريجياً إلى مستشفى سرايدي.
+        </p>
+        <a class="bulletin-source" href="https://alarabyalasil.com/2026/07/22/%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D9%87%D9%88%D9%84-%D9%81%D9%8A-%D8%BA%D8%A7%D8%A8%D8%A7%D8%AA-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9-%D9%8A%D9%85%D8%AA/" target="_blank" rel="noopener" data-i18n="news.source1">المصدر: العربي الأصيل ←</a>
+      </div>
+      <div class="bulletin-items">
+        <div class="b-item">
+          <span class="b-kicker-alt" data-i18n="news.item1.kicker">محليات</span>
+          <h4 data-i18n="news.item1.h4">سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز</h4>
+          <p data-i18n="news.item1.p">باشرت مديرية توزيع سونلغاز بعنابة معاينة ميدانية للشبكات الكهربائية والغازية التي طالها الحريق في سرايدي، تمهيداً لإعادة الخدمة تدريجياً بعد تراجع الخطر عن المنشآت الحيوية.</p>
+          <a class="bulletin-source" href="https://www.awras.com/%D8%AD%D8%B1%D8%A7%D8%A6%D9%82-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%AA%D8%B6%D8%B1%D8%A8-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%88/" target="_blank" rel="noopener" data-i18n="news.source2">المصدر: أوراس ←</a>
+        </div>
+        <div class="b-item">
+          <span class="b-kicker-alt" data-i18n="news.item2.kicker">رياضة</span>
+          <h4 data-i18n="news.item2.h4">اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً</h4>
+          <p data-i18n="news.item2.p">أنهى اتحاد عنابة، الملقب جمهوره بـ«الهوليڨانز»، موسم ٢٠٢٥-٢٠٢٦ في المركز السادس ضمن مجموعة الوسط الشرقي للرابطة الثانية المحترفة، ويترقب أنصاره تعزيزات صيفية تعيد الفريق إلى دائرة المنافسة على الصعود.</p>
+        </div>
+      </div>
+      <div class="bulletin-note" data-i18n="news.note">
+        هذه النشرة تُحرَّر يدوياً وتعكس أبرز مستجدات المدينة عند آخر تحديث للصفحة. للاطلاع على عناوين إضافية محدَّثة تلقائياً، تابع القائمة أدناه.
+      </div>
+    </div>
+
+    <div class="more-news-title" data-i18n="news.moreTitle">📰 آخر العناوين <span class="live-badge"><span class="live-dot"></span>تحديث تلقائي</span></div>
+    <div class="news-carousel" id="newsCarousel">
+      <button type="button" class="nc-arrow prev" id="ncPrev" aria-label="السابق">‹</button>
+      <button type="button" class="nc-arrow next" id="ncNext" aria-label="التالي">›</button>
+      <div class="nc-track" id="newsCarouselTrack">
+        <div class="news-skeleton" style="flex:0 0 100%;"></div>
+      </div>
+      <div class="nc-dots" id="newsCarouselDots"></div>
+    </div>
+  </div>
+</section>
+<script>
+  function fetchWithTimeout(url, ms){
+    const controller = new AbortController();
+    const timer = setTimeout(function(){ controller.abort(); }, ms);
+    return fetch(url, {signal: controller.signal}).finally(function(){ clearTimeout(timer); });
+  }
+
+  function parseXmlNewsItems(xmlText){
+    const xml = new DOMParser().parseFromString(xmlText, 'text/xml');
+    const entries = Array.from(xml.querySelectorAll('item'));
+    if(!entries.length) throw new Error('xml empty');
+    return entries.map(function(el){
+      return {
+        title: el.querySelector('title') ? el.querySelector('title').textContent : '',
+        link: el.querySelector('link') ? el.querySelector('link').textContent : '',
+        pubDate: el.querySelector('pubDate') ? el.querySelector('pubDate').textContent : ''
+      };
+    });
+  }
+
+  async function fetchViaRss2Json(feedUrl){
+    const proxied = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feedUrl);
+    const res = await fetchWithTimeout(proxied, 8000);
+    if(!res.ok) throw new Error('rss2json network');
+    const data = await res.json();
+    if(data.status !== 'ok' || !data.items || !data.items.length) throw new Error('rss2json empty');
+    return data.items.map(it => ({title: it.title, link: it.link, pubDate: it.pubDate}));
+  }
+
+  async function fetchViaAllOrigins(feedUrl){
+    const proxied = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(feedUrl);
+    const res = await fetchWithTimeout(proxied, 8000);
+    if(!res.ok) throw new Error('allorigins network');
+    return parseXmlNewsItems(await res.text());
+  }
+
+  async function fetchViaCorsProxyIo(feedUrl){
+    const proxied = 'https://corsproxy.io/?url=' + encodeURIComponent(feedUrl);
+    const res = await fetchWithTimeout(proxied, 8000);
+    if(!res.ok) throw new Error('corsproxy.io network');
+    return parseXmlNewsItems(await res.text());
+  }
+
+  async function fetchViaCodetabs(feedUrl){
+    const proxied = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(feedUrl);
+    const res = await fetchWithTimeout(proxied, 8000);
+    if(!res.ok) throw new Error('codetabs network');
+    return parseXmlNewsItems(await res.text());
+  }
+
+  async function fetchViaThingProxy(feedUrl){
+    const proxied = 'https://thingproxy.freeboard.io/fetch/' + feedUrl;
+    const res = await fetchWithTimeout(proxied, 8000);
+    if(!res.ok) throw new Error('thingproxy network');
+    return parseXmlNewsItems(await res.text());
+  }
+
+  async function fetchViaAllOriginsGet(feedUrl){
+    const proxied = 'https://api.allorigins.win/get?url=' + encodeURIComponent(feedUrl);
+    const res = await fetchWithTimeout(proxied, 8000);
+    if(!res.ok) throw new Error('allorigins-get network');
+    const data = await res.json();
+    if(!data || !data.contents) throw new Error('allorigins-get empty');
+    return parseXmlNewsItems(data.contents);
+  }
+
+  const NEWS_FETCHERS = [fetchViaRss2Json, fetchViaAllOrigins, fetchViaCorsProxyIo, fetchViaCodetabs, fetchViaThingProxy, fetchViaAllOriginsGet];
+
+  // مصدر احتياطي محلي: يُستخدم فقط إذا تعذّر الوصول لكل الوسطاء الخارجيين،
+  // حتى لا تبقى الواجهة فارغة أو تعرض رسالة خطأ بلا فائدة للزائر.
+  // كل خبر هنا حقيقي وموثّق بمصدره — وليس نصاً افتراضياً. عند غياب تاريخ
+  // دقيق موثوق للخبر يُترك التاريخ فارغاً بدل اختلاق تاريخ غير صحيح.
+  const FALLBACK_NEWS_ITEMS = [
+    {
+      title: 'حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة',
+      link: 'https://alarabyalasil.com/2026/07/22/%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D9%87%D9%88%D9%84-%D9%81%D9%8A-%D8%BA%D8%A7%D8%A8%D8%A7%D8%AA-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9-%D9%8A%D9%85%D8%AA/',
+      pubDate: '2026-07-22'
+    },
+    {
+      title: 'مديرية الصحة بعنابة تعيد نقل مرضى مستشفى سرايدي بعد إخماد الحرائق',
+      link: 'https://www.aljazairalyoum.dz/',
+      pubDate: '2026-07-22'
+    },
+    {
+      title: 'سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز بسرايدي',
+      link: 'https://www.awras.com/%D8%AD%D8%B1%D8%A7%D8%A6%D9%82-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%AA%D8%B6%D8%B1%D8%A8-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%88/',
+      pubDate: '2026-07-22'
+    },
+    {
+      title: 'تنصيب عميد أول للشرطة كافي عبد الجليل رئيساً جديداً لأمن ولاية عنابة',
+      link: 'https://www.aps.dz/ar/regions/tag/%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9',
+      pubDate: ''
+    },
+    {
+      title: 'هزة أرضية بقوة 3.5 درجة تضرب منطقة شطيبة بولاية عنابة',
+      link: 'https://www.aps.dz/ar/regions/tag/%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9',
+      pubDate: ''
+    },
+    {
+      title: 'الفاف يستدعي مدربين ولاعبين من اتحاد عنابة للتحقيق في نزاهة المنافسة',
+      link: 'https://ultraalgeria.ultrasawt.com/%D8%A7%D9%84%D9%81%D8%A7%D9%81-%D8%AA%D8%AD%D8%B1%D9%83-%D9%85%D9%84%D9%81-%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D8%B3%D8%AA%D8%AF%D8%B9%D8%A7%D8%A1-%D9%85%D8%AF%D8%B1%D8%A8%D9%8A%D9%86-%D9%88%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%84%D9%84%D8%AA%D8%AD%D9%82%D9%8A%D9%82/%D9%81%D8%B1%D9%8A%D9%82-%D8%A7%D9%84%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1/%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9',
+      pubDate: '2026-05-13'
+    },
+    {
+      title: 'درك عنابة يوجّه نداءً للجمهور في قضية تتعلق باستيراد سيارات من الصين',
+      link: 'https://www.ennaharonline.com/algeria/',
+      pubDate: ''
+    },
+    {
+      title: 'اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً',
+      link: 'https://news.google.com/search?q=%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9&hl=ar',
+      pubDate: ''
+    }
+  ];
+
+  // تدوير القائمة الاحتياطية حسب الدورة الزمنية الحالية (كل 15 دقيقة)
+  // بحيث لا تبقى نفس الأخبار بنفس الترتيب عند كل تحديث تلقائي
+  function rotateFallbackNews(){
+    const slot = Math.floor(Date.now() / (15 * 60 * 1000));
+    const offset = slot % FALLBACK_NEWS_ITEMS.length;
+    return FALLBACK_NEWS_ITEMS.slice(offset).concat(FALLBACK_NEWS_ITEMS.slice(0, offset));
+  }
+
+  async function fetchAnnabaNewsItems(feedUrl){
+    for(const fetcher of NEWS_FETCHERS){
+      try{
+        const items = await fetcher(feedUrl);
+        if(items && items.length) return items;
+      }catch(e){ /* try next source */ }
+    }
+    return null;
+  }
+
+  let ncItems = [];
+  let ncIndex = 0;
+  let ncAutoTimer = null;
+  let ncRetryTimer = null;
+  const NC_AUTOPLAY_MS = 5500;
+
+  function ncRenderSlide(item, i){
+    const d = new Date((item.pubDate || '').replace(' ', 'T'));
+    const dateStr = isNaN(d) ? '' : d.toLocaleDateString('ar-DZ', {day:'numeric', month:'long', year:'numeric'});
+    let source = '';
+    try{ source = new URL(item.link).hostname.replace('www.',''); }catch(e){}
+    const title = (item.title || '').split(' - ')[0];
+    return `<a class="nc-slide" href="${item.link}" target="_blank" rel="noopener">
+      <span class="news-idx">${String(i+1).padStart(2,'0')}</span>
+      <span class="news-body">
+        <h4>${title}</h4>
+        <span class="news-meta">${dateStr ? '<span>📅 ' + dateStr + '</span>' : ''}<span>🔗 ${source}</span></span>
+      </span>
+    </a>`;
+  }
+
+  function ncGoTo(index, opts){
+    opts = opts || {};
+    const track = document.getElementById('newsCarouselTrack');
+    if(!track || !ncItems.length) return;
+    ncIndex = ((index % ncItems.length) + ncItems.length) % ncItems.length;
+    const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+    const sign = isRTL ? 1 : -1;
+    track.style.transform = 'translateX(' + (sign * ncIndex * 100) + '%)';
+    document.querySelectorAll('.nc-dot').forEach(function(dot, i){
+      dot.classList.toggle('active', i === ncIndex);
+    });
+    if(!opts.keepTimer) ncRestartAutoplay();
+  }
+
+  function ncRestartAutoplay(){
+    if(ncAutoTimer) clearInterval(ncAutoTimer);
+    if(ncItems.length > 1){
+      ncAutoTimer = setInterval(function(){ ncGoTo(ncIndex + 1, {keepTimer:true}); }, NC_AUTOPLAY_MS);
+    }
+  }
+
+  function ncBuildCarousel(){
+    const track = document.getElementById('newsCarouselTrack');
+    const dots = document.getElementById('newsCarouselDots');
+    const prevBtn = document.getElementById('ncPrev');
+    const nextBtn = document.getElementById('ncNext');
+    if(!track) return;
+    track.innerHTML = ncItems.map(ncRenderSlide).join('');
+    dots.innerHTML = ncItems.map(function(_, i){
+      return '<button type="button" class="nc-dot' + (i===0?' active':'') + '" data-i' + '="' + i + '" aria-label="خبر ' + (i+1) + '"></button>';
+    }).join('');
+    const showControls = ncItems.length > 1;
+    if(prevBtn) prevBtn.style.display = showControls ? 'flex' : 'none';
+    if(nextBtn) nextBtn.style.display = showControls ? 'flex' : 'none';
+    dots.style.display = showControls ? 'flex' : 'none';
+    dots.querySelectorAll('.nc-dot').forEach(function(dot){
+      dot.addEventListener('click', function(){ ncGoTo(parseInt(dot.getAttribute('data-i'), 10)); });
+    });
+    ncIndex = 0;
+    track.style.transform = 'translateX(0%)';
+    ncRestartAutoplay();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    const prevBtn = document.getElementById('ncPrev');
+    const nextBtn = document.getElementById('ncNext');
+    if(prevBtn) prevBtn.addEventListener('click', function(){ ncGoTo(ncIndex - 1); });
+    if(nextBtn) nextBtn.addEventListener('click', function(){ ncGoTo(ncIndex + 1); });
+    const carousel = document.getElementById('newsCarousel');
+    if(carousel){
+      carousel.addEventListener('mouseenter', function(){ if(ncAutoTimer) clearInterval(ncAutoTimer); });
+      carousel.addEventListener('mouseleave', ncRestartAutoplay);
+    }
+  });
+
+  async function loadAnnabaNews(isAuto){
+    const carousel = document.getElementById('newsCarousel');
+    const track = document.getElementById('newsCarouselTrack');
+    const updated = document.getElementById('newsUpdated');
+    const isFirstLoad = ncItems.length === 0;
+    if(!isFirstLoad){
+      carousel.classList.add('ng-fade');
+      await new Promise(r => setTimeout(r, 300));
+    }
+    if(ncAutoTimer) clearInterval(ncAutoTimer);
+    if(ncRetryTimer) clearTimeout(ncRetryTimer);
+    track.innerHTML = '<div class="news-skeleton" style="flex:0 0 100%;"></div>';
+    const feed = 'https://news.google.com/rss/search?q=%D8%B9%D9%86%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1&hl=ar&gl=DZ&ceid=DZ:ar';
+    let rawItems = await fetchAnnabaNewsItems(feed);
+    if(!rawItems){
+      // محاولة ثانية بعد فاصل قصير في حال كان الفشل مؤقتاً (تقييد معدل الطلبات على أحد الوسطاء)
+      await new Promise(r => setTimeout(r, 1800));
+      rawItems = await fetchAnnabaNewsItems(feed);
+    }
+    try{
+      if(!rawItems) throw new Error('no source available');
+      ncItems = rawItems.slice(0, 8);
+      ncBuildCarousel();
+      carousel.classList.remove('ng-fade');
+      updated.textContent = 'آخر تحديث: ' + new Date().toLocaleTimeString('ar-DZ', {hour:'2-digit', minute:'2-digit'}) + (isAuto ? ' (تلقائي)' : '');
+      updated.classList.remove('pulse');
+      void updated.offsetWidth;
+      updated.classList.add('pulse');
+    }catch(e){
+      // تعذّر الوصول لكل الوسطاء الخارجيين: نعرض قائمة محلية موثوقة ومتنوعة بدل ترك الواجهة فارغة،
+      // مع تدوير ترتيبها حسب الدورة الزمنية الحالية حتى لا تبدو ثابتة عند كل تحديث
+      ncItems = rotateFallbackNews();
+      ncBuildCarousel();
+      carousel.classList.remove('ng-fade');
+      updated.innerHTML = '⚠️ تعذّر التحديث المباشر حالياً — تُعرض آخر عناوين مؤكدة';
+      // إعادة محاولة ذاتية بعد دقيقتين في حال استمر تعذّر الاتصال، دون انتظار الدورة الكاملة (١٥ دقيقة)
+      ncRetryTimer = setTimeout(function(){ loadAnnabaNews(true); }, 2 * 60 * 1000);
+    }
+  }
+
+  // جدولة دقيقة: تحديث تلقائي كل 15 دقيقة بالضبط، متزامن مع الدقائق 00 / 15 / 30 / 45
+  const NEWS_REFRESH_MS = 15 * 60 * 1000;
+  function scheduleNewsAutoRefresh(){
+    const now = new Date();
+    const next = new Date(now);
+    next.setSeconds(0, 0);
+    next.setMinutes(Math.ceil((now.getMinutes() + (now.getSeconds() ? 1 : 0)) / 15) * 15);
+    let msUntilNext = next.getTime() - now.getTime();
+    if(msUntilNext <= 0) msUntilNext += NEWS_REFRESH_MS;
+    setTimeout(function(){
+      loadAnnabaNews(true);
+      setInterval(function(){ loadAnnabaNews(true); }, NEWS_REFRESH_MS);
+    }, msUntilNext);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    loadAnnabaNews(false);
+    scheduleNewsAutoRefresh();
+  });
+
+</script>
+
+<script>
+  // عدّاد زوار حقيقي عبر خدمة CounterAPI (مجانية، بلا مفتاح API)
+  // يُحتسب كل تحميل للصفحة كزيارة، ويُعرض المجموع التراكمي أعلى الموقع ضمن إحصائيات البداية
+  let visitorCountValue = null;
+
+  function toEasternArabicDigits(str){
+    const map = {'0':'٠','1':'١','2':'٢','3':'٣','4':'٤','5':'٥','6':'٦','7':'٧','8':'٨','9':'٩'};
+    return str.replace(/[0-9]/g, function(d){ return map[d]; });
+  }
+
+  function formatVisitorCount(n, lang){
+    const withCommas = Math.max(0, Math.round(n)).toLocaleString('en-US');
+    if(lang === 'ar') return toEasternArabicDigits(withCommas.replace(/,/g, '٬'));
+    return withCommas;
+  }
+
+  function updateVisitorDisplay(){
+    if(visitorCountValue === null) return;
+    const el = document.getElementById('visitorCount');
+    if(!el) return;
+    const lang = document.documentElement.getAttribute('lang') || 'ar';
+    el.innerHTML = '<span class="live-dot" style="margin-inline-end:6px;"></span>' + formatVisitorCount(visitorCountValue, lang);
+  }
+
+  async function loadVisitorCounter(){
+    try{
+      const res = await fetchWithTimeout('https://api.counterapi.dev/v1/annabazdf-com/site-visits/up', 6000);
+      if(!res.ok) throw new Error('counter network');
+      const data = await res.json();
+      const value = (data && (data.value ?? data.count ?? (data.data && (data.data.up_count ?? data.data.value))));
+      if(typeof value !== 'number' || isNaN(value)) throw new Error('unexpected counter response');
+      visitorCountValue = value;
+      updateVisitorDisplay();
+      const stat = document.getElementById('visitorStat');
+      if(stat) stat.style.display = '';
+    }catch(e){
+      // تعذّر جلب العدّاد الحقيقي: نُبقي إحصائية الزوار مخفية بدل عرض رقم غير موثوق
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadVisitorCounter);
+</script>
+
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="videos.title">شاهد عنابة مباشرة</h2>
+      <p data-i18n="videos.desc">مقاطع فيديو حقيقية تنقلكم إلى شوارع وشواطئ ومعالم المدينة، كأنكم فيها.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/W6Gc4SZlhKo" title="عنابة من السماء" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="vc-label" data-i18n="videos.v1">🚁 عنابة من السماء — لقطات جوية بجودة عالية</div>
+      </div>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/k8DP0jCMtS0" title="أفضل الأماكن في عنابة" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="vc-label" data-i18n="videos.v2">📍 أفضل الأماكن التي يجب زيارتها في عنابة</div>
+      </div>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/U5HFaRlhtlY" title="جولة سياحية في عنابة" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="vc-label" data-i18n="videos.v3">🌊 جولة سياحية مع مرشد محلي في عنابة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="deep-history" id="history">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="history.title">تاريخ عنابة العريق</h2>
+      <p data-i18n="history.desc">أكثر من ثلاثة آلاف عام متصلة من التاريخ، من ميناء فينيقي صغير إلى مدينة جزائرية كبرى — رحلة موثّقة عبر ثماني حقب.</p>
+    </div>
+    <div class="era-list">
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠١</span><span class="era-span" data-i18n="history.era1.span">حوالي القرن ١٢ ق.م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era1.h3">التأسيس الفينيقي: ميناء «أُبّون»</h3>
+          <p data-i18n="history.era1.p1">أسّس التجّار الفينيقيون على هذا الساحل مرفأً أطلقوا عليه اسم «أُبّون»، وهو لفظ فينيقي يُعتقد أنه يعني «الماء المتدفق»، إشارة إلى ينابيع المنطقة الغزيرة النابعة من جبل الإيدوغ القريب. أعطى هذا الاسم لاحقاً تسميته للخليج الذي تطل عليه المدينة.</p>
+          <p data-i18n="history.era1.p2">لقربها الجغرافي من قرطاج، تحالفت أُبّون مع الحاضرة البونيقية الكبرى وأصبحت من أهم موانئها التجارية على السواحل النوميدية، وشاركت مصيرها خلال الحرب البونية الأولى (٢٦٤–٢٤١ ق.م) التي خاضتها قرطاج ضد روما.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٢</span><span class="era-span" data-i18n="history.era2.span">٢٠٣ ق.م – ٤٣٠ م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era2.h3">هيبو ريجيوس: مقر ملكي نوميدي ثم مدينة رومانية</h3>
+          <p data-i18n="history.era2.p1">بعد سقوط قرطاج، أصبحت المدينة إحدى مقرّات الملوك النوميديين، ما أكسبها التسمية اللاتينية «هيبو ريجيوس» أي «هيبو الملكية» تمييزاً لها عن مدن أخرى تحمل اسم هيبو في المنطقة. ثم أُدمجت لاحقاً ضمن الولايات الرومانية في إفريقيا، وازدهرت كمركز حضري وديني مهم.</p>
+          <p data-i18n="history.era2.p2">اكتسبت المدينة شهرتها العالمية حين أصبح القديس أوغسطينوس أسقفاً عليها بين عامي ٣٩٦ و٤٣٠ للميلاد، وألّف فيها جزءاً كبيراً من مؤلفاته اللاهوتية والفلسفية المؤثرة. تُوفي أوغسطينوس في المدينة في ٢٨ أوت ٤٣٠، أثناء حصار الوندال لها.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٣</span><span class="era-span" data-i18n="history.era3.span">٤٣١ – ٥٣٣ م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era3.h3">الوندال ثم إعادة الفتح البيزنطي</h3>
+          <p data-i18n="history.era3.p1">بعد حصار دام نحو أربعة عشر شهراً، سقطت هيبو ريجيوس بيد الملك الوندالي جنسريك سنة ٤٣١ للميلاد، وشكّلت لفترة من الزمن أحد أهم مواقع مملكة الوندال في شمال إفريقيا قبل أن تنتقل مكانة الصدارة إلى قرطاج بعد سقوطها هي الأخرى سنة ٤٣٩.</p>
+          <p data-i18n="history.era3.p2">استعاد البيزنطيون المدينة ضمن حملة الجنرال بليزاريوس لإعادة فتح شمال إفريقيا سنة ٥٣٣ للميلاد، لتدخل بذلك حقبة بيزنطية استمرت أكثر من قرن، شهدت خلالها بعض أعمال التحصين والترميم قبل الفتح الإسلامي.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٤</span><span class="era-span" data-i18n="history.era4.span">القرن ٧ – ١٥ م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era4.h3">الفتح الإسلامي وولادة اسم «بونة»</h3>
+          <p data-i18n="history.era4.p1">مع الفتوحات الإسلامية لبلاد المغرب في القرن السابع الميلادي، دخلت المدينة العهد الإسلامي وعُرفت باسمها الجديد «بونة»، وتعاقبت عليها دول إسلامية عدة عبر العصور الوسطى، من الأدارسة والفاطميين إلى الزيريين والحماديين فالموحدين والحفصيين.</p>
+          <p data-i18n="history.era4.p2">يعود مسجد سيدي بومروان، أحد أبرز معالم المدينة اليوم، إلى سنة ١٠٣٣م في العهد الزيري، وشُيّد بطراز أندلسي معتمداً على أعمدة رومانية أعيد توظيفها من الأطلال القديمة. وبعد سقوط غرناطة سنة ١٤٩٢، استقبلت المدينة أفواجاً من المهاجرين الأندلسيين الذين أثروا نسيجها الثقافي والموسيقي والمعماري.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٥</span><span class="era-span" data-i18n="history.era5.span">القرن ١٦ – ١٨٣٠ م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era5.h3">بونة في العهد العثماني: سنجق بلاد العناب</h3>
+          <p data-i18n="history.era5.p1">انضمت بونة إلى إيالة الجزائر العثمانية، وأصبحت مقراً لسنجق يُعرف باسم «سنجق بلاد العناب»، إدارياً تحت إشراف باي قسنطينة. من أبرز آثار هذه الحقبة جامع الباي، الذي شيّده صالح باي (باي قسنطينة بين ١٧٧٥ و١٧٩٢) على غرار الجامع الكبير بالعاصمة، وظل مصلّى للأتراك الأحناف حتى سنة ١٨٣٢.</p>
+          <p data-i18n="history.era5.p2">عُرفت المدينة العثمانية بشبكة مياهها المتطورة المكوّنة من سبعة ينابيع تُغذّيها قناة فخارية من جبل الإيدوغ، وبحي القصبة ذي الطابع العثماني المميز ببيوته المتلاصقة وحدائقه الداخلية، والذي لا يزال قائماً حتى اليوم كمعلم سياحي.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٦</span><span class="era-span" data-i18n="history.era6.span">١٨٣٠ – ١٩٦٢ م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era6.h3">الاستعمار الفرنسي: من بونة إلى Bône</h3>
+          <p data-i18n="history.era6.p1">احتلت القوات الفرنسية المدينة لأشهر معدودة سنة ١٨٣٠، قبل أن تتمكن الحامية العثمانية بمساندة السكان من طردها. غير أن فرنسا عادت سنة ١٨٣٢ بقوة بحرية واحتلت المدينة احتلالاً كاملاً، مسيطرة على قلعتها وأسوارها.</p>
+          <p data-i18n="history.era6.p2">أُطلق على المدينة اسمها الفرنسي «بون» (Bône)، وابتداءً من سنة ١٨٧٠ انطلق تشييد المدينة الجديدة خارج أسوار القصبة القديمة بمخطط عمراني أوروبي، لتتحول عنابة إلى ميناء استعماري رئيسي على المتوسط طوال ما يقارب ١٣٢ عاماً من الاحتلال.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٧</span><span class="era-span" data-i18n="history.era7.span">١٩٥٤ – ١٩٦٢ م</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era7.h3">ثورة التحرير: منطقة الشمال القسنطيني في قلب المعركة</h3>
+          <p data-i18n="history.era7.p1">مع اندلاع ثورة أول نوفمبر ١٩٥٤، شكّلت منطقة الشمال القسنطيني، التي تنتمي إليها عنابة، معقلاً مهماً لجيش التحرير الوطني ضمن ما عُرف بالولاية الثانية. وقد سُجن يوسف زيغود، القائد الذي أشرف لاحقاً على هجومات ٢٠ أوت ١٩٥٥ الواسعة في المنطقة، في سجن عنابة قبل انطلاق الثورة.</p>
+          <p data-i18n="history.era7.p2">واصلت المدينة ومحيطها المساهمة في الكفاح المسلح حتى إعلان استقلال الجزائر في ٥ يوليو ١٩٦٢، لتستعيد المدينة عندها اسمها العربي «عنابة» نهائياً بعد قرن وثلث من الاحتلال.</p>
+        </div>
+      </div>
+
+      <div class="era">
+        <div class="era-side"><span class="era-num">٠٨</span><span class="era-span" data-i18n="history.era8.span">١٩٦٢ – اليوم</span></div>
+        <div class="era-main">
+          <h3 data-i18n="history.era8.h3">الاستقلال والنهضة الصناعية</h3>
+          <p data-i18n="history.era8.p1">عرفت عنابة بعد الاستقلال تحولاً اقتصادياً جذرياً، تُوّج بتأسيس الشركة الوطنية للصناعة السيدرالية في ٣ سبتمبر ١٩٦٤، وانطلاق الإنتاج الفعلي لمركب الحجار للحديد والصلب بعد افتتاحه في ١٩ يونيو ١٩٦٩، ليصبح أكبر مركب من نوعه في القارة الأفريقية.</p>
+          <p data-i18n="history.era8.p2">واليوم، تجمع عنابة بين إرثها التاريخي الممتد لثلاثة آلاف عام وحاضرها كقطب صناعي واقتصادي رائد في الجزائر، محافظة على لقبيها التاريخيين: «جوهرة الشرق الجزائري» و«جوهرة المتوسط».</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="origin" id="origin">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="origin.title">من بونة إلى عنابة</h2>
+      <p data-i18n="origin.desc">ثلاثة آلاف عام من التاريخ، حيث تعاقبت الحضارات على هذه البقعة من الساحل الجزائري.</p>
+    </div>
+    <div class="origin-media">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vue%20depuis%20le%20site%20arch%C3%A9ologique%20Hippone%20vers%20la%20basilique%20Saint%20Augustin.jpg?width=1400" alt="آثار هيبون وكنيسة القديس أوغسطينوس">
+      <div class="cap" data-i18n="origin.caption">موقع هيبون الأثري بمواجهة كنيسة القديس أوغسطينوس</div>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <span class="t-era" data-i18n="origin.t1.era">القرن ١١ ق.م</span>
+        <h3 data-i18n="origin.t1.h3">ميناء هيبون الفينيقي النوميدي</h3>
+        <p data-i18n="origin.t1.p">أنشأ النوميديون والفينيقيون مرفأً تجارياً مهماً على هذا الساحل، أطلقوا عليه اسم «هيبون»، وهو الأصل الذي اشتُقت منه تسمية «بونة» التي عُرفت بها المدينة لقرون.</p>
+      </div>
+      <div class="t-item">
+        <span class="t-era" data-i18n="origin.t2.era">العصر الروماني</span>
+        <h3 data-i18n="origin.t2.h3">هيبو ريجيوس ومدينة أوغسطينوس</h3>
+        <p data-i18n="origin.t2.p">عاش فيها القديس أوغسطينوس وترك أثراً روحياً وفكرياً خلّده لاحقاً بناء كنيسة على ربوة هيبون، أعيد تشييدها عام ١٨٨١ وتضم تمثالاً برونزياً للقديس.</p>
+      </div>
+      <div class="t-item">
+        <span class="t-era" data-i18n="origin.t3.era">القرن الـ١١ الميلادي</span>
+        <h3 data-i18n="origin.t3.h3">الطابع الأندلسي</h3>
+        <p data-i18n="origin.t3.p">شُيّد مسجد أبي مروان بطراز معماري أندلسي على أعمدة رومانية، شاهداً على تعاقب الحضارات التي طبعت هوية المدينة المعمارية.</p>
+      </div>
+      <div class="t-item">
+        <span class="t-era" data-i18n="origin.t4.era">١٨٣٠ – ١٩٦٢</span>
+        <h3 data-i18n="origin.t4.h3">الاستعمار الفرنسي وميناء تجاري</h3>
+        <p data-i18n="origin.t4.p">ظلت عنابة ميناءً تجارياً مهماً طوال القرن التاسع عشر، وشهدت في خمسينيات القرن العشرين إقامة مشاريع صناعية كبرى مهّدت لدورها الاقتصادي اللاحق.</p>
+      </div>
+      <div class="t-item">
+        <span class="t-era" data-i18n="origin.t5.era">١٩٦٤ – اليوم</span>
+        <h3 data-i18n="origin.t5.h3">مدينة الصلب والحداثة</h3>
+        <p data-i18n="origin.t5.p">تحتضن عنابة أكبر مركب للحديد والصلب في أفريقيا (الحجار)، لتصبح قطباً صناعياً واقتصادياً رائداً في شرق الجزائر، دون أن تفقد طابعها الساحلي والثقافي.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="landmarks" id="landmarks">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="landmarks.title">معالم لا تُنسى</h2>
+      <p data-i18n="landmarks.desc">من الآثار الرومانية إلى العمارة الأندلسية، تختزن عنابة تراثاً متنوعاً يستحق الاكتشاف.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="card-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/St%20Augustine%27s%20Basilica%2C%20Hippo%20Regius%20(15708457209).jpg?width=700" alt="كنيسة القديس أوغسطينوس">
+        <div class="card-body">
+          <span class="num">٠١</span>
+          <h3 data-i18n="landmarks.c1.h3">كنيسة القديس أوغسطينوس</h3>
+          <p data-i18n="landmarks.c1.p">تعلو ربوة هيبون، وتُعد من أبرز معالم عنابة الجاذبة للزوار، شاهدة على تاريخ التعايش الديني في المنطقة.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Museum%20at%20Hippo%20Regius%20(Annaba)%20(15864053292).jpg?width=700" alt="متحف هيبون">
+        <div class="card-body">
+          <span class="num">٠٢</span>
+          <h3 data-i18n="landmarks.c2.h3">آثار هيبون ومتحفها</h3>
+          <p data-i18n="landmarks.c2.p">موقع أثري روماني يطل على الكنيسة، ومتحف صغير يضم مجموعة نادرة من الفسيفساء والتماثيل والأواني القديمة.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mosqu%C3%A9e%20de%20Sidi%20Bou%20Merouane.jpg?width=700" alt="مسجد أبي مروان">
+        <div class="card-body">
+          <span class="num">٠٣</span>
+          <h3 data-i18n="landmarks.c3.h3">مسجد أبي مروان</h3>
+          <p data-i18n="landmarks.c3.p">بُني في القرن الحادي عشر بطراز أندلسي أصيل، معتمداً على أعمدة رومانية أعيد توظيفها في بنائه.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Plage%20de%20seraidi%20%C3%A0%2015km%20d%27Annaba.jpg?width=700" alt="حديقة السرايدية">
+        <div class="card-body">
+          <span class="num">٠٤</span>
+          <h3 data-i18n="landmarks.c4.h3">حديقة السرايدية</h3>
+          <p data-i18n="landmarks.c4.p">منطقة جبلية خضراء تجمع بين الغابات والشواطئ، ملاذ طبيعي للاسترخاء بعيداً عن ضجيج المدينة.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cours%20de%20la%20R%C3%A9volution%20-%20Annaba.jpg?width=700" alt="ساحة الثورة">
+        <div class="card-body">
+          <span class="num">٠٥</span>
+          <h3 data-i18n="landmarks.c5.h3">ساحة الثورة</h3>
+          <p data-i18n="landmarks.c5.p">من أبرز الساحات النابضة بالحياة في قلب المدينة، ونقطة التقاء يومية لسكانها.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Chetaybi%20Annaba%20plage%20sable%20d%27or.jpg?width=700" alt="شواطئ عنابة الذهبية">
+        <div class="card-body">
+          <span class="num">٠٦</span>
+          <h3 data-i18n="landmarks.c6.h3">الكورنيش والشواطئ الذهبية</h3>
+          <p data-i18n="landmarks.c6.p">امتداد ساحلي بطول ٨٠ كيلومتراً برمال ذهبية ومياه صافية، جعل من عنابة وجهة اصطياف مفضلة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beaches" id="beaches">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="beaches.title">🌊 بحار عنابة الخلابة</h2>
+      <p data-i18n="beaches.desc">من الكورنيش إلى شطايبي وسرايدي، تتنوع شواطئ عنابة بين الرمال الذهبية والمياه الفيروزية والغروب الساحر — جولة بصرية سريعة على أجمل زواياها الساحلية.</p>
+    </div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="beachesMarquee">
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20La%20Corniche.jpg?width=700" alt="كورنيش عنابة" loading="lazy"><span class="mc-caption" data-i18n="beaches.c1">كورنيش عنابة</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20beach.jpg?width=700" alt="شاطئ عنابة" loading="lazy"><span class="mc-caption" data-i18n="beaches.c2">شاطئ عنابة</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sun%20Set%20Chetaibi%20Annaba.jpg?width=700" alt="غروب الشمس بشطايبي" loading="lazy"><span class="mc-caption" data-i18n="beaches.c3">غروب الشمس بشطايبي</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plage%20oued%20bokrat%20Annaba.jpg?width=700" alt="شاطئ واد بقرط" loading="lazy"><span class="mc-caption" data-i18n="beaches.c4">شاطئ واد بقرط</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20Seraidi.jpg?width=700" alt="سرايدي" loading="lazy"><span class="mc-caption" data-i18n="beaches.c5">مرتفعات سرايدي المطلة على البحر</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20cote.jpg?width=700" alt="الساحل العنابي" loading="lazy"><span class="mc-caption" data-i18n="beaches.c6">الساحل العنابي</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20plage%205clo.jpg?width=700" alt="شاطئ عنابة" loading="lazy"><span class="mc-caption" data-i18n="beaches.c7">إحدى شواطئ عنابة الذهبية</span></div>
+      <div class="marquee-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chetaybi%20Annaba%20plage%20sable%20d%27or.jpg?width=700" alt="شاطئ شطايبي الذهبي" loading="lazy"><span class="mc-caption" data-i18n="beaches.c8">شاطئ شطايبي الذهبي</span></div>
+      <!-- تكرار القائمة لضمان تمرير لا نهائي سلس -->
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20La%20Corniche.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c1">كورنيش عنابة</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20beach.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c2">شاطئ عنابة</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sun%20Set%20Chetaibi%20Annaba.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c3">غروب الشمس بشطايبي</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plage%20oued%20bokrat%20Annaba.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c4">شاطئ واد بقرط</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20Seraidi.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c5">مرتفعات سرايدي المطلة على البحر</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20cote.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c6">الساحل العنابي</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20plage%205clo.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c7">إحدى شواطئ عنابة الذهبية</span></div>
+      <div class="marquee-card" aria-hidden="true"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chetaybi%20Annaba%20plage%20sable%20d%27or.jpg?width=700" alt="" loading="lazy"><span class="mc-caption" data-i18n="beaches.c8">شاطئ شطايبي الذهبي</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="view3d" id="view3d">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="view3d.title">عنابة كما لم ترها من قبل</h2>
+      <p data-i18n="view3d.desc">حلّق فوق المدينة بعدسة الأقمار الصناعية، وتجوّل بين الكورنيش والقصبة وهيبون من زاوية علوية تفاعلية — اسحب واقلب الاتجاه لاستكشاف عنابة في ثلاثية الأبعاد.</p>
+    </div>
+    <div class="view3d-frame">
+      <span class="view3d-badge" data-i18n="view3d.badge">🛰️ عرض تفاعلي مباشر</span>
+      <iframe
+        src="https://www.google.com/maps?q=Annaba,Algeria&t=k&z=14&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="view3d-hint" data-i18n="view3d.hint">اضغط مع السحب (أو إصبعين على الجوال) لإمالة الزاوية والدوران حول المدينة بشكل ثلاثي الأبعاد.</div>
+    </div>
+    <div class="view3d-actions">
+      <a class="btn-3d primary" href="https://earth.google.com/web/@36.9,7.7667,10a,20000d,35y,0h,60t,0r" target="_blank" rel="noopener" data-i18n="view3d.btn1">🌍 افتح عنابة في Google Earth ثلاثي الأبعاد</a>
+      <a class="btn-3d secondary" href="https://www.google.com/maps/place/Annaba/@36.9,7.7667,13z" target="_blank" rel="noopener" data-i18n="view3d.btn2">🗺️ فتح الخريطة كاملة الشاشة</a>
+    </div>
+  </div>
+</section>
+
+<section class="articles" id="articles">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="articles.title">مقالات موسّعة</h2>
+      <p data-i18n="articles.desc">اقرأ بتفصيل أكبر عن جوانب مختلفة من مدينة عنابة، من طبيعتها إلى مطبخها ورياضتها.</p>
+    </div>
+    <div class="article-list">
+
+      <details class="article">
+        <summary>
+          <div class="a-title">
+            <span class="a-tag" data-i18n="articles.a1.tag">الموقع والطبيعة</span>
+            <div>
+              <h3 data-i18n="articles.a1.h3">أين تقع عنابة، وكيف هو مناخها؟</h3>
+              <span class="a-teaser" data-i18n="articles.a1.teaser">موقع استراتيجي على المتوسط، قرب الحدود التونسية ووادي سيبوس.</span>
+            </div>
+          </div>
+          <span class="chev">︿</span>
+        </summary>
+        <div class="article-body">
+          <p data-i18n="articles.a1.p1">تقع عنابة في أقصى الشمال الشرقي للجزائر، على ساحل البحر الأبيض المتوسط وبالقرب من مصب وادي سيبوس. تبعد عن العاصمة الجزائر نحو ٦٠٠ كيلومتر، وعن قسنطينة نحو ١٥٠ كيلومتراً، بينما لا تفصلها عن الحدود الجزائرية التونسية سوى ٨٠ كيلومتراً، ما يمنحها موقعاً حدودياً وتجارياً مهماً منذ القدم.</p>
+          <p data-i18n="articles.a1.p2">مناخ المدينة متوسطي نموذجي: صيف حار وجاف نسبياً بفضل النسيم البحري، وشتاء معتدل ورطب تتساقط خلاله أمطار غزيرة مقارنة ببقية مناطق الشرق الجزائري. هذا المناخ، إلى جانب التربة الخصبة لسهل عنابة، جعل المنطقة على الدوام قِبلة زراعية إلى جانب دورها الصناعي والبحري.</p>
+          <p data-i18n="articles.a1.p3">يضفي جبل الإيدوغ المطل على المدينة من الجنوب الغربي طابعاً جبلياً أخضر يتناقض مع الواجهة البحرية المسطحة، وهو ما يمنح عنابة تنوعاً جغرافياً نادراً بين الجبل والساحل والسهل في مساحة صغيرة نسبياً.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-title">
+            <span class="a-tag" data-i18n="articles.a2.tag">أصل التسمية</span>
+            <div>
+              <h3 data-i18n="articles.a2.h3">من هيبون إلى «بلد العناب»: حكاية اسم المدينة</h3>
+              <span class="a-teaser" data-i18n="articles.a2.teaser">أربعة أسماء عبر ثلاثة آلاف سنة تروي قصة تعاقب الحضارات.</span>
+            </div>
+          </div>
+          <span class="chev">︿</span>
+        </summary>
+        <div class="article-body">
+          <p data-i18n="articles.a2.p1">حملت المدينة عبر تاريخها أكثر من اسم: «هيبون» في العهد الفينيقي النوميدي، ثم «هيبو ريجيوس» في العهد الروماني، فـ«بونة» في العصور الوسطى الإسلامية، ثم «بون» (Bône) خلال الاحتلال الفرنسي، قبل أن تستقر على اسمها الحالي «عنابة» بعد الاستقلال.</p>
+          <p data-i18n="articles.a2.p2">يُرجَّح أن اسم «عنابة» مشتق من كلمة «العناب»، الفاكهة التي اشتهرت بها المنطقة بكثرة، لدرجة أن سكانها لُقّبوا شعبياً بـ«أهل بلد العناب». وتحمل المدينة أيضاً لقبين شائعين حتى اليوم: «جوهرة الشرق الجزائري» و«جوهرة المتوسط»، إشارة إلى مكانتها الثقافية والاقتصادية المتميزة بين مدن الساحل الشرقي.</p>
+          <p data-i18n="articles.a2.p3">هذا التعدد في الأسماء ليس مجرد تفصيل لغوي، بل انعكاس لتاريخ طويل من التعايش الحضاري بين الفينيقيين والنوميديين والرومان والبيزنطيين والعرب والعثمانيين والفرنسيين، كل منهم ترك بصمته في المدينة قبل أن تستعيد عنابة هويتها الجزائرية الكاملة سنة ١٩٦٢.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-title">
+            <span class="a-tag" data-i18n="articles.a3.tag">الرياضة</span>
+            <div>
+              <h3 data-i18n="articles.a3.h3">اتحاد عنابة: أشهر الأندية وأكثرها جماهيرية</h3>
+              <span class="a-teaser" data-i18n="articles.a3.teaser">ملعب ١٩ ماي ١٩٥٦ وجمهور يُلقَّب بـ«الهوليڨانز».</span>
+            </div>
+          </div>
+          <span class="chev">︿</span>
+        </summary>
+        <div class="article-body">
+          <p data-i18n="articles.a3.p1">يُعد الاتحاد الرياضي لمدينة عنابة (USM Annaba) النادي الأبرز في المدينة، تأسس سنة ١٩٨٣ ضمن قرار رئاسي شمل عدة مدن جزائرية كبرى، وسرعان ما صنع لنفسه اسماً في البطولة الوطنية رغم عدم إحرازه ألقاباً كبرى حتى الآن.</p>
+          <p data-i18n="articles.a3.p2">يلعب النادي مبارياته على ملعب ١٩ ماي ١٩٥٦، وهو ثاني أكبر ملعب في الجزائر بعد ملعب ٥ جويلية بالعاصمة. ويشتهر جمهور اتحاد عنابة بحماسه الاستثنائي وأعداده الكبيرة التي قد تصل إلى عشرات الآلاف في المباريات الكبرى، ما أكسبهم لقب «الهوليڨانز» تشبيهاً بالجماهير الإنجليزية المعروفة بشغفها الجارف.</p>
+          <p data-i18n="articles.a3.p3">إلى جانب كرة القدم، ساهمت أندية أحياء ومناطق عنابة، مثل اتحاد سيدي عمار، في تكوين أجيال من اللاعبين الذين مثّلوا لاحقاً الأندية الكبرى في المدينة والمنتخب الوطني.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-title">
+            <span class="a-tag" data-i18n="articles.a4.tag">الطبيعة والسياحة البيئية</span>
+            <div>
+              <h3 data-i18n="articles.a4.h3">سرايدي: الغابة التي تعانق البحر</h3>
+              <span class="a-teaser" data-i18n="articles.a4.teaser">أوكالبتوس وصنوبر وبلوط فلين على ارتفاعات تطل على المتوسط.</span>
+            </div>
+          </div>
+          <span class="chev">︿</span>
+        </summary>
+        <div class="article-body">
+          <p data-i18n="articles.a4.p1">تقع منطقة سرايدي على ارتفاع يطل مباشرة على خليج عنابة، وتجمع بين غابة كثيفة من أشجار الأوكالبتوس والصنوبر البحري وبلوط الفلين، إلى جانب أشجار اللوز والجوز، لتشكل مساحة خضراء نادرة على مقربة من الساحل.</p>
+          <p data-i18n="articles.a4.p2">لا تزال شواطئ سرايدي تحافظ إلى حد كبير على طابعها الطبيعي البكر، رغم إقامة بعض المرافق البسيطة لخدمة المصطافين كمواقف السيارات ونقاط بيع المأكولات. وتستقطب هذه الشواطئ زواراً من الولايات المجاورة بفضل طريقها الجبلي المتعرج وسط الغابة، والذي يمنح القادمين إليها بانوراما مميزة على البحر.</p>
+          <p data-i18n="articles.a4.p3">تُعد سرايدي أيضاً وجهة مفضلة لهواة مراقبة الطيور والمشي في الطبيعة، ما يجعلها امتداداً بيئياً وسياحياً مكمّلاً للشواطئ الرملية المنتشرة على طول الساحل العنابي.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-title">
+            <span class="a-tag" data-i18n="articles.a5.tag">المطبخ المحلي</span>
+            <div>
+              <h3 data-i18n="articles.a5.h3">البوريك العنابي وأطباق بونة الأصيلة</h3>
+              <span class="a-teaser" data-i18n="articles.a5.teaser">من البوريك المقلي إلى الشخشوخة والقريتلية.</span>
+            </div>
+          </div>
+          <span class="chev">︿</span>
+        </summary>
+        <div class="article-body">
+          <p data-i18n="articles.a5.p1">يُعتبر «البوريك العنابي» العلامة المميزة للمطبخ المحلي، وهو طبق مصنوع من رقائق البريك المحشوة بالبطاطا المهروسة واللحم المفروم أو التونة والبصل والجبن والبقدونس، تُضاف فوقها بيضة قبل أن تُطوى وتُقلى في الزيت حتى تنضج. يحظى هذا الطبق بمكانة خاصة على مائدة رمضان في عنابة، إلى جانب شوربة الفريك المعروفة محلياً بـ«الجاري».</p>
+          <p data-i18n="articles.a5.p2">من الأطباق التقليدية الأخرى التي تحضّرها العائلات العنابية بانتظام: الشخشوخة، والقريتلية، والملوخية، والقناوية، إضافة إلى الكسكسي بمختلف أنواعه. كما تحتفظ المدينة بعادة اجتماعية جميلة تتمثل في تبادل الأطباق الرمضانية بين الجيران والأقارب.</p>
+          <p data-i18n="articles.a5.p3">هذا التنوع في الأطباق يعكس هوية عنابة كمدينة ساحلية منفتحة، استفادت من موقعها التجاري التاريخي لتطوّر مطبخاً محلياً غنياً يمزج بين النكهات البحرية والريفية.</p>
+        </div>
+      </details>
+
+      <details class="article">
+        <summary>
+          <div class="a-title">
+            <span class="a-tag" data-i18n="articles.a6.tag">الصناعة</span>
+            <div>
+              <h3 data-i18n="articles.a6.h3">الحجار: من مخطط قسنطينة إلى عملاق الصلب الأفريقي</h3>
+              <span class="a-teaser" data-i18n="articles.a6.teaser">من ١٩٥٨ إلى اليوم: مسار مركب صناعي غيّر وجه المدينة.</span>
+            </div>
+          </div>
+          <span class="chev">︿</span>
+        </summary>
+        <div class="article-body">
+          <p data-i18n="articles.a6.p1">تعود فكرة إقامة مصنع للصلب في منطقة الحجار جنوب عنابة إلى «مخطط قسنطينة» الاستعماري لسنة ١٩٥٨. وبعد الاستقلال، أنشأت الدولة الجزائرية في الثالث من سبتمبر ١٩٦٤ الشركة الوطنية للصناعة السيدرالية لبناء المركب، الذي دخل مرحلة الإنتاج الفعلي بعد افتتاحه في ١٩ يونيو ١٩٦٩.</p>
+          <p data-i18n="articles.a6.p2">يمتد المركب على مساحة تفوق ٨٠٠ هكتار، ويضم فرنين عاليين ومصانع صلب ووحدات درفلة متعددة، ويرتبط باستغلال مناجم الحديد في ونزة وبوحجر. وقد شهد المركب على مر العقود مراحل تأميم وخصخصة متعاقبة، وبلغ إنتاجه من الصلب نحو ٧٠٠ ألف طن سنة ٢٠١٨، بتشغيله آلاف العمال من ولاية عنابة والولايات المجاورة.</p>
+          <p data-i18n="articles.a6.p3">يبقى مركب الحجار حتى اليوم أكبر مجمع للحديد والصلب في القارة الأفريقية، ورمزاً للطموح الصناعي الجزائري في العقود الأولى بعد الاستقلال، ومحركاً اقتصادياً رئيسياً لمدينة عنابة ومحيطها.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="split" id="life">
+  <div class="quote-band">
+    <blockquote>
+      <span data-i18n="quote.text">"عنابة مدينة كلما امتدت في الزمن كلما زادت صغراً، فهي طفلة حسناء"</span>
+      <cite data-i18n="quote.cite">— عز الدين ميهوبي، كاتب جزائري</cite>
+    </blockquote>
+  </div>
+  <div class="split-panel a">
+    <img class="split-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Wilaya%20de%20annaba%202.jpg?width=900" alt="ميناء ومدينة عنابة الصناعية">
+    <span class="tag" data-i18n="split.a.tag">الاقتصاد</span>
+    <h3 data-i18n="split.a.h3">قلب الصناعة في الشرق الجزائري</h3>
+    <p data-i18n="split.a.p">
+      تحتضن عنابة مركب الحجار للحديد والصلب، أكبر منشأة من نوعها في أفريقيا،
+      ما جعل منها قطباً صناعياً رئيسياً منذ ستينيات القرن الماضي. إلى جانب
+      الصلب، تنشط المدينة في التصنيع الكيميائي وتعليب الأغذية وميناء تجاري
+      يخدم شرق البلاد.
+    </p>
+    <ul>
+      <li data-i18n="split.a.li1">مركب الحجار للحديد والصلب</li>
+      <li data-i18n="split.a.li2">ميناء تجاري تاريخي على المتوسط</li>
+      <li data-i18n="split.a.li3">صناعات كيميائية وغذائية</li>
+    </ul>
+  </div>
+  <div class="split-panel b">
+    <span class="tag" data-i18n="split.b.tag">الثقافة والفنون</span>
+    <h3 data-i18n="split.b.h3">عاصمة الموسيقى الأندلسية الشرقية</h3>
+    <p data-i18n="split.b.p">
+      تُعرف عنابة كأحد أهم مراكز الطابع الغنائي الأندلسي المألوف في الجزائر،
+      وقد أنجبت أسماءً فنية بارزة تركت بصمتها في هذا اللون التراثي، إلى جانب
+      الصناعات التقليدية والحرف اليدوية التي لا تزال حاضرة في نسيج المدينة.
+    </p>
+    <ul>
+      <li data-i18n="split.b.li1">الطابع الأندلسي المألوف</li>
+      <li data-i18n="split.b.li2">حرف وصناعات تقليدية</li>
+      <li data-i18n="split.b.li3">مهرجانات وفعاليات ثقافية سنوية</li>
+    </ul>
+  </div>
+</section>
+
+<section class="survey-section" id="survey">
+  <div class="wrap">
+    <div class="survey-box">
+      <div class="section-head">
+        <h2 data-i18n="survey.title">📋 استطلاع رأي حول مدينة عنابة</h2>
+        <p data-i18n="survey.desc">رأيك يهمّنا! شاركنا بدقيقة من وقتك لتقييم المدينة واقتراح ما يمكن تحسينه.</p>
+      </div>
+
+      <form id="surveyForm" action="https://formsubmit.co/zaynoue@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="نتيجة استطلاع جديد - موقع عنابة">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="شكراً لمشاركتك في استطلاع عنابة! تم استلام إجابتك بنجاح.">
+
+        <div class="survey-field">
+          <label data-i18n="survey.q1">كيف تقيّم مدينة عنابة بشكل عام؟</label>
+          <div class="survey-options">
+            <label><input type="radio" name="التقييم_العام" value="ممتازة" required> <span data-i18n="survey.q1.o1">ممتازة</span></label>
+            <label><input type="radio" name="التقييم_العام" value="جيدة جداً"> <span data-i18n="survey.q1.o2">جيدة جداً</span></label>
+            <label><input type="radio" name="التقييم_العام" value="جيدة"> <span data-i18n="survey.q1.o3">جيدة</span></label>
+            <label><input type="radio" name="التقييم_العام" value="متوسطة"> <span data-i18n="survey.q1.o4">متوسطة</span></label>
+            <label><input type="radio" name="التقييم_العام" value="بحاجة لتحسين"> <span data-i18n="survey.q1.o5">بحاجة لتحسين</span></label>
+          </div>
+        </div>
+
+        <div class="survey-field">
+          <label data-i18n="survey.q2">ما هو معلمك المفضل في عنابة؟</label>
+          <div class="survey-options">
+            <label><input type="radio" name="المعلم_المفضل" value="الكورنيش والشواطئ" required> <span data-i18n="survey.q2.o1">الكورنيش والشواطئ</span></label>
+            <label><input type="radio" name="المعلم_المفضل" value="كنيسة القديس أوغسطينوس وهيبون"> <span data-i18n="survey.q2.o2">كنيسة أوغسطينوس وهيبون</span></label>
+            <label><input type="radio" name="المعلم_المفضل" value="مسجد أبي مروان"> <span data-i18n="survey.q2.o3">مسجد أبي مروان</span></label>
+            <label><input type="radio" name="المعلم_المفضل" value="سرايدي"> <span data-i18n="survey.q2.o4">سرايدي</span></label>
+            <label><input type="radio" name="المعلم_المفضل" value="أخرى"> <span data-i18n="survey.q2.o5">أخرى</span></label>
+          </div>
+        </div>
+
+        <div class="survey-field">
+          <label for="surveySuggestion" data-i18n="survey.q3">ما الذي تقترح تحسينه في المدينة؟ (اختياري)</label>
+          <textarea id="surveySuggestion" name="مقترحات_التحسين" rows="4" data-i18n-placeholder="survey.q3.placeholder" placeholder="اكتب اقتراحك هنا..."></textarea>
+        </div>
+
+        <div class="survey-field">
+          <label for="surveyEmail" data-i18n="survey.q4">بريدك الإلكتروني (اختياري، إن رغبت بالرد عليك)</label>
+          <input type="email" id="surveyEmail" name="البريد_الإلكتروني_للمشارك" data-i18n-placeholder="survey.q4.placeholder" placeholder="example@email.com">
+        </div>
+
+        <button type="submit" class="survey-submit" data-i18n="survey.submit">إرسال الاستطلاع</button>
+        <p class="survey-note" data-i18n="survey.note">إجابتك تُرسل بشكل مباشر وآمن ولا تُخزَّن على هذا الموقع.</p>
+      </form>
+
+      <div class="survey-success" id="surveySuccess">
+        <div class="icon">✅</div>
+        <h3 data-i18n="survey.success.title">شكراً لمشاركتك!</h3>
+        <p data-i18n="survey.success.desc">تم إرسال إجابتك بنجاح. نقدّر وقتك في مساعدتنا على تحسين هذا الموقع.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const form = document.getElementById('surveyForm');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+        .then(function(){
+          form.style.display = 'none';
+          document.getElementById('surveySuccess').classList.add('show');
+        })
+        .catch(function(){
+          // كحل بديل عند تعذّر الإرسال عبر الخلفية، نلجأ للإرسال المباشر التقليدي للنموذج
+          form.submit();
+        });
+    });
+  });
+</script>
+
+<section class="donate-section" id="donate">
+  <div class="wrap">
+    <div class="donate-box">
+      <div class="eyebrow" data-i18n="donate.eyebrow">ادعموا الموقع</div>
+      <h2 data-i18n="donate.title">ساعدونا في تطوير هذا الموقع</h2>
+      <p data-i18n="donate.desc">annabazdf.com موقع مستقل يُدار بشغف لتقديم محتوى موثوق عن مدينة عنابة. تبرعكم، مهما كان بسيطاً، يساعدنا على تحسين التصميم، إضافة محتوى جديد، وتغطية تكاليف الاستضافة والتشغيل.</p>
+      <div class="donate-actions">
+        <button class="donate-btn" style="font-size:1rem; padding:14px 34px;" onclick="openDonateModal()" data-i18n="donate.cta">💛 <span class="dtext">تبرّع الآن</span></button>
+      </div>
+      <p class="donate-note" data-i18n="donate.note">كل تبرع، مهما كان حجمه، يصنع فرقاً حقيقياً في استمرارية الموقع. شكراً لدعمكم 🙏</p>
+    </div>
+  </div>
+</section>
+
+<div class="donate-modal-overlay" id="donateModal">
+  <div class="donate-modal">
+    <button class="dm-close" onclick="closeDonateModal()">✕</button>
+    <h3 data-i18n="donate.modal.title">اختر طريقة التبرع</h3>
+    <p data-i18n="donate.modal.desc">يمكنكم دعم الموقع عبر إحدى الوسائل التالية. سيتم فتح الرابط في نافذة جديدة.</p>
+    <div class="donate-options">
+      <!-- ⚠️ يرجى استبدال الروابط أدناه بروابط الدفع الحقيقية الخاصة بكم (PayPal / Buy Me a Coffee / بطاقة بنكية...) -->
+      <a href="https://www.paypal.com/donate" target="_blank" rel="noopener">PayPal <span>→</span></a>
+      <a href="https://www.buymeacoffee.com/" target="_blank" rel="noopener">Buy Me a Coffee <span>→</span></a>
+      <a href="mailto:contact@annabazdf.com?subject=Don%20/%20Donation" data-i18n="donate.modal.email">تواصل معنا مباشرة <span>→</span></a>
+    </div>
+  </div>
+</div>
+<script>
+  function openDonateModal(){ document.getElementById('donateModal').classList.add('open'); }
+  function closeDonateModal(){ document.getElementById('donateModal').classList.remove('open'); }
+  document.getElementById('donateModal').addEventListener('click', function(e){
+    if(e.target === this) closeDonateModal();
+  });
+</script>
+
+<footer>
+  <div class="brand">عناب<span style="color:var(--gold)">ة</span></div>
+  <p data-i18n="footer.desc">بونة القديمة، جوهرة المتوسط، ومدينة الحاضر الصناعي والثقافي.</p>
+  <div class="credit" data-i18n="footer.credit">تصميم: زين الدين</div>
+  <div class="domain">www.annabazdf.com</div>
+</footer>
+
+<script>
+const I18N = {
+  "ar": {
+    "intro.eyebrow": "أهلاً وسهلاً بكم",
+    "intro.title": "مرحباً بكم في عنابة<br>جوهرة الشرق",
+    "intro.sub": "قسمون زين الدين يرحب بكم",
+    "intro.enter": "دخول الموقع ↓",
+    "nav.history": "التاريخ",
+    "nav.videos": "فيديوهات",
+    "nav.news": "الأخبار",
+    "nav.origin": "الأصل",
+    "nav.landmarks": "المعالم",
+    "nav.beaches": "الشواطئ",
+    "nav.articles": "مقالات",
+    "nav.life": "الحياة",
+    "nav.donateBtn": "💛 <span class=\"dtext\">تبرّع</span>",
+    "hero.eyebrow": "شمال شرق الجزائر — البحر الأبيض المتوسط",
+    "hero.title": "عنابة، <em>جوهرة</em><br>الشرق الجزائري",
+    "hero.lead": "مدينة تحمل في اسمها عبق التاريخ، وفي سواحلها ذهب الرمال ونقاء المياه.\n    من ميناء «هيبون» الفينيقي النوميدي إلى صرح الصلب الأفريقي الكبير،\n    عنابة قصة امتدت أكثر من ثلاثين قرناً على ضفاف المتوسط.",
+    "hero.stat1": "شريط ساحلي",
+    "hero.stat2b": "القرن ١١ ق.م",
+    "hero.stat2": "تأسيس هيبون",
+    "hero.stat3b": "الرابعة",
+    "hero.stat3": "الأكبر جزائرياً سكاناً",
+    "hero.stat4": "زائر لهذا الموقع",
+    "hero.scroll": "تابع القراءة",
+    "videos.title": "شاهد عنابة مباشرة",
+    "videos.desc": "مقاطع فيديو حقيقية تنقلكم إلى شوارع وشواطئ ومعالم المدينة، كأنكم فيها.",
+    "videos.v1": "🚁 عنابة من السماء — لقطات جوية بجودة عالية",
+    "videos.v2": "📍 أفضل الأماكن التي يجب زيارتها في عنابة",
+    "videos.v3": "🌊 جولة سياحية مع مرشد محلي في عنابة",
+    "history.title": "تاريخ عنابة العريق",
+    "history.desc": "أكثر من ثلاثة آلاف عام متصلة من التاريخ، من ميناء فينيقي صغير إلى مدينة جزائرية كبرى — رحلة موثّقة عبر ثماني حقب.",
+    "history.era1.span": "حوالي القرن ١٢ ق.م",
+    "history.era1.h3": "التأسيس الفينيقي: ميناء «أُبّون»",
+    "history.era1.p1": "أسّس التجّار الفينيقيون على هذا الساحل مرفأً أطلقوا عليه اسم «أُبّون»، وهو لفظ فينيقي يُعتقد أنه يعني «الماء المتدفق»، إشارة إلى ينابيع المنطقة الغزيرة النابعة من جبل الإيدوغ القريب. أعطى هذا الاسم لاحقاً تسميته للخليج الذي تطل عليه المدينة.",
+    "history.era1.p2": "لقربها الجغرافي من قرطاج، تحالفت أُبّون مع الحاضرة البونيقية الكبرى وأصبحت من أهم موانئها التجارية على السواحل النوميدية، وشاركت مصيرها خلال الحرب البونية الأولى (٢٦٤–٢٤١ ق.م) التي خاضتها قرطاج ضد روما.",
+    "history.era2.span": "٢٠٣ ق.م – ٤٣٠ م",
+    "history.era2.h3": "هيبو ريجيوس: مقر ملكي نوميدي ثم مدينة رومانية",
+    "history.era2.p1": "بعد سقوط قرطاج، أصبحت المدينة إحدى مقرّات الملوك النوميديين، ما أكسبها التسمية اللاتينية «هيبو ريجيوس» أي «هيبو الملكية» تمييزاً لها عن مدن أخرى تحمل اسم هيبو في المنطقة. ثم أُدمجت لاحقاً ضمن الولايات الرومانية في إفريقيا، وازدهرت كمركز حضري وديني مهم.",
+    "history.era2.p2": "اكتسبت المدينة شهرتها العالمية حين أصبح القديس أوغسطينوس أسقفاً عليها بين عامي ٣٩٦ و٤٣٠ للميلاد، وألّف فيها جزءاً كبيراً من مؤلفاته اللاهوتية والفلسفية المؤثرة. تُوفي أوغسطينوس في المدينة في ٢٨ أوت ٤٣٠، أثناء حصار الوندال لها.",
+    "history.era3.span": "٤٣١ – ٥٣٣ م",
+    "history.era3.h3": "الوندال ثم إعادة الفتح البيزنطي",
+    "history.era3.p1": "بعد حصار دام نحو أربعة عشر شهراً، سقطت هيبو ريجيوس بيد الملك الوندالي جنسريك سنة ٤٣١ للميلاد، وشكّلت لفترة من الزمن أحد أهم مواقع مملكة الوندال في شمال إفريقيا قبل أن تنتقل مكانة الصدارة إلى قرطاج بعد سقوطها هي الأخرى سنة ٤٣٩.",
+    "history.era3.p2": "استعاد البيزنطيون المدينة ضمن حملة الجنرال بليزاريوس لإعادة فتح شمال إفريقيا سنة ٥٣٣ للميلاد، لتدخل بذلك حقبة بيزنطية استمرت أكثر من قرن، شهدت خلالها بعض أعمال التحصين والترميم قبل الفتح الإسلامي.",
+    "history.era4.span": "القرن ٧ – ١٥ م",
+    "history.era4.h3": "الفتح الإسلامي وولادة اسم «بونة»",
+    "history.era4.p1": "مع الفتوحات الإسلامية لبلاد المغرب في القرن السابع الميلادي، دخلت المدينة العهد الإسلامي وعُرفت باسمها الجديد «بونة»، وتعاقبت عليها دول إسلامية عدة عبر العصور الوسطى، من الأدارسة والفاطميين إلى الزيريين والحماديين فالموحدين والحفصيين.",
+    "history.era4.p2": "يعود مسجد سيدي بومروان، أحد أبرز معالم المدينة اليوم، إلى سنة ١٠٣٣م في العهد الزيري، وشُيّد بطراز أندلسي معتمداً على أعمدة رومانية أعيد توظيفها من الأطلال القديمة. وبعد سقوط غرناطة سنة ١٤٩٢، استقبلت المدينة أفواجاً من المهاجرين الأندلسيين الذين أثروا نسيجها الثقافي والموسيقي والمعماري.",
+    "history.era5.span": "القرن ١٦ – ١٨٣٠ م",
+    "history.era5.h3": "بونة في العهد العثماني: سنجق بلاد العناب",
+    "history.era5.p1": "انضمت بونة إلى إيالة الجزائر العثمانية، وأصبحت مقراً لسنجق يُعرف باسم «سنجق بلاد العناب»، إدارياً تحت إشراف باي قسنطينة. من أبرز آثار هذه الحقبة جامع الباي، الذي شيّده صالح باي (باي قسنطينة بين ١٧٧٥ و١٧٩٢) على غرار الجامع الكبير بالعاصمة، وظل مصلّى للأتراك الأحناف حتى سنة ١٨٣٢.",
+    "history.era5.p2": "عُرفت المدينة العثمانية بشبكة مياهها المتطورة المكوّنة من سبعة ينابيع تُغذّيها قناة فخارية من جبل الإيدوغ، وبحي القصبة ذي الطابع العثماني المميز ببيوته المتلاصقة وحدائقه الداخلية، والذي لا يزال قائماً حتى اليوم كمعلم سياحي.",
+    "history.era6.span": "١٨٣٠ – ١٩٦٢ م",
+    "history.era6.h3": "الاستعمار الفرنسي: من بونة إلى Bône",
+    "history.era6.p1": "احتلت القوات الفرنسية المدينة لأشهر معدودة سنة ١٨٣٠، قبل أن تتمكن الحامية العثمانية بمساندة السكان من طردها. غير أن فرنسا عادت سنة ١٨٣٢ بقوة بحرية واحتلت المدينة احتلالاً كاملاً، مسيطرة على قلعتها وأسوارها.",
+    "history.era6.p2": "أُطلق على المدينة اسمها الفرنسي «بون» (Bône)، وابتداءً من سنة ١٨٧٠ انطلق تشييد المدينة الجديدة خارج أسوار القصبة القديمة بمخطط عمراني أوروبي، لتتحول عنابة إلى ميناء استعماري رئيسي على المتوسط طوال ما يقارب ١٣٢ عاماً من الاحتلال.",
+    "history.era7.span": "١٩٥٤ – ١٩٦٢ م",
+    "history.era7.h3": "ثورة التحرير: منطقة الشمال القسنطيني في قلب المعركة",
+    "history.era7.p1": "مع اندلاع ثورة أول نوفمبر ١٩٥٤، شكّلت منطقة الشمال القسنطيني، التي تنتمي إليها عنابة، معقلاً مهماً لجيش التحرير الوطني ضمن ما عُرف بالولاية الثانية. وقد سُجن يوسف زيغود، القائد الذي أشرف لاحقاً على هجومات ٢٠ أوت ١٩٥٥ الواسعة في المنطقة، في سجن عنابة قبل انطلاق الثورة.",
+    "history.era7.p2": "واصلت المدينة ومحيطها المساهمة في الكفاح المسلح حتى إعلان استقلال الجزائر في ٥ يوليو ١٩٦٢، لتستعيد المدينة عندها اسمها العربي «عنابة» نهائياً بعد قرن وثلث من الاحتلال.",
+    "history.era8.span": "١٩٦٢ – اليوم",
+    "history.era8.h3": "الاستقلال والنهضة الصناعية",
+    "history.era8.p1": "عرفت عنابة بعد الاستقلال تحولاً اقتصادياً جذرياً، تُوّج بتأسيس الشركة الوطنية للصناعة السيدرالية في ٣ سبتمبر ١٩٦٤، وانطلاق الإنتاج الفعلي لمركب الحجار للحديد والصلب بعد افتتاحه في ١٩ يونيو ١٩٦٩، ليصبح أكبر مركب من نوعه في القارة الأفريقية.",
+    "history.era8.p2": "واليوم، تجمع عنابة بين إرثها التاريخي الممتد لثلاثة آلاف عام وحاضرها كقطب صناعي واقتصادي رائد في الجزائر، محافظة على لقبيها التاريخيين: «جوهرة الشرق الجزائري» و«جوهرة المتوسط».",
+    "news.title": "الأخبار اليومية <span class=\"live-badge\"><span class=\"live-dot\"></span>مباشر</span>",
+    "news.desc": "كل ما يحدث حصرياً في مدينة عنابة، بتحديث مستمر: نشرة يومية مُحرَّرة + عناوين تتحدث تلقائياً في كل زيارة.",
+    "news.refresh": "تحديث الأخبار",
+    "news.bname": "نشرة عنابة اليوم",
+    "news.bdate": "الخميس ٢٣ يوليو ٢٠٢٦",
+    "news.kicker": "عاجل",
+    "news.lead.h3": "حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة",
+    "news.lead.p1": "تواصل مصالح الحماية المدنية والجيش الوطني الشعبي منذ منتصف الأسبوع الماضي عمليات مكافحة حرائق غابية متفرقة اندلعت في المرتفعات الجبلية لبلدية سرايدي بولاية عنابة، وتوسّعت ليلة الثلاثاء الماضي بشكل حاد بفعل ارتفاع درجات الحرارة وهبوب رياح قوية، ما اضطر السلطات إلى إجلاء أكثر من مئة مريض من مؤسسة إعادة التأهيل الوظيفي بسرايدي نحو مستشفيي الحجار والبوني تحسّباً لاقتراب ألسنة اللهب من محيط المنشأة.",
+    "news.lead.p2": "كما لجأت مؤسسة سونلغاز إلى قطع الكهرباء والغاز احترازياً عن كامل بلدية سرايدي، فيما زار وزير الداخلية والجماعات المحلية والنقل، السعيد سعيود، المنطقة وأكد متابعة رئيس الجمهورية عبد المجيد تبون للملف بشكل آني، مع الإعلان عن تعويض كامل للمتضررين وإعادة بناء نحو ١٥٠ مسكناً متضرراً. وبعد السيطرة على جزء من الحرائق، شرعت السلطات في إعادة نقل المرضى تدريجياً إلى مستشفى سرايدي.",
+    "news.source1": "المصدر: العربي الأصيل ←",
+    "news.item1.kicker": "محليات",
+    "news.item1.h4": "سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز",
+    "news.item1.p": "باشرت مديرية توزيع سونلغاز بعنابة معاينة ميدانية للشبكات الكهربائية والغازية التي طالها الحريق في سرايدي، تمهيداً لإعادة الخدمة تدريجياً بعد تراجع الخطر عن المنشآت الحيوية.",
+    "news.source2": "المصدر: أوراس ←",
+    "news.item2.kicker": "رياضة",
+    "news.item2.h4": "اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً",
+    "news.item2.p": "أنهى اتحاد عنابة، الملقب جمهوره بـ«الهوليڨانز»، موسم ٢٠٢٥-٢٠٢٦ في المركز السادس ضمن مجموعة الوسط الشرقي للرابطة الثانية المحترفة، ويترقب أنصاره تعزيزات صيفية تعيد الفريق إلى دائرة المنافسة على الصعود.",
+    "news.note": "هذه النشرة تُحرَّر يدوياً وتعكس أبرز مستجدات المدينة عند آخر تحديث للصفحة. للاطلاع على عناوين إضافية محدَّثة تلقائياً، تابع القائمة أدناه.",
+    "news.moreTitle": "📰 آخر العناوين <span class=\"live-badge\"><span class=\"live-dot\"></span>تحديث تلقائي</span>",
+    "origin.title": "من بونة إلى عنابة",
+    "origin.desc": "ثلاثة آلاف عام من التاريخ، حيث تعاقبت الحضارات على هذه البقعة من الساحل الجزائري.",
+    "origin.caption": "موقع هيبون الأثري بمواجهة كنيسة القديس أوغسطينوس",
+    "origin.t1.era": "القرن ١١ ق.م",
+    "origin.t1.h3": "ميناء هيبون الفينيقي النوميدي",
+    "origin.t1.p": "أنشأ النوميديون والفينيقيون مرفأً تجارياً مهماً على هذا الساحل، أطلقوا عليه اسم «هيبون»، وهو الأصل الذي اشتُقت منه تسمية «بونة» التي عُرفت بها المدينة لقرون.",
+    "origin.t2.era": "العصر الروماني",
+    "origin.t2.h3": "هيبو ريجيوس ومدينة أوغسطينوس",
+    "origin.t2.p": "عاش فيها القديس أوغسطينوس وترك أثراً روحياً وفكرياً خلّده لاحقاً بناء كنيسة على ربوة هيبون، أعيد تشييدها عام ١٨٨١ وتضم تمثالاً برونزياً للقديس.",
+    "origin.t3.era": "القرن الـ١١ الميلادي",
+    "origin.t3.h3": "الطابع الأندلسي",
+    "origin.t3.p": "شُيّد مسجد أبي مروان بطراز معماري أندلسي على أعمدة رومانية، شاهداً على تعاقب الحضارات التي طبعت هوية المدينة المعمارية.",
+    "origin.t4.era": "١٨٣٠ – ١٩٦٢",
+    "origin.t4.h3": "الاستعمار الفرنسي وميناء تجاري",
+    "origin.t4.p": "ظلت عنابة ميناءً تجارياً مهماً طوال القرن التاسع عشر، وشهدت في خمسينيات القرن العشرين إقامة مشاريع صناعية كبرى مهّدت لدورها الاقتصادي اللاحق.",
+    "origin.t5.era": "١٩٦٤ – اليوم",
+    "origin.t5.h3": "مدينة الصلب والحداثة",
+    "origin.t5.p": "تحتضن عنابة أكبر مركب للحديد والصلب في أفريقيا (الحجار)، لتصبح قطباً صناعياً واقتصادياً رائداً في شرق الجزائر، دون أن تفقد طابعها الساحلي والثقافي.",
+    "landmarks.title": "معالم لا تُنسى",
+    "landmarks.desc": "من الآثار الرومانية إلى العمارة الأندلسية، تختزن عنابة تراثاً متنوعاً يستحق الاكتشاف.",
+    "landmarks.c1.h3": "كنيسة القديس أوغسطينوس",
+    "landmarks.c1.p": "تعلو ربوة هيبون، وتُعد من أبرز معالم عنابة الجاذبة للزوار، شاهدة على تاريخ التعايش الديني في المنطقة.",
+    "landmarks.c2.h3": "آثار هيبون ومتحفها",
+    "landmarks.c2.p": "موقع أثري روماني يطل على الكنيسة، ومتحف صغير يضم مجموعة نادرة من الفسيفساء والتماثيل والأواني القديمة.",
+    "landmarks.c3.h3": "مسجد أبي مروان",
+    "landmarks.c3.p": "بُني في القرن الحادي عشر بطراز أندلسي أصيل، معتمداً على أعمدة رومانية أعيد توظيفها في بنائه.",
+    "landmarks.c4.h3": "حديقة السرايدية",
+    "landmarks.c4.p": "منطقة جبلية خضراء تجمع بين الغابات والشواطئ، ملاذ طبيعي للاسترخاء بعيداً عن ضجيج المدينة.",
+    "landmarks.c5.h3": "ساحة الثورة",
+    "landmarks.c5.p": "من أبرز الساحات النابضة بالحياة في قلب المدينة، ونقطة التقاء يومية لسكانها.",
+    "landmarks.c6.h3": "الكورنيش والشواطئ الذهبية",
+    "landmarks.c6.p": "امتداد ساحلي بطول ٨٠ كيلومتراً برمال ذهبية ومياه صافية، جعل من عنابة وجهة اصطياف مفضلة.",
+    "beaches.title": "🌊 بحار عنابة الخلابة",
+    "beaches.desc": "من الكورنيش إلى شطايبي وسرايدي، تتنوع شواطئ عنابة بين الرمال الذهبية والمياه الفيروزية والغروب الساحر — جولة بصرية سريعة على أجمل زواياها الساحلية.",
+    "beaches.c1": "كورنيش عنابة",
+    "beaches.c2": "شاطئ عنابة",
+    "beaches.c3": "غروب الشمس بشطايبي",
+    "beaches.c4": "شاطئ واد بقرط",
+    "beaches.c5": "مرتفعات سرايدي المطلة على البحر",
+    "beaches.c6": "الساحل العنابي",
+    "beaches.c7": "إحدى شواطئ عنابة الذهبية",
+    "beaches.c8": "شاطئ شطايبي الذهبي",
+    "view3d.title": "عنابة كما لم ترها من قبل",
+    "view3d.desc": "حلّق فوق المدينة بعدسة الأقمار الصناعية، وتجوّل بين الكورنيش والقصبة وهيبون من زاوية علوية تفاعلية — اسحب واقلب الاتجاه لاستكشاف عنابة في ثلاثية الأبعاد.",
+    "view3d.badge": "🛰️ عرض تفاعلي مباشر",
+    "view3d.hint": "اضغط مع السحب (أو إصبعين على الجوال) لإمالة الزاوية والدوران حول المدينة بشكل ثلاثي الأبعاد.",
+    "view3d.btn1": "🌍 افتح عنابة في Google Earth ثلاثي الأبعاد",
+    "view3d.btn2": "🗺️ فتح الخريطة كاملة الشاشة",
+    "articles.title": "مقالات موسّعة",
+    "articles.desc": "اقرأ بتفصيل أكبر عن جوانب مختلفة من مدينة عنابة، من طبيعتها إلى مطبخها ورياضتها.",
+    "articles.a1.tag": "الموقع والطبيعة",
+    "articles.a1.h3": "أين تقع عنابة، وكيف هو مناخها؟",
+    "articles.a1.teaser": "موقع استراتيجي على المتوسط، قرب الحدود التونسية ووادي سيبوس.",
+    "articles.a1.p1": "تقع عنابة في أقصى الشمال الشرقي للجزائر، على ساحل البحر الأبيض المتوسط وبالقرب من مصب وادي سيبوس. تبعد عن العاصمة الجزائر نحو ٦٠٠ كيلومتر، وعن قسنطينة نحو ١٥٠ كيلومتراً، بينما لا تفصلها عن الحدود الجزائرية التونسية سوى ٨٠ كيلومتراً، ما يمنحها موقعاً حدودياً وتجارياً مهماً منذ القدم.",
+    "articles.a1.p2": "مناخ المدينة متوسطي نموذجي: صيف حار وجاف نسبياً بفضل النسيم البحري، وشتاء معتدل ورطب تتساقط خلاله أمطار غزيرة مقارنة ببقية مناطق الشرق الجزائري. هذا المناخ، إلى جانب التربة الخصبة لسهل عنابة، جعل المنطقة على الدوام قِبلة زراعية إلى جانب دورها الصناعي والبحري.",
+    "articles.a1.p3": "يضفي جبل الإيدوغ المطل على المدينة من الجنوب الغربي طابعاً جبلياً أخضر يتناقض مع الواجهة البحرية المسطحة، وهو ما يمنح عنابة تنوعاً جغرافياً نادراً بين الجبل والساحل والسهل في مساحة صغيرة نسبياً.",
+    "articles.a2.tag": "أصل التسمية",
+    "articles.a2.h3": "من هيبون إلى «بلد العناب»: حكاية اسم المدينة",
+    "articles.a2.teaser": "أربعة أسماء عبر ثلاثة آلاف سنة تروي قصة تعاقب الحضارات.",
+    "articles.a2.p1": "حملت المدينة عبر تاريخها أكثر من اسم: «هيبون» في العهد الفينيقي النوميدي، ثم «هيبو ريجيوس» في العهد الروماني، فـ«بونة» في العصور الوسطى الإسلامية، ثم «بون» (Bône) خلال الاحتلال الفرنسي، قبل أن تستقر على اسمها الحالي «عنابة» بعد الاستقلال.",
+    "articles.a2.p2": "يُرجَّح أن اسم «عنابة» مشتق من كلمة «العناب»، الفاكهة التي اشتهرت بها المنطقة بكثرة، لدرجة أن سكانها لُقّبوا شعبياً بـ«أهل بلد العناب». وتحمل المدينة أيضاً لقبين شائعين حتى اليوم: «جوهرة الشرق الجزائري» و«جوهرة المتوسط»، إشارة إلى مكانتها الثقافية والاقتصادية المتميزة بين مدن الساحل الشرقي.",
+    "articles.a2.p3": "هذا التعدد في الأسماء ليس مجرد تفصيل لغوي، بل انعكاس لتاريخ طويل من التعايش الحضاري بين الفينيقيين والنوميديين والرومان والبيزنطيين والعرب والعثمانيين والفرنسيين، كل منهم ترك بصمته في المدينة قبل أن تستعيد عنابة هويتها الجزائرية الكاملة سنة ١٩٦٢.",
+    "articles.a3.tag": "الرياضة",
+    "articles.a3.h3": "اتحاد عنابة: أشهر الأندية وأكثرها جماهيرية",
+    "articles.a3.teaser": "ملعب ١٩ ماي ١٩٥٦ وجمهور يُلقَّب بـ«الهوليڨانز».",
+    "articles.a3.p1": "يُعد الاتحاد الرياضي لمدينة عنابة (USM Annaba) النادي الأبرز في المدينة، تأسس سنة ١٩٨٣ ضمن قرار رئاسي شمل عدة مدن جزائرية كبرى، وسرعان ما صنع لنفسه اسماً في البطولة الوطنية رغم عدم إحرازه ألقاباً كبرى حتى الآن.",
+    "articles.a3.p2": "يلعب النادي مبارياته على ملعب ١٩ ماي ١٩٥٦، وهو ثاني أكبر ملعب في الجزائر بعد ملعب ٥ جويلية بالعاصمة. ويشتهر جمهور اتحاد عنابة بحماسه الاستثنائي وأعداده الكبيرة التي قد تصل إلى عشرات الآلاف في المباريات الكبرى، ما أكسبهم لقب «الهوليڨانز» تشبيهاً بالجماهير الإنجليزية المعروفة بشغفها الجارف.",
+    "articles.a3.p3": "إلى جانب كرة القدم، ساهمت أندية أحياء ومناطق عنابة، مثل اتحاد سيدي عمار، في تكوين أجيال من اللاعبين الذين مثّلوا لاحقاً الأندية الكبرى في المدينة والمنتخب الوطني.",
+    "articles.a4.tag": "الطبيعة والسياحة البيئية",
+    "articles.a4.h3": "سرايدي: الغابة التي تعانق البحر",
+    "articles.a4.teaser": "أوكالبتوس وصنوبر وبلوط فلين على ارتفاعات تطل على المتوسط.",
+    "articles.a4.p1": "تقع منطقة سرايدي على ارتفاع يطل مباشرة على خليج عنابة، وتجمع بين غابة كثيفة من أشجار الأوكالبتوس والصنوبر البحري وبلوط الفلين، إلى جانب أشجار اللوز والجوز، لتشكل مساحة خضراء نادرة على مقربة من الساحل.",
+    "articles.a4.p2": "لا تزال شواطئ سرايدي تحافظ إلى حد كبير على طابعها الطبيعي البكر، رغم إقامة بعض المرافق البسيطة لخدمة المصطافين كمواقف السيارات ونقاط بيع المأكولات. وتستقطب هذه الشواطئ زواراً من الولايات المجاورة بفضل طريقها الجبلي المتعرج وسط الغابة، والذي يمنح القادمين إليها بانوراما مميزة على البحر.",
+    "articles.a4.p3": "تُعد سرايدي أيضاً وجهة مفضلة لهواة مراقبة الطيور والمشي في الطبيعة، ما يجعلها امتداداً بيئياً وسياحياً مكمّلاً للشواطئ الرملية المنتشرة على طول الساحل العنابي.",
+    "articles.a5.tag": "المطبخ المحلي",
+    "articles.a5.h3": "البوريك العنابي وأطباق بونة الأصيلة",
+    "articles.a5.teaser": "من البوريك المقلي إلى الشخشوخة والقريتلية.",
+    "articles.a5.p1": "يُعتبر «البوريك العنابي» العلامة المميزة للمطبخ المحلي، وهو طبق مصنوع من رقائق البريك المحشوة بالبطاطا المهروسة واللحم المفروم أو التونة والبصل والجبن والبقدونس، تُضاف فوقها بيضة قبل أن تُطوى وتُقلى في الزيت حتى تنضج. يحظى هذا الطبق بمكانة خاصة على مائدة رمضان في عنابة، إلى جانب شوربة الفريك المعروفة محلياً بـ«الجاري».",
+    "articles.a5.p2": "من الأطباق التقليدية الأخرى التي تحضّرها العائلات العنابية بانتظام: الشخشوخة، والقريتلية، والملوخية، والقناوية، إضافة إلى الكسكسي بمختلف أنواعه. كما تحتفظ المدينة بعادة اجتماعية جميلة تتمثل في تبادل الأطباق الرمضانية بين الجيران والأقارب.",
+    "articles.a5.p3": "هذا التنوع في الأطباق يعكس هوية عنابة كمدينة ساحلية منفتحة، استفادت من موقعها التجاري التاريخي لتطوّر مطبخاً محلياً غنياً يمزج بين النكهات البحرية والريفية.",
+    "articles.a6.tag": "الصناعة",
+    "articles.a6.h3": "الحجار: من مخطط قسنطينة إلى عملاق الصلب الأفريقي",
+    "articles.a6.teaser": "من ١٩٥٨ إلى اليوم: مسار مركب صناعي غيّر وجه المدينة.",
+    "articles.a6.p1": "تعود فكرة إقامة مصنع للصلب في منطقة الحجار جنوب عنابة إلى «مخطط قسنطينة» الاستعماري لسنة ١٩٥٨. وبعد الاستقلال، أنشأت الدولة الجزائرية في الثالث من سبتمبر ١٩٦٤ الشركة الوطنية للصناعة السيدرالية لبناء المركب، الذي دخل مرحلة الإنتاج الفعلي بعد افتتاحه في ١٩ يونيو ١٩٦٩.",
+    "articles.a6.p2": "يمتد المركب على مساحة تفوق ٨٠٠ هكتار، ويضم فرنين عاليين ومصانع صلب ووحدات درفلة متعددة، ويرتبط باستغلال مناجم الحديد في ونزة وبوحجر. وقد شهد المركب على مر العقود مراحل تأميم وخصخصة متعاقبة، وبلغ إنتاجه من الصلب نحو ٧٠٠ ألف طن سنة ٢٠١٨، بتشغيله آلاف العمال من ولاية عنابة والولايات المجاورة.",
+    "articles.a6.p3": "يبقى مركب الحجار حتى اليوم أكبر مجمع للحديد والصلب في القارة الأفريقية، ورمزاً للطموح الصناعي الجزائري في العقود الأولى بعد الاستقلال، ومحركاً اقتصادياً رئيسياً لمدينة عنابة ومحيطها.",
+    "quote.text": "\"عنابة مدينة كلما امتدت في الزمن كلما زادت صغراً، فهي طفلة حسناء\"",
+    "quote.cite": "— عز الدين ميهوبي، كاتب جزائري",
+    "split.a.tag": "الاقتصاد",
+    "split.a.h3": "قلب الصناعة في الشرق الجزائري",
+    "split.a.p": "تحتضن عنابة مركب الحجار للحديد والصلب، أكبر منشأة من نوعها في أفريقيا،\n      ما جعل منها قطباً صناعياً رئيسياً منذ ستينيات القرن الماضي. إلى جانب\n      الصلب، تنشط المدينة في التصنيع الكيميائي وتعليب الأغذية وميناء تجاري\n      يخدم شرق البلاد.",
+    "split.a.li1": "مركب الحجار للحديد والصلب",
+    "split.a.li2": "ميناء تجاري تاريخي على المتوسط",
+    "split.a.li3": "صناعات كيميائية وغذائية",
+    "split.b.tag": "الثقافة والفنون",
+    "split.b.h3": "عاصمة الموسيقى الأندلسية الشرقية",
+    "split.b.p": "تُعرف عنابة كأحد أهم مراكز الطابع الغنائي الأندلسي المألوف في الجزائر،\n      وقد أنجبت أسماءً فنية بارزة تركت بصمتها في هذا اللون التراثي، إلى جانب\n      الصناعات التقليدية والحرف اليدوية التي لا تزال حاضرة في نسيج المدينة.",
+    "split.b.li1": "الطابع الأندلسي المألوف",
+    "split.b.li2": "حرف وصناعات تقليدية",
+    "split.b.li3": "مهرجانات وفعاليات ثقافية سنوية",
+    "donate.eyebrow": "ادعموا الموقع",
+    "nav.survey": "استطلاع",
+    "survey.title": "📋 استطلاع رأي حول مدينة عنابة",
+    "survey.desc": "رأيك يهمّنا! شاركنا بدقيقة من وقتك لتقييم المدينة واقتراح ما يمكن تحسينه.",
+    "survey.q1": "كيف تقيّم مدينة عنابة بشكل عام؟",
+    "survey.q1.o1": "ممتازة",
+    "survey.q1.o2": "جيدة جداً",
+    "survey.q1.o3": "جيدة",
+    "survey.q1.o4": "متوسطة",
+    "survey.q1.o5": "بحاجة لتحسين",
+    "survey.q2": "ما هو معلمك المفضل في عنابة؟",
+    "survey.q2.o1": "الكورنيش والشواطئ",
+    "survey.q2.o2": "كنيسة أوغسطينوس وهيبون",
+    "survey.q2.o3": "مسجد أبي مروان",
+    "survey.q2.o4": "سرايدي",
+    "survey.q2.o5": "أخرى",
+    "survey.q3": "ما الذي تقترح تحسينه في المدينة؟ (اختياري)",
+    "survey.q3.placeholder": "اكتب اقتراحك هنا...",
+    "survey.q4": "بريدك الإلكتروني (اختياري، إن رغبت بالرد عليك)",
+    "survey.q4.placeholder": "example@email.com",
+    "survey.submit": "إرسال الاستطلاع",
+    "survey.note": "إجابتك تُرسل بشكل مباشر وآمن ولا تُخزَّن على هذا الموقع.",
+    "survey.success.title": "شكراً لمشاركتك!",
+    "survey.success.desc": "تم إرسال إجابتك بنجاح. نقدّر وقتك في مساعدتنا على تحسين هذا الموقع.",
+    "donate.title": "ساعدونا في تطوير هذا الموقع",
+    "donate.desc": "annabazdf.com موقع مستقل يُدار بشغف لتقديم محتوى موثوق عن مدينة عنابة. تبرعكم، مهما كان بسيطاً، يساعدنا على تحسين التصميم، إضافة محتوى جديد، وتغطية تكاليف الاستضافة والتشغيل.",
+    "donate.cta": "💛 <span class=\"dtext\">تبرّع الآن</span>",
+    "donate.note": "كل تبرع، مهما كان حجمه، يصنع فرقاً حقيقياً في استمرارية الموقع. شكراً لدعمكم 🙏",
+    "donate.modal.title": "اختر طريقة التبرع",
+    "donate.modal.desc": "يمكنكم دعم الموقع عبر إحدى الوسائل التالية. سيتم فتح الرابط في نافذة جديدة.",
+    "donate.modal.email": "تواصل معنا مباشرة <span>→</span>",
+    "footer.desc": "بونة القديمة، جوهرة المتوسط، ومدينة الحاضر الصناعي والثقافي.",
+    "footer.credit": "تصميم: زين الدين"
+  },
+  "fr": {
+    "intro.eyebrow": "Bienvenue",
+    "intro.title": "Bienvenue à Annaba<br>Joyau de l'Orient",
+    "intro.sub": "Kacimoune Zineddine vous souhaite la bienvenue",
+    "intro.enter": "Entrer sur le site ↓",
+    "nav.history": "Histoire",
+    "nav.videos": "Vidéos",
+    "nav.news": "Actualités",
+    "nav.origin": "Origine",
+    "nav.landmarks": "Sites",
+    "nav.beaches": "Plages",
+    "nav.articles": "Articles",
+    "nav.life": "Vie locale",
+    "nav.donateBtn": "💛 <span class=\"dtext\">Faire un don</span>",
+    "hero.eyebrow": "Nord-est de l'Algérie — Mer Méditerranée",
+    "hero.title": "Annaba, <em>joyau</em><br>de l'Orient algérien",
+    "hero.lead": "Une ville dont le nom porte le parfum de l'histoire, et dont les côtes offrent l'or du sable et la pureté de l'eau.\n    Du port phénico-numide d'« Hippone » au grand complexe sidérurgique africain,\n    Annaba est une histoire de plus de trente siècles sur les rives de la Méditerranée.",
+    "hero.stat1": "de littoral",
+    "hero.stat2b": "XIe siècle av. J.-C.",
+    "hero.stat2": "Fondation d'Hippone",
+    "hero.stat3b": "4ᵉ",
+    "hero.stat3": "ville la plus peuplée d'Algérie",
+    "hero.stat4": "visiteurs de ce site",
+    "hero.scroll": "Continuer la lecture",
+    "videos.title": "Découvrez Annaba en vidéo",
+    "videos.desc": "Des vidéos réelles qui vous transportent dans les rues, sur les plages et parmi les monuments de la ville, comme si vous y étiez.",
+    "videos.v1": "🚁 Annaba vue du ciel — images aériennes en haute qualité",
+    "videos.v2": "📍 Les meilleurs endroits à visiter à Annaba",
+    "videos.v3": "🌊 Visite touristique avec un guide local à Annaba",
+    "history.title": "La riche histoire d'Annaba",
+    "history.desc": "Plus de trois mille ans d'histoire ininterrompue, d'un petit port phénicien à une grande ville algérienne — un voyage documenté à travers huit époques.",
+    "history.era1.span": "Vers le XIIe siècle av. J.-C.",
+    "history.era1.h3": "La fondation phénicienne : le port d'« Ubbon »",
+    "history.era1.p1": "Les marchands phéniciens fondèrent sur cette côte un port qu'ils appelèrent « Ubbon », un terme phénicien que l'on pense signifier « l'eau jaillissante », en référence aux sources abondantes de la région issues du mont Edough tout proche. Ce nom donna plus tard son appellation à la baie que surplombe la ville.",
+    "history.era1.p2": "En raison de sa proximité géographique avec Carthage, Ubbon s'allia à la grande cité punique et devint l'un de ses ports commerciaux les plus importants sur les côtes numides, partageant son destin durant la première guerre punique (264-241 av. J.-C.) que Carthage mena contre Rome.",
+    "history.era2.span": "203 av. J.-C. – 430 apr. J.-C.",
+    "history.era2.h3": "Hippo Regius : résidence royale numide puis cité romaine",
+    "history.era2.p1": "Après la chute de Carthage, la ville devint l'une des résidences des rois numides, ce qui lui valut le nom latin « Hippo Regius », c'est-à-dire « Hippone royale », pour la distinguer d'autres villes portant le nom d'Hippone dans la région. Elle fut ensuite intégrée aux provinces romaines d'Afrique et prospéra comme centre urbain et religieux important.",
+    "history.era2.p2": "La ville acquit une renommée mondiale lorsque saint Augustin en devint l'évêque entre 396 et 430 apr. J.-C., y rédigeant une grande partie de ses œuvres théologiques et philosophiques influentes. Augustin mourut dans la ville le 28 août 430, alors qu'elle était assiégée par les Vandales.",
+    "history.era3.span": "431 – 533 apr. J.-C.",
+    "history.era3.h3": "Les Vandales puis la reconquête byzantine",
+    "history.era3.p1": "Après un siège de près de quatorze mois, Hippo Regius tomba aux mains du roi vandale Genséric en 431 apr. J.-C., et constitua pendant un temps l'un des sites les plus importants du royaume vandale en Afrique du Nord, avant que la primauté ne revienne à Carthage après sa chute à son tour en 439.",
+    "history.era3.p2": "Les Byzantins reprirent la ville lors de la campagne du général Bélisaire pour reconquérir l'Afrique du Nord en 533 apr. J.-C., inaugurant une période byzantine qui dura plus d'un siècle, marquée par quelques travaux de fortification et de restauration avant la conquête islamique.",
+    "history.era4.span": "VIIe – XVe siècle",
+    "history.era4.h3": "La conquête islamique et la naissance du nom « Bouna »",
+    "history.era4.p1": "Avec les conquêtes islamiques du Maghreb au VIIe siècle, la ville entra dans l'ère islamique et fut connue sous son nouveau nom « Bouna ». Plusieurs dynasties musulmanes s'y succédèrent au Moyen Âge, des Idrissides et Fatimides aux Zirides et Hammadides, puis aux Almohades et Hafsides.",
+    "history.era4.p2": "La mosquée de Sidi Bou Merouane, l'un des monuments les plus emblématiques de la ville aujourd'hui, remonte à l'an 1033 sous les Zirides, construite dans un style andalou en réemployant des colonnes romaines issues des ruines antiques. Après la chute de Grenade en 1492, la ville accueillit des vagues de migrants andalous qui enrichirent son tissu culturel, musical et architectural.",
+    "history.era5.span": "XVIe siècle – 1830",
+    "history.era5.h3": "Bouna sous l'Empire ottoman : le sandjak du pays des jujubes",
+    "history.era5.p1": "Bouna rejoignit la régence ottomane d'Alger et devint le siège d'un sandjak connu sous le nom de « sandjak du pays des jujubes », administrativement sous l'autorité du bey de Constantine. Parmi les vestiges les plus remarquables de cette époque figure la mosquée du Bey, construite par Salah Bey (bey de Constantine entre 1775 et 1792) sur le modèle de la grande mosquée de la capitale, restée lieu de culte pour les Turcs hanafites jusqu'en 1832.",
+    "history.era5.p2": "La ville ottomane était réputée pour son réseau hydraulique sophistiqué, composé de sept sources alimentées par un canal en terre cuite depuis le mont Edough, ainsi que pour son quartier de la Casbah, au caractère ottoman distinctif avec ses maisons mitoyennes et ses jardins intérieurs, toujours debout aujourd'hui comme site touristique.",
+    "history.era6.span": "1830 – 1962",
+    "history.era6.h3": "La colonisation française : de Bouna à Bône",
+    "history.era6.p1": "Les forces françaises occupèrent la ville pendant quelques mois seulement en 1830, avant que la garnison ottomane, soutenue par la population, ne parvienne à les chasser. Mais la France revint en 1832 avec une force navale et occupa la ville entièrement, prenant le contrôle de sa citadelle et de ses remparts.",
+    "history.era6.p2": "La ville reçut son nom français de « Bône », et à partir de 1870 commença la construction de la ville nouvelle hors des murs de l'ancienne Casbah, selon un plan urbain européen, faisant d'Annaba un port colonial majeur sur la Méditerranée pendant près de 132 ans d'occupation.",
+    "history.era7.span": "1954 – 1962",
+    "history.era7.h3": "La révolution de libération : la région du Nord constantinois au cœur de la bataille",
+    "history.era7.p1": "Avec le déclenchement de la révolution du 1er novembre 1954, la région du Nord constantinois, dont fait partie Annaba, constitua un bastion important de l'Armée de libération nationale au sein de ce qui fut appelé la Wilaya II. Youcef Zighoud, le chef qui supervisa plus tard les vastes offensives du 20 août 1955 dans la région, avait été emprisonné dans la prison d'Annaba avant le début de la révolution.",
+    "history.era7.p2": "La ville et sa région poursuivirent leur contribution à la lutte armée jusqu'à la proclamation de l'indépendance de l'Algérie le 5 juillet 1962, date à laquelle la ville retrouva définitivement son nom arabe « Annaba », après un siècle et un tiers d'occupation.",
+    "history.era8.span": "1962 – aujourd'hui",
+    "history.era8.h3": "L'indépendance et l'essor industriel",
+    "history.era8.p1": "Après l'indépendance, Annaba connut une transformation économique radicale, couronnée par la création de la Société nationale de sidérurgie le 3 septembre 1964, et le démarrage de la production effective du complexe sidérurgique d'El Hadjar après son inauguration le 19 juin 1969, en faisant le plus grand complexe de son genre sur le continent africain.",
+    "history.era8.p2": "Aujourd'hui, Annaba conjugue un héritage historique de trois mille ans avec son présent de pôle industriel et économique de premier plan en Algérie, conservant ses deux titres historiques : « joyau de l'Orient algérien » et « joyau de la Méditerranée ».",
+    "news.title": "Actualités du jour <span class=\"live-badge\"><span class=\"live-dot\"></span>En direct</span>",
+    "news.desc": "Tout ce qui se passe en exclusivité dans la ville d'Annaba, avec une mise à jour continue : un bulletin quotidien rédigé + des titres actualisés automatiquement à chaque visite.",
+    "news.refresh": "Actualiser les actualités",
+    "news.bname": "Le bulletin d'Annaba aujourd'hui",
+    "news.bdate": "Jeudi 23 juillet 2026",
+    "news.kicker": "Urgent",
+    "news.lead.h3": "Les incendies de la forêt de Seraïdi entrent dans leur deuxième semaine au milieu d'une vaste mobilisation terrestre et aérienne",
+    "news.lead.p1": "Les services de la Protection civile et l'Armée nationale populaire poursuivent depuis la mi-semaine dernière la lutte contre des incendies de forêt dispersés qui se sont déclarés dans les hauteurs montagneuses de la commune de Seraïdi, dans la wilaya d'Annaba. Ils se sont étendus violemment dans la nuit de mardi dernier en raison de la hausse des températures et de vents forts, obligeant les autorités à évacuer plus de cent patients de l'établissement de réadaptation fonctionnelle de Seraïdi vers les hôpitaux d'El Hadjar et de Bouni, par précaution face à l'approche des flammes autour de l'établissement.",
+    "news.lead.p2": "La société Sonelgaz a également procédé à une coupure préventive de l'électricité et du gaz sur toute la commune de Seraïdi, tandis que le ministre de l'Intérieur, des Collectivités locales et des Transports, Saïd Sayoud, s'est rendu sur place et a affirmé le suivi immédiat du dossier par le président de la République Abdelmadjid Tebboune, avec l'annonce d'une indemnisation complète des sinistrés et de la reconstruction d'environ 150 logements endommagés. Après avoir maîtrisé une partie des incendies, les autorités ont entamé le retour progressif des patients vers l'hôpital de Seraïdi.",
+    "news.source1": "Source : Al Arabi Al Assil ←",
+    "news.item1.kicker": "Local",
+    "news.item1.h4": "Sonelgaz inspecte les réseaux endommagés en vue du rétablissement de l'électricité et du gaz",
+    "news.item1.p": "La direction de distribution de Sonelgaz à Annaba a entamé une inspection de terrain des réseaux électriques et gaziers touchés par l'incendie à Seraïdi, en vue d'un rétablissement progressif du service après le recul du danger sur les installations vitales.",
+    "news.source2": "Source : Awras ←",
+    "news.item2.kicker": "Sport",
+    "news.item2.h4": "Le USM Annaba se prépare pour une nouvelle saison en Ligue 2 après avoir terminé sixième la saison dernière",
+    "news.item2.p": "Le USM Annaba, dont les supporters sont surnommés les « Hooligans », a terminé la saison 2025-2026 à la sixième place du groupe Centre-Est de la Ligue 2 professionnelle. Ses supporters attendent des renforts estivaux pour ramener l'équipe dans la course à la montée.",
+    "news.note": "Ce bulletin est rédigé manuellement et reflète les principaux développements de la ville lors de la dernière mise à jour de la page. Pour consulter d'autres titres mis à jour automatiquement, suivez la liste ci-dessous.",
+    "news.moreTitle": "📰 Derniers titres <span class=\"live-badge\"><span class=\"live-dot\"></span>Mise à jour automatique</span>",
+    "origin.title": "De Bouna à Annaba",
+    "origin.desc": "Trois mille ans d'histoire, où se sont succédé les civilisations sur ce point de la côte algérienne.",
+    "origin.caption": "Le site archéologique d'Hippone face à la basilique Saint-Augustin",
+    "origin.t1.era": "XIe siècle av. J.-C.",
+    "origin.t1.h3": "Le port phénico-numide d'Hippone",
+    "origin.t1.p": "Les Numides et les Phéniciens créèrent sur cette côte un port commercial important, qu'ils appelèrent « Hippone », l'origine dont dérive le nom « Bouna » sous lequel la ville fut connue pendant des siècles.",
+    "origin.t2.era": "Époque romaine",
+    "origin.t2.h3": "Hippo Regius et la ville d'Augustin",
+    "origin.t2.p": "Saint Augustin y vécut et laissa une empreinte spirituelle et intellectuelle, immortalisée plus tard par la construction d'une basilique sur la colline d'Hippone, reconstruite en 1881 et abritant une statue en bronze du saint.",
+    "origin.t3.era": "XIe siècle apr. J.-C.",
+    "origin.t3.h3": "Le caractère andalou",
+    "origin.t3.p": "La mosquée Sidi Bou Merouane fut construite dans un style architectural andalou sur des colonnes romaines, témoin de la succession des civilisations qui ont marqué l'identité architecturale de la ville.",
+    "origin.t4.era": "1830 – 1962",
+    "origin.t4.h3": "La colonisation française et un port commercial",
+    "origin.t4.p": "Annaba resta un port commercial important tout au long du XIXe siècle, et connut dans les années 1950 l'implantation de grands projets industriels qui préparèrent son rôle économique ultérieur.",
+    "origin.t5.era": "1964 – aujourd'hui",
+    "origin.t5.h3": "La ville de l'acier et de la modernité",
+    "origin.t5.p": "Annaba abrite le plus grand complexe sidérurgique d'Afrique (El Hadjar), devenant un pôle industriel et économique de premier plan dans l'est de l'Algérie, sans perdre son caractère côtier et culturel.",
+    "landmarks.title": "Des sites inoubliables",
+    "landmarks.desc": "Des vestiges romains à l'architecture andalouse, Annaba conserve un patrimoine varié qui mérite d'être découvert.",
+    "landmarks.c1.h3": "La basilique Saint-Augustin",
+    "landmarks.c1.p": "Dominant la colline d'Hippone, c'est l'un des sites les plus attractifs d'Annaba pour les visiteurs, témoin de l'histoire de la coexistence religieuse dans la région.",
+    "landmarks.c2.h3": "Les ruines d'Hippone et son musée",
+    "landmarks.c2.p": "Un site archéologique romain qui surplombe la basilique, avec un petit musée abritant une rare collection de mosaïques, statues et poteries anciennes.",
+    "landmarks.c3.h3": "La mosquée Sidi Bou Merouane",
+    "landmarks.c3.p": "Construite au XIe siècle dans un style andalou authentique, s'appuyant sur des colonnes romaines réemployées dans sa construction.",
+    "landmarks.c4.h3": "Le parc de Seraïdi",
+    "landmarks.c4.p": "Une région montagneuse et verdoyante alliant forêts et plages, un refuge naturel pour se détendre loin du bruit de la ville.",
+    "landmarks.c5.h3": "La place de la Révolution",
+    "landmarks.c5.p": "L'une des places les plus animées au cœur de la ville, point de rencontre quotidien pour ses habitants.",
+    "landmarks.c6.h3": "La corniche et les plages dorées",
+    "landmarks.c6.p": "Une étendue côtière de 80 kilomètres de sable doré et d'eaux limpides, qui a fait d'Annaba une destination estivale de choix.",
+    "beaches.title": "🌊 Les mers spectaculaires d'Annaba",
+    "beaches.desc": "De la corniche à Chetaïbi et Seraïdi, les plages d'Annaba oscillent entre sable doré, eaux turquoise et couchers de soleil envoûtants — un tour d'horizon visuel de ses plus beaux rivages.",
+    "beaches.c1": "La corniche d'Annaba",
+    "beaches.c2": "La plage d'Annaba",
+    "beaches.c3": "Coucher de soleil à Chetaïbi",
+    "beaches.c4": "La plage d'oued Bokrat",
+    "beaches.c5": "Les hauteurs de Seraïdi surplombant la mer",
+    "beaches.c6": "Le littoral annabi",
+    "beaches.c7": "Une des plages dorées d'Annaba",
+    "beaches.c8": "La plage dorée de Chetaïbi",
+    "view3d.title": "Annaba comme vous ne l'avez jamais vue",
+    "view3d.desc": "Survolez la ville avec une vue satellite, et parcourez la corniche, la Casbah et Hippone sous un angle interactif — faites glisser et pivotez pour explorer Annaba en trois dimensions.",
+    "view3d.badge": "🛰️ Vue interactive en direct",
+    "view3d.hint": "Cliquez et faites glisser (ou utilisez deux doigts sur mobile) pour incliner l'angle et tourner autour de la ville en trois dimensions.",
+    "view3d.btn1": "🌍 Ouvrir Annaba sur Google Earth 3D",
+    "view3d.btn2": "🗺️ Ouvrir la carte en plein écran",
+    "articles.title": "Articles approfondis",
+    "articles.desc": "Lisez en détail sur différents aspects de la ville d'Annaba, de sa nature à sa cuisine et son sport.",
+    "articles.a1.tag": "Situation et nature",
+    "articles.a1.h3": "Où se situe Annaba, et quel est son climat ?",
+    "articles.a1.teaser": "Une position stratégique sur la Méditerranée, près de la frontière tunisienne et de l'oued Seybouse.",
+    "articles.a1.p1": "Annaba se situe à l'extrême nord-est de l'Algérie, sur la côte méditerranéenne et près de l'embouchure de l'oued Seybouse. Elle se trouve à environ 600 kilomètres de la capitale Alger et à environ 150 kilomètres de Constantine, alors que la frontière algéro-tunisienne n'est qu'à 80 kilomètres, ce qui lui confère une position frontalière et commerciale importante depuis l'Antiquité.",
+    "articles.a1.p2": "Le climat de la ville est typiquement méditerranéen : un été chaud et relativement sec grâce à la brise marine, et un hiver doux et humide avec des pluies abondantes comparé au reste de l'est algérien. Ce climat, associé à la fertilité de la plaine d'Annaba, a toujours fait de la région un pôle agricole en plus de son rôle industriel et maritime.",
+    "articles.a1.p3": "Le mont Edough, qui domine la ville au sud-ouest, lui confère un caractère montagneux verdoyant qui contraste avec le front de mer plat, offrant à Annaba une diversité géographique rare entre montagne, littoral et plaine sur une surface relativement restreinte.",
+    "articles.a2.tag": "Origine du nom",
+    "articles.a2.h3": "D'Hippone au « pays des jujubes » : l'histoire du nom de la ville",
+    "articles.a2.teaser": "Quatre noms à travers trois mille ans racontent l'histoire de la succession des civilisations.",
+    "articles.a2.p1": "La ville a porté plus d'un nom au cours de son histoire : « Hippone » à l'époque phénico-numide, puis « Hippo Regius » à l'époque romaine, puis « Bouna » au Moyen Âge islamique, puis « Bône » pendant l'occupation française, avant de se fixer sur son nom actuel « Annaba » après l'indépendance.",
+    "articles.a2.p2": "On suppose que le nom « Annaba » dérive du mot « ennab » (jujube), le fruit dont la région était réputée, au point que ses habitants furent surnommés populairement « les gens du pays des jujubes ». La ville porte aussi deux surnoms courants encore aujourd'hui : « joyau de l'Orient algérien » et « joyau de la Méditerranée », en référence à sa place culturelle et économique distinguée parmi les villes du littoral est.",
+    "articles.a2.p3": "Cette multiplicité de noms n'est pas un simple détail linguistique, mais le reflet d'une longue histoire de coexistence civilisationnelle entre Phéniciens, Numides, Romains, Byzantins, Arabes, Ottomans et Français, chacun ayant laissé son empreinte dans la ville avant qu'Annaba ne retrouve pleinement son identité algérienne en 1962.",
+    "articles.a3.tag": "Sport",
+    "articles.a3.h3": "USM Annaba : le club le plus célèbre et le plus populaire",
+    "articles.a3.teaser": "Le stade du 19 mai 1956 et un public surnommé les « Hooligans ».",
+    "articles.a3.p1": "L'Union sportive de la ville d'Annaba (USM Annaba) est le club le plus en vue de la ville, fondé en 1983 dans le cadre d'une décision présidentielle concernant plusieurs grandes villes algériennes, et s'est rapidement forgé un nom dans le championnat national malgré l'absence de grands titres à ce jour.",
+    "articles.a3.p2": "Le club dispute ses matchs au stade du 19 mai 1956, le deuxième plus grand stade d'Algérie après le stade du 5 Juillet à la capitale. Le public de l'USM Annaba est réputé pour son enthousiasme exceptionnel et son nombre important, pouvant atteindre des dizaines de milliers lors des grands matchs, ce qui lui a valu le surnom de « Hooligans », en comparaison avec le public anglais connu pour sa passion débordante.",
+    "articles.a3.p3": "Outre le football, les clubs de quartiers et de communes d'Annaba, comme l'USM Sidi Amar, ont contribué à former des générations de joueurs qui ont ensuite représenté les grands clubs de la ville et l'équipe nationale.",
+    "articles.a4.tag": "Nature et écotourisme",
+    "articles.a4.h3": "Seraïdi : la forêt qui embrasse la mer",
+    "articles.a4.teaser": "Eucalyptus, pins et chênes-lièges sur des hauteurs surplombant la Méditerranée.",
+    "articles.a4.p1": "La région de Seraïdi se situe en altitude, surplombant directement le golfe d'Annaba, et associe une forêt dense d'eucalyptus, de pins maritimes et de chênes-lièges, ainsi que des amandiers et des noyers, formant un espace vert rare à proximité du littoral.",
+    "articles.a4.p2": "Les plages de Seraïdi conservent en grande partie leur caractère naturel préservé, malgré l'aménagement de quelques équipements simples pour les estivants comme des parkings et des points de vente de nourriture. Ces plages attirent des visiteurs des wilayas voisines grâce à leur route de montagne sinueuse au cœur de la forêt, offrant à ceux qui s'y rendent un panorama exceptionnel sur la mer.",
+    "articles.a4.p3": "Seraïdi est aussi une destination privilégiée pour les amateurs d'observation des oiseaux et de randonnée, ce qui en fait un prolongement écologique et touristique complémentaire aux plages de sable réparties le long du littoral annabi.",
+    "articles.a5.tag": "Cuisine locale",
+    "articles.a5.h3": "Le bourek annabi et les plats authentiques de Bouna",
+    "articles.a5.teaser": "Du bourek frit à la chakhchoukha et la kridlia.",
+    "articles.a5.p1": "Le « bourek annabi » est considéré comme la marque distinctive de la cuisine locale : un plat fait de feuilles de brick farcies de pommes de terre écrasées, de viande hachée ou de thon, d'oignons, de fromage et de persil, surmontées d'un œuf avant d'être repliées et frites dans l'huile jusqu'à cuisson. Ce plat occupe une place spéciale sur la table du Ramadan à Annaba, aux côtés de la soupe de frik connue localement sous le nom de « jari ».",
+    "articles.a5.p2": "Parmi les autres plats traditionnels régulièrement préparés par les familles annabies : la chakhchoukha, la kridlia, la mloukhia et la guenaouia, en plus du couscous sous ses différentes formes. La ville conserve aussi une belle coutume sociale consistant à échanger des plats du Ramadan entre voisins et proches.",
+    "articles.a5.p3": "Cette diversité culinaire reflète l'identité d'Annaba en tant que ville côtière ouverte, qui a su tirer parti de sa position commerciale historique pour développer une cuisine locale riche, mêlant saveurs maritimes et rurales.",
+    "articles.a6.tag": "Industrie",
+    "articles.a6.h3": "El Hadjar : du plan de Constantine au géant africain de l'acier",
+    "articles.a6.teaser": "De 1958 à aujourd'hui : le parcours d'un complexe industriel qui a changé le visage de la ville.",
+    "articles.a6.p1": "L'idée d'implanter une usine sidérurgique dans la région d'El Hadjar, au sud d'Annaba, remonte au « plan de Constantine » colonial de 1958. Après l'indépendance, l'État algérien créa le 3 septembre 1964 la Société nationale de sidérurgie pour construire le complexe, qui entra en phase de production effective après son inauguration le 19 juin 1969.",
+    "articles.a6.p2": "Le complexe s'étend sur une superficie de plus de 800 hectares, comprenant deux hauts-fourneaux, des aciéries et plusieurs unités de laminage, et est lié à l'exploitation des mines de fer de Ouenza et Boukhadra. Le complexe a connu au fil des décennies des phases successives de nationalisation et de privatisation, sa production d'acier atteignant environ 700 000 tonnes en 2018, employant des milliers de travailleurs de la wilaya d'Annaba et des wilayas voisines.",
+    "articles.a6.p3": "Le complexe d'El Hadjar reste à ce jour le plus grand ensemble sidérurgique du continent africain, symbole de l'ambition industrielle algérienne des premières décennies après l'indépendance, et moteur économique majeur pour la ville d'Annaba et sa région.",
+    "quote.text": "« Annaba est une ville qui, plus le temps s'étend, plus elle rapetisse : c'est une belle enfant »",
+    "quote.cite": "— Azzeddine Mihoubi, écrivain algérien",
+    "split.a.tag": "Économie",
+    "split.a.h3": "Le cœur de l'industrie dans l'est algérien",
+    "split.a.p": "Annaba abrite le complexe sidérurgique d'El Hadjar, la plus grande installation de son genre en Afrique,\n      ce qui en a fait un pôle industriel majeur depuis les années 1960. Outre\n      l'acier, la ville est active dans l'industrie chimique, la conserverie alimentaire et un port commercial\n      qui dessert l'est du pays.",
+    "split.a.li1": "Le complexe sidérurgique d'El Hadjar",
+    "split.a.li2": "Un port commercial historique sur la Méditerranée",
+    "split.a.li3": "Industries chimiques et agroalimentaires",
+    "split.b.tag": "Culture et arts",
+    "split.b.h3": "Capitale de la musique andalouse orientale",
+    "split.b.p": "Annaba est connue comme l'un des centres les plus importants du style musical andalou « malouf » en Algérie,\n      et a donné naissance à des artistes marquants qui ont laissé leur empreinte dans ce genre patrimonial, aux côtés\n      des industries traditionnelles et de l'artisanat toujours présents dans le tissu de la ville.",
+    "split.b.li1": "Le style andalou malouf",
+    "split.b.li2": "Artisanat et industries traditionnelles",
+    "split.b.li3": "Festivals et événements culturels annuels",
+    "donate.eyebrow": "Soutenez le site",
+    "nav.survey": "Sondage",
+    "survey.title": "📋 Sondage sur la ville d'Annaba",
+    "survey.desc": "Votre avis compte ! Accordez-nous une minute pour évaluer la ville et suggérer des améliorations.",
+    "survey.q1": "Comment évaluez-vous globalement la ville d'Annaba ?",
+    "survey.q1.o1": "Excellente",
+    "survey.q1.o2": "Très bonne",
+    "survey.q1.o3": "Bonne",
+    "survey.q1.o4": "Moyenne",
+    "survey.q1.o5": "À améliorer",
+    "survey.q2": "Quel est votre site préféré à Annaba ?",
+    "survey.q2.o1": "La corniche et les plages",
+    "survey.q2.o2": "La basilique Saint-Augustin et Hippone",
+    "survey.q2.o3": "La mosquée Sidi Bou Merouane",
+    "survey.q2.o4": "Seraïdi",
+    "survey.q2.o5": "Autre",
+    "survey.q3": "Que suggérez-vous d'améliorer dans la ville ? (facultatif)",
+    "survey.q3.placeholder": "Écrivez votre suggestion ici...",
+    "survey.q4": "Votre e-mail (facultatif, si vous souhaitez une réponse)",
+    "survey.q4.placeholder": "exemple@email.com",
+    "survey.submit": "Envoyer le sondage",
+    "survey.note": "Votre réponse est envoyée directement et en toute sécurité, et n'est pas stockée sur ce site.",
+    "survey.success.title": "Merci pour votre participation !",
+    "survey.success.desc": "Votre réponse a été envoyée avec succès. Nous apprécions votre temps pour nous aider à améliorer ce site.",
+    "donate.title": "Aidez-nous à améliorer ce site",
+    "donate.desc": "annabazdf.com est un site indépendant géré avec passion pour offrir un contenu fiable sur la ville d'Annaba. Votre don, aussi modeste soit-il, nous aide à améliorer le design, ajouter du nouveau contenu, et couvrir les frais d'hébergement et de fonctionnement.",
+    "donate.cta": "💛 <span class=\"dtext\">Faire un don maintenant</span>",
+    "donate.note": "Chaque don, quel que soit son montant, fait une réelle différence pour la pérennité du site. Merci pour votre soutien 🙏",
+    "donate.modal.title": "Choisissez un mode de don",
+    "donate.modal.desc": "Vous pouvez soutenir le site via l'un des moyens suivants. Le lien s'ouvrira dans une nouvelle fenêtre.",
+    "donate.modal.email": "Contactez-nous directement <span>→</span>",
+    "footer.desc": "L'ancienne Bouna, joyau de la Méditerranée, et ville au présent industriel et culturel.",
+    "footer.credit": "Design : Zineddine"
+  },
+  "en": {
+    "intro.eyebrow": "Welcome",
+    "intro.title": "Welcome to Annaba<br>Jewel of the East",
+    "intro.sub": "Kacimoune Zineddine welcomes you",
+    "intro.enter": "Enter the site ↓",
+    "nav.history": "History",
+    "nav.videos": "Videos",
+    "nav.news": "News",
+    "nav.origin": "Origins",
+    "nav.landmarks": "Landmarks",
+    "nav.beaches": "Beaches",
+    "nav.articles": "Articles",
+    "nav.life": "Life",
+    "nav.donateBtn": "💛 <span class=\"dtext\">Donate</span>",
+    "hero.eyebrow": "Northeast Algeria — The Mediterranean Sea",
+    "hero.title": "Annaba, <em>Jewel</em><br>of Eastern Algeria",
+    "hero.lead": "A city whose name carries the scent of history, and whose coasts hold golden sands and pure waters.\n    From the Phoenician-Numidian port of \"Hippo\" to the great African steel complex,\n    Annaba is a story spanning more than thirty centuries on the shores of the Mediterranean.",
+    "hero.stat1": "of coastline",
+    "hero.stat2b": "11th century BC",
+    "hero.stat2": "Founding of Hippo",
+    "hero.stat3b": "4th",
+    "hero.stat3": "most populous city in Algeria",
+    "hero.stat4": "visitors to this site",
+    "hero.scroll": "Keep scrolling",
+    "videos.title": "See Annaba live",
+    "videos.desc": "Real footage taking you through the city's streets, beaches and landmarks, as if you were there.",
+    "videos.v1": "🚁 Annaba from above — high-quality aerial footage",
+    "videos.v2": "📍 The best places to visit in Annaba",
+    "videos.v3": "🌊 A guided tour with a local guide in Annaba",
+    "history.title": "The rich history of Annaba",
+    "history.desc": "Over three thousand years of continuous history, from a small Phoenician port to a major Algerian city — a documented journey across eight eras.",
+    "history.era1.span": "Around the 12th century BC",
+    "history.era1.h3": "The Phoenician founding: the port of \"Ubbon\"",
+    "history.era1.p1": "Phoenician traders founded a port on this coast which they named \"Ubbon,\" a Phoenician word believed to mean \"flowing water,\" referring to the region's abundant springs flowing from the nearby Mount Edough. This name later gave its title to the bay overlooked by the city.",
+    "history.era1.p2": "Due to its geographic proximity to Carthage, Ubbon allied with the great Punic metropolis and became one of its most important trading ports on the Numidian coast, sharing its fate during the First Punic War (264–241 BC) that Carthage waged against Rome.",
+    "history.era2.span": "203 BC – 430 AD",
+    "history.era2.h3": "Hippo Regius: a Numidian royal seat, then a Roman city",
+    "history.era2.p1": "After the fall of Carthage, the city became one of the residences of the Numidian kings, earning it the Latin name \"Hippo Regius,\" meaning \"Royal Hippo,\" to distinguish it from other cities named Hippo in the region. It was later incorporated into the Roman provinces of Africa and flourished as an important urban and religious center.",
+    "history.era2.p2": "The city gained worldwide fame when Saint Augustine became its bishop between 396 and 430 AD, writing much of his influential theological and philosophical works there. Augustine died in the city on August 28, 430, during the Vandal siege.",
+    "history.era3.span": "431 – 533 AD",
+    "history.era3.h3": "The Vandals, then the Byzantine reconquest",
+    "history.era3.p1": "After a siege lasting about fourteen months, Hippo Regius fell to the Vandal king Genseric in 431 AD, and for a time was one of the most important sites of the Vandal kingdom in North Africa, before primacy shifted to Carthage after its own fall in 439.",
+    "history.era3.p2": "The Byzantines recovered the city as part of General Belisarius's campaign to reconquer North Africa in 533 AD, ushering in a Byzantine era that lasted more than a century, during which some fortification and restoration work took place before the Islamic conquest.",
+    "history.era4.span": "7th – 15th century",
+    "history.era4.h3": "The Islamic conquest and the birth of the name \"Bouna\"",
+    "history.era4.p1": "With the Islamic conquests of the Maghreb in the 7th century, the city entered the Islamic era and became known by its new name \"Bouna.\" Several Islamic states succeeded one another there through the Middle Ages, from the Idrisids and Fatimids to the Zirids and Hammadids, then the Almohads and Hafsids.",
+    "history.era4.p2": "The Sidi Bou Merouane Mosque, one of the city's most prominent landmarks today, dates back to the year 1033 under the Zirids, built in Andalusian style using reclaimed Roman columns from ancient ruins. After the fall of Granada in 1492, the city welcomed waves of Andalusian migrants who enriched its cultural, musical and architectural fabric.",
+    "history.era5.span": "16th century – 1830",
+    "history.era5.h3": "Bouna under Ottoman rule: the Sanjak of the Land of Jujubes",
+    "history.era5.p1": "Bouna joined the Ottoman Regency of Algiers and became the seat of a sanjak known as the \"Sanjak of the Land of Jujubes,\" administratively under the Bey of Constantine. Among the most notable remains of this era is the Bey's Mosque, built by Salah Bey (Bey of Constantine between 1775 and 1792) modeled on the Great Mosque of the capital, remaining a place of worship for Hanafi Turks until 1832.",
+    "history.era5.p2": "The Ottoman city was known for its advanced water network of seven springs fed by a terracotta channel from Mount Edough, and for its Casbah quarter with its distinctive Ottoman character of adjoining houses and interior gardens, which still stands today as a tourist landmark.",
+    "history.era6.span": "1830 – 1962",
+    "history.era6.h3": "French colonization: from Bouna to Bône",
+    "history.era6.p1": "French forces occupied the city for only a few months in 1830, before the Ottoman garrison, backed by the population, managed to expel them. However, France returned in 1832 with a naval force and occupied the city entirely, taking control of its citadel and walls.",
+    "history.era6.p2": "The city was given its French name \"Bône,\" and starting in 1870 construction began on a new town outside the walls of the old Casbah following a European urban plan, turning Annaba into a major colonial port on the Mediterranean throughout nearly 132 years of occupation.",
+    "history.era7.span": "1954 – 1962",
+    "history.era7.h3": "The liberation revolution: the North Constantine region at the heart of the battle",
+    "history.era7.p1": "With the outbreak of the revolution on November 1, 1954, the North Constantine region, to which Annaba belongs, formed an important stronghold for the National Liberation Army within what was known as Wilaya II. Youcef Zighoud, the commander who later oversaw the widespread attacks of August 20, 1955 in the region, had been imprisoned in Annaba's prison before the revolution began.",
+    "history.era7.p2": "The city and its surroundings continued to contribute to the armed struggle until the declaration of Algeria's independence on July 5, 1962, when the city finally reclaimed its Arabic name \"Annaba\" after a century and a third of occupation.",
+    "history.era8.span": "1962 – present",
+    "history.era8.h3": "Independence and industrial revival",
+    "history.era8.p1": "After independence, Annaba underwent a radical economic transformation, crowned by the founding of the National Steel Industry Company on September 3, 1964, and the start of actual production at the El Hadjar steel complex after its inauguration on June 19, 1969, making it the largest complex of its kind on the African continent.",
+    "history.era8.p2": "Today, Annaba combines a three-thousand-year historical legacy with its present as a leading industrial and economic hub in Algeria, preserving its two historic titles: \"Jewel of Eastern Algeria\" and \"Jewel of the Mediterranean.\"",
+    "news.title": "Daily news <span class=\"live-badge\"><span class=\"live-dot\"></span>Live</span>",
+    "news.desc": "Everything happening exclusively in the city of Annaba, continuously updated: an edited daily bulletin + headlines refreshed automatically on every visit.",
+    "news.refresh": "Refresh news",
+    "news.bname": "Annaba Today Bulletin",
+    "news.bdate": "Thursday, July 23, 2026",
+    "news.kicker": "Breaking",
+    "news.lead.h3": "Seraïdi forest fires enter their second week amid extensive ground and air mobilization",
+    "news.lead.p1": "Civil Protection services and the National People's Army have continued since the middle of last week to fight scattered forest fires that broke out in the mountainous heights of the Seraïdi commune in Annaba province, which spread sharply on Tuesday night due to rising temperatures and strong winds, forcing authorities to evacuate more than a hundred patients from the Seraïdi functional rehabilitation facility to El Hadjar and Bouni hospitals as a precaution against approaching flames near the facility.",
+    "news.lead.p2": "Sonelgaz also cut off electricity and gas as a precaution across the entire commune of Seraïdi, while the Minister of Interior, Local Authorities and Transport, Saïd Sayoud, visited the area and confirmed that President Abdelmadjid Tebboune was following the matter closely, announcing full compensation for those affected and the reconstruction of about 150 damaged homes. After bringing part of the fires under control, authorities began gradually returning patients to Seraïdi hospital.",
+    "news.source1": "Source: Al Araby Al Assil ←",
+    "news.item1.kicker": "Local",
+    "news.item1.h4": "Sonelgaz inspects damaged networks ahead of restoring electricity and gas",
+    "news.item1.p": "Sonelgaz's distribution directorate in Annaba began a field inspection of the electrical and gas networks affected by the Seraïdi fire, ahead of gradually restoring service after the danger to vital facilities receded.",
+    "news.source2": "Source: Awras ←",
+    "news.item2.kicker": "Sport",
+    "news.item2.h4": "USM Annaba prepares for a new Ligue 2 season after finishing sixth last season",
+    "news.item2.p": "USM Annaba, whose fans are nicknamed the \"Hooligans,\" finished the 2025–2026 season in sixth place in the East-Central group of the professional Ligue 2. Its supporters are hoping for summer reinforcements to bring the team back into contention for promotion.",
+    "news.note": "This bulletin is edited manually and reflects the city's main developments as of the page's last update. For additional automatically updated headlines, follow the list below.",
+    "news.moreTitle": "📰 Latest headlines <span class=\"live-badge\"><span class=\"live-dot\"></span>Auto-updating</span>",
+    "origin.title": "From Bouna to Annaba",
+    "origin.desc": "Three thousand years of history, where civilizations have succeeded one another on this stretch of the Algerian coast.",
+    "origin.caption": "The archaeological site of Hippo facing the Basilica of Saint Augustine",
+    "origin.t1.era": "11th century BC",
+    "origin.t1.h3": "The Phoenician-Numidian port of Hippo",
+    "origin.t1.p": "The Numidians and Phoenicians established an important trading port on this coast, which they named \"Hippo,\" the origin from which the name \"Bouna\" — by which the city was known for centuries — was derived.",
+    "origin.t2.era": "Roman era",
+    "origin.t2.h3": "Hippo Regius and the city of Augustine",
+    "origin.t2.p": "Saint Augustine lived here and left a spiritual and intellectual legacy, later immortalized by the construction of a basilica on Hippo's hill, rebuilt in 1881 and housing a bronze statue of the saint.",
+    "origin.t3.era": "11th century AD",
+    "origin.t3.h3": "The Andalusian character",
+    "origin.t3.p": "The Sidi Bou Merouane Mosque was built in Andalusian architectural style on Roman columns, a witness to the succession of civilizations that shaped the city's architectural identity.",
+    "origin.t4.era": "1830 – 1962",
+    "origin.t4.h3": "French colonization and a commercial port",
+    "origin.t4.p": "Annaba remained an important commercial port throughout the 19th century, and in the 1950s saw the establishment of major industrial projects that paved the way for its later economic role.",
+    "origin.t5.era": "1964 – present",
+    "origin.t5.h3": "A city of steel and modernity",
+    "origin.t5.p": "Annaba is home to the largest steel complex in Africa (El Hadjar), making it a leading industrial and economic hub in eastern Algeria, without losing its coastal and cultural character.",
+    "landmarks.title": "Unforgettable landmarks",
+    "landmarks.desc": "From Roman ruins to Andalusian architecture, Annaba holds a diverse heritage worth discovering.",
+    "landmarks.c1.h3": "The Basilica of Saint Augustine",
+    "landmarks.c1.p": "Rising above Hippo's hill, it is one of Annaba's most attractive landmarks for visitors, a witness to the history of religious coexistence in the region.",
+    "landmarks.c2.h3": "The ruins of Hippo and its museum",
+    "landmarks.c2.p": "A Roman archaeological site overlooking the basilica, with a small museum housing a rare collection of ancient mosaics, statues and vessels.",
+    "landmarks.c3.h3": "The Sidi Bou Merouane Mosque",
+    "landmarks.c3.p": "Built in the 11th century in an authentic Andalusian style, relying on Roman columns reused in its construction.",
+    "landmarks.c4.h3": "Seraïdi Park",
+    "landmarks.c4.p": "A green mountainous region combining forests and beaches, a natural retreat for relaxing away from the noise of the city.",
+    "landmarks.c5.h3": "Revolution Square",
+    "landmarks.c5.p": "One of the liveliest squares in the heart of the city, a daily meeting point for its residents.",
+    "landmarks.c6.h3": "The corniche and golden beaches",
+    "landmarks.c6.p": "An 80-kilometer coastal stretch of golden sand and clear waters that has made Annaba a favorite summer destination.",
+    "beaches.title": "🌊 The Spectacular Seas of Annaba",
+    "beaches.desc": "From the corniche to Chetaïbi and Seraïdi, Annaba's beaches range between golden sand, turquoise water and mesmerizing sunsets — a quick visual tour of its most beautiful coastal spots.",
+    "beaches.c1": "Annaba's corniche",
+    "beaches.c2": "Annaba beach",
+    "beaches.c3": "Sunset at Chetaïbi",
+    "beaches.c4": "Oued Bokrat beach",
+    "beaches.c5": "The heights of Seraïdi overlooking the sea",
+    "beaches.c6": "The Annaba coastline",
+    "beaches.c7": "One of Annaba's golden beaches",
+    "beaches.c8": "Chetaïbi's golden beach",
+    "view3d.title": "Annaba like you've never seen it",
+    "view3d.desc": "Fly over the city through a satellite lens, and wander between the corniche, the Casbah and Hippo from an interactive aerial angle — drag and rotate to explore Annaba in 3D.",
+    "view3d.badge": "🛰️ Live interactive view",
+    "view3d.hint": "Click and drag (or use two fingers on mobile) to tilt the angle and rotate around the city in three dimensions.",
+    "view3d.btn1": "🌍 Open Annaba in Google Earth 3D",
+    "view3d.btn2": "🗺️ Open the map in full screen",
+    "articles.title": "In-depth articles",
+    "articles.desc": "Read in greater detail about different aspects of the city of Annaba, from its nature to its cuisine and sport.",
+    "articles.a1.tag": "Location and nature",
+    "articles.a1.h3": "Where is Annaba located, and what is its climate like?",
+    "articles.a1.teaser": "A strategic location on the Mediterranean, near the Tunisian border and the Seybouse river.",
+    "articles.a1.p1": "Annaba is located at the far northeastern tip of Algeria, on the Mediterranean coast and near the mouth of the Seybouse river. It is about 600 kilometers from the capital Algiers and about 150 kilometers from Constantine, while only 80 kilometers separate it from the Algerian-Tunisian border, giving it an important border and trade position since ancient times.",
+    "articles.a1.p2": "The city's climate is typically Mediterranean: a hot, relatively dry summer thanks to the sea breeze, and a mild, humid winter with heavy rainfall compared to the rest of eastern Algeria. This climate, combined with the fertile soil of the Annaba plain, has always made the region an agricultural hub alongside its industrial and maritime role.",
+    "articles.a1.p3": "Mount Edough, overlooking the city from the southwest, gives it a green mountainous character that contrasts with the flat seafront, giving Annaba a rare geographic diversity between mountain, coast and plain within a relatively small area.",
+    "articles.a2.tag": "Origin of the name",
+    "articles.a2.h3": "From Hippo to the \"Land of Jujubes\": the story of the city's name",
+    "articles.a2.teaser": "Four names across three thousand years tell the story of a succession of civilizations.",
+    "articles.a2.p1": "The city has carried more than one name throughout its history: \"Hippo\" in the Phoenician-Numidian era, then \"Hippo Regius\" in the Roman era, then \"Bouna\" in the Islamic Middle Ages, then \"Bône\" during the French occupation, before settling on its current name \"Annaba\" after independence.",
+    "articles.a2.p2": "The name \"Annaba\" is thought to derive from the word \"ennab\" (jujube), the fruit for which the region was widely known, to the point that its inhabitants were popularly nicknamed \"the people of the land of jujubes.\" The city also carries two nicknames common to this day: \"Jewel of Eastern Algeria\" and \"Jewel of the Mediterranean,\" referring to its distinguished cultural and economic standing among the cities of the eastern coast.",
+    "articles.a2.p3": "This multiplicity of names is not merely a linguistic detail, but a reflection of a long history of civilizational coexistence among Phoenicians, Numidians, Romans, Byzantines, Arabs, Ottomans and French, each leaving their mark on the city before Annaba fully reclaimed its Algerian identity in 1962.",
+    "articles.a3.tag": "Sport",
+    "articles.a3.h3": "USM Annaba: the most famous and popular club",
+    "articles.a3.teaser": "The May 19, 1956 Stadium and fans nicknamed the \"Hooligans.\"",
+    "articles.a3.p1": "The Annaba Sports Union (USM Annaba) is the city's most prominent club, founded in 1983 as part of a presidential decision covering several major Algerian cities, and quickly made a name for itself in the national championship despite not having won any major titles so far.",
+    "articles.a3.p2": "The club plays its matches at the May 19, 1956 Stadium, the second largest stadium in Algeria after the July 5 Stadium in the capital. USM Annaba's fans are known for their exceptional enthusiasm and large numbers, which can reach tens of thousands at major matches, earning them the nickname \"Hooligans,\" likened to English fans known for their overwhelming passion.",
+    "articles.a3.p3": "Besides football, neighborhood and district clubs in Annaba, such as USM Sidi Amar, have helped shape generations of players who later represented the city's major clubs and the national team.",
+    "articles.a4.tag": "Nature and eco-tourism",
+    "articles.a4.h3": "Seraïdi: the forest that embraces the sea",
+    "articles.a4.teaser": "Eucalyptus, pine and cork oak on heights overlooking the Mediterranean.",
+    "articles.a4.p1": "The Seraïdi region sits at an elevation directly overlooking the Gulf of Annaba, combining a dense forest of eucalyptus, maritime pine and cork oak trees, alongside almond and walnut trees, forming a rare green space close to the coast.",
+    "articles.a4.p2": "Seraïdi's beaches largely retain their pristine natural character, despite the establishment of some simple facilities for visitors such as parking areas and food stalls. These beaches attract visitors from neighboring provinces thanks to their winding mountain road through the forest, which offers arriving visitors a distinctive panorama over the sea.",
+    "articles.a4.p3": "Seraïdi is also a favorite destination for bird-watching and nature-walking enthusiasts, making it an ecological and touristic extension complementing the sandy beaches spread along the Annaba coast.",
+    "articles.a5.tag": "Local cuisine",
+    "articles.a5.h3": "Annaba-style bourek and authentic Bouna dishes",
+    "articles.a5.teaser": "From fried bourek to chakhchoukha and kridlia.",
+    "articles.a5.p1": "\"Annaba-style bourek\" is considered the signature dish of local cuisine — made from brick pastry sheets filled with mashed potato and either ground meat or tuna, onions, cheese and parsley, topped with an egg before being folded and fried in oil until cooked. This dish holds a special place on Annaba's Ramadan table, alongside frik soup, known locally as \"jari.\"",
+    "articles.a5.p2": "Other traditional dishes regularly prepared by Annaba families include chakhchoukha, kridlia, mloukhia and guenaouia, in addition to couscous in its various forms. The city also keeps a lovely social custom of exchanging Ramadan dishes between neighbors and relatives.",
+    "articles.a5.p3": "This culinary diversity reflects Annaba's identity as an open coastal city, which drew on its historic trading position to develop a rich local cuisine blending maritime and rural flavors.",
+    "articles.a6.tag": "Industry",
+    "articles.a6.h3": "El Hadjar: from the Constantine Plan to Africa's steel giant",
+    "articles.a6.teaser": "From 1958 to today: the journey of an industrial complex that changed the face of the city.",
+    "articles.a6.p1": "The idea of establishing a steel plant in the El Hadjar region south of Annaba dates back to the colonial \"Constantine Plan\" of 1958. After independence, the Algerian state established the National Steel Industry Company on September 3, 1964 to build the complex, which entered actual production after its inauguration on June 19, 1969.",
+    "articles.a6.p2": "The complex covers an area of more than 800 hectares, including two blast furnaces, steel mills and multiple rolling units, and is linked to the exploitation of iron mines in Ouenza and Boukhadra. Over the decades, the complex went through successive phases of nationalization and privatization, with steel production reaching about 700,000 tons in 2018, employing thousands of workers from Annaba province and neighboring provinces.",
+    "articles.a6.p3": "The El Hadjar complex remains to this day the largest iron and steel complex on the African continent, a symbol of Algerian industrial ambition in the early decades after independence, and a major economic engine for the city of Annaba and its surroundings.",
+    "quote.text": "\"Annaba is a city that grows smaller the longer it stretches through time — she is a beautiful child\"",
+    "quote.cite": "— Azzedine Mihoubi, Algerian writer",
+    "split.a.tag": "Economy",
+    "split.a.h3": "The heart of industry in eastern Algeria",
+    "split.a.p": "Annaba is home to the El Hadjar iron and steel complex, the largest facility of its kind in Africa,\n      making it a major industrial hub since the 1960s. Besides\n      steel, the city is active in chemical manufacturing, food canning, and a commercial port\n      serving the east of the country.",
+    "split.a.li1": "The El Hadjar iron and steel complex",
+    "split.a.li2": "A historic commercial port on the Mediterranean",
+    "split.a.li3": "Chemical and food industries",
+    "split.b.tag": "Culture and arts",
+    "split.b.h3": "Capital of eastern Andalusian music",
+    "split.b.p": "Annaba is known as one of the most important centers of the Andalusian \"malouf\" musical style in Algeria,\n      and has produced prominent artists who left their mark on this heritage genre, alongside\n      traditional industries and crafts still present in the fabric of the city.",
+    "split.b.li1": "The Andalusian malouf style",
+    "split.b.li2": "Traditional crafts and industries",
+    "split.b.li3": "Annual festivals and cultural events",
+    "donate.eyebrow": "Support the site",
+    "nav.survey": "Survey",
+    "survey.title": "📋 Survey about Annaba",
+    "survey.desc": "Your opinion matters! Give us a minute of your time to rate the city and suggest improvements.",
+    "survey.q1": "How would you rate the city of Annaba overall?",
+    "survey.q1.o1": "Excellent",
+    "survey.q1.o2": "Very good",
+    "survey.q1.o3": "Good",
+    "survey.q1.o4": "Average",
+    "survey.q1.o5": "Needs improvement",
+    "survey.q2": "What is your favorite landmark in Annaba?",
+    "survey.q2.o1": "The corniche and beaches",
+    "survey.q2.o2": "St. Augustine's Basilica and Hippo",
+    "survey.q2.o3": "Sidi Bou Merouane Mosque",
+    "survey.q2.o4": "Seraïdi",
+    "survey.q2.o5": "Other",
+    "survey.q3": "What would you suggest improving in the city? (optional)",
+    "survey.q3.placeholder": "Write your suggestion here...",
+    "survey.q4": "Your email (optional, if you'd like a reply)",
+    "survey.q4.placeholder": "example@email.com",
+    "survey.submit": "Submit survey",
+    "survey.note": "Your response is sent directly and securely, and is not stored on this site.",
+    "survey.success.title": "Thank you for participating!",
+    "survey.success.desc": "Your response was sent successfully. We appreciate you taking the time to help us improve this site.",
+    "donate.title": "Help us improve this site",
+    "donate.desc": "annabazdf.com is an independent site run with passion to provide reliable content about the city of Annaba. Your donation, however small, helps us improve the design, add new content, and cover hosting and running costs.",
+    "donate.cta": "💛 <span class=\"dtext\">Donate now</span>",
+    "donate.note": "Every donation, however big or small, makes a real difference to keeping the site running. Thank you for your support 🙏",
+    "donate.modal.title": "Choose a way to donate",
+    "donate.modal.desc": "You can support the site through one of the following methods. The link will open in a new window.",
+    "donate.modal.email": "Contact us directly <span>→</span>",
+    "footer.desc": "The old Bouna, jewel of the Mediterranean, and a city of industrial and cultural present.",
+    "footer.credit": "Design: Zineddine"
+  }
+};
+
+function applyLanguage(lang){
+  const dict = I18N[lang] || I18N.ar;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    const key = el.getAttribute('data-i18n');
+    if(dict[key] !== undefined){
+      el.innerHTML = dict[key];
+    }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+    const key = el.getAttribute('data-i18n-placeholder');
+    if(dict[key] !== undefined){
+      el.setAttribute('placeholder', dict[key]);
+    }
+  });
+  const html = document.documentElement;
+  html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.querySelectorAll('#langSwitch button').forEach(function(btn){
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+  try { localStorage.setItem('annaba-lang', lang); } catch(e){}
+  if(typeof ncGoTo === 'function' && typeof ncIndex === 'number' && ncItems && ncItems.length){
+    ncGoTo(ncIndex, {keepTimer:true});
+  }
+  if(typeof updateVisitorDisplay === 'function'){
+    updateVisitorDisplay();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  let saved = 'ar';
+  try { saved = localStorage.getItem('annaba-lang') || 'ar'; } catch(e){}
+  if(saved !== 'ar'){ applyLanguage(saved); }
+  document.querySelectorAll('#langSwitch button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyLanguage(btn.getAttribute('data-lang'));
+    });
+  });
+});
+</script>
+</body>
+</html>
