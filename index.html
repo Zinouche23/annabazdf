@@ -5,34 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="pageTitle">عنابة | annabazdf.com</title>
 <meta name="description" id="pageDesc" content="عنابة، جوهرة الشرق الجزائري — annabazdf.com">
-<meta property="og:title" id="ogTitle" content="عنابة | annabazdf.com">
-<meta property="og:site_name" content="annabazdf.com">
+<link rel="canonical" href="https://www.annabazdf.com/">
+<meta name="theme-color" content="#0b1116">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b1116'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23d9a441' font-family='Arial'%3E%D8%B9%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="annabazdf.com">
 <meta property="og:url" content="https://www.annabazdf.com/">
-<meta property="og:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Wilaya%20de%20annaba.jpg?width=1600">
 <meta property="og:locale" content="ar_DZ">
+<meta property="og:title" id="ogTitle" content="عنابة | annabazdf.com">
+<meta property="og:description" id="ogDesc" content="دليلكم الشامل لمدينة عنابة: تاريخها، معالمها، شواطئها، مؤسساتها، وأخبارها اليومية — annabazdf.com">
+<meta property="og:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20La%20Corniche.jpg?width=1200">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" id="twTitle" content="عنابة | annabazdf.com">
-<meta name="twitter:description" id="twDesc" content="عنابة، جوهرة الشرق الجزائري — annabazdf.com">
-<meta name="twitter:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Wilaya%20de%20annaba.jpg?width=1600">
-<meta name="theme-color" content="#0d1520">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<style media="print">
-  nav, .refresh-btn, #backToTop, #fontControls, .donate-btn, video, iframe, #readProgress { display:none !important; }
-  body{background:#fff; color:#000;}
-</style>
+<meta name="twitter:title" content="عنابة | annabazdf.com">
+<meta name="twitter:description" content="دليلكم الشامل لمدينة عنابة: تاريخها، معالمها، شواطئها، مؤسساتها، وأخبارها اليومية">
+<meta name="twitter:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20La%20Corniche.jpg?width=1200">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TouristDestination",
-  "name": "Annaba",
-  "alternateName": "عنابة",
-  "description": "عنابة، جوهرة الشرق الجزائري — تاريخ ومعالم وشواطئ وأخبار يومية.",
+  "@type": "WebSite",
+  "name": "عنابة | annabazdf.com",
+  "alternateName": "Annaba Jewel of Eastern Algeria",
   "url": "https://www.annabazdf.com/",
-  "address": {"@type": "PostalAddress", "addressLocality": "Annaba", "addressCountry": "DZ"}
+  "description": "دليل شامل عن مدينة عنابة الجزائرية: تاريخها، معالمها السياحية، شواطئها، مؤسساتها الرسمية، وأخبارها اليومية.",
+  "inLanguage": ["ar", "fr", "en"],
+  "about": {
+    "@type": "City",
+    "name": "Annaba",
+    "alternateName": ["عنابة", "Bône", "Hippo Regius"],
+    "addressCountry": "DZ",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Annaba Province"
+    }
+  }
 }
 </script>
+<meta property="og:site_name" content="annabazdf.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -213,6 +222,135 @@
   .donate-modal h3{color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800; font-size:1.3rem; margin-bottom:16px;}
   .donate-modal p{color:var(--fog); font-size:0.95rem; line-height:1.8; margin-bottom:22px;}
   .donate-options{display:flex; flex-direction:column; gap:10px;}
+
+  /* DOMAINS SECTION */
+  .domains{background:var(--ink-2); border-bottom:1px solid rgba(233,220,194,0.08);}
+  .domains-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:20px;
+  }
+  .domain-card{
+    background:rgba(233,220,194,0.05); border:1px solid rgba(233,220,194,0.15);
+    border-radius:12px; padding:32px 18px; display:flex; flex-direction:column;
+    align-items:center; gap:12px; cursor:pointer; transition:all .25s;
+    font-family:inherit; color:inherit;
+  }
+  .domain-card:hover{border-color:var(--gold); background:rgba(217,164,65,0.08); transform:translateY(-4px);}
+  .domain-card .dc-icon{font-size:2rem;}
+  .domain-card .dc-title{color:var(--sand); font-weight:700; font-size:0.98rem;}
+  @media(max-width:700px){
+    .domains-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  .domain-modal-overlay{
+    position:fixed; inset:0; z-index:9998; background:rgba(7,13,18,0.85);
+    display:none; align-items:center; justify-content:center; padding:24px;
+    backdrop-filter:blur(3px);
+  }
+  .domain-modal-overlay.open{display:flex;}
+  .domain-modal{
+    background:var(--ink-2); border:1px solid rgba(217,164,65,0.3);
+    max-width:480px; width:100%; max-height:85vh; overflow-y:auto;
+    padding:38px 32px; position:relative;
+  }
+  .domain-modal .dm-close{
+    position:absolute; top:14px; inset-inline-end:14px;
+    background:none; border:none; color:var(--fog); font-size:1.4rem; cursor:pointer;
+  }
+  .domain-modal .dm-close:hover{color:var(--gold-soft);}
+  .domain-modal h3{color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800; font-size:1.3rem; margin:14px 0 16px;}
+  .domain-modal p{color:var(--fog); font-size:0.95rem; line-height:1.85; margin-bottom:10px;}
+  .domain-modal-news{margin-top:20px; padding-top:18px; border-top:1px solid rgba(233,220,194,0.1);}
+  .dmn-label{color:var(--gold-soft); font-weight:700; font-size:0.85rem; margin-bottom:10px;}
+  .domain-modal-news a{
+    display:block; color:var(--fog); text-decoration:none; font-size:0.88rem;
+    padding:9px 0; border-bottom:1px solid rgba(233,220,194,0.06); transition:color .2s;
+  }
+  .domain-modal-news a:hover{color:var(--gold-soft);}
+  .domain-modal-news a:last-child{border-bottom:none;}
+
+  /* INSTITUTIONS SECTION */
+  .institutions{background:var(--ink); border-bottom:1px solid rgba(233,220,194,0.08);}
+
+  /* SPA-STYLE PAGE SWITCHING */
+  .page-section{display:none;}
+  .page-section.active{
+    display:block;
+    animation:pageIn .5s cubic-bezier(.22,.61,.36,1);
+  }
+  @keyframes pageIn{
+    from{opacity:0; transform:translateY(18px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  /* ARTICLE READER OVERLAY (واجهة قراءة منفصلة) */
+  .reader-overlay{
+    position:fixed; inset:0; z-index:9990; background:var(--ink);
+    overflow-y:auto; display:none;
+  }
+  .reader-overlay.open{display:block; animation:pageIn .4s ease;}
+  .reader-inner{max-width:760px; margin:0 auto; padding:110px 6% 90px;}
+  .reader-back{
+    position:fixed; top:20px; inset-inline-start:20px; z-index:9995;
+    background:var(--ink-2); border:1px solid rgba(217,164,65,0.35); color:var(--gold-soft);
+    padding:11px 22px; border-radius:99px; font-weight:800; font-family:'Cairo',sans-serif;
+    cursor:pointer; font-size:0.9rem; transition:all .2s;
+  }
+  .reader-back:hover{border-color:var(--gold); color:var(--sand); background:rgba(217,164,65,0.08);}
+  .reader-content h2{color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800; font-size:1.7rem; margin-bottom:24px; line-height:1.5;}
+  .reader-content p{color:var(--fog); font-size:1.02rem; line-height:2; margin-bottom:18px;}
+
+  /* PLACES TO VISIT SECTION */
+  .places{background:var(--ink-2); border-bottom:1px solid rgba(233,220,194,0.08);}
+  .places-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:20px;
+  }
+  .place-card{
+    background:var(--ink); border:1px solid rgba(233,220,194,0.1); border-radius:12px;
+    overflow:hidden; display:flex; flex-direction:column; transition:transform .3s, border-color .3s;
+  }
+  .place-card:hover{transform:translateY(-5px); border-color:rgba(217,164,65,0.4);}
+  .place-img{height:190px; overflow:hidden;}
+  .place-img img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease;}
+  .place-card:hover .place-img img{transform:scale(1.08);}
+  .place-body{padding:20px 22px; flex:1; display:flex; flex-direction:column;}
+  .place-tag{
+    color:var(--gold-soft); font-size:0.72rem; font-weight:800; letter-spacing:0.5px;
+    text-transform:uppercase; margin-bottom:8px;
+  }
+  .place-body h3{color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800; font-size:1.1rem; margin-bottom:10px;}
+  .place-body p{color:var(--fog); font-size:0.9rem; line-height:1.75; flex:1;}
+  @media(max-width:900px){
+    .places-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media(max-width:560px){
+    .places-grid{grid-template-columns:1fr;}
+  }
+  .inst-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:24px; margin-top:20px;
+  }
+  .inst-card{
+    background:var(--ink-2); border:1px solid rgba(233,220,194,0.1);
+    border-radius:10px; overflow:hidden; display:flex; flex-direction:column;
+    transition:border-color .25s, transform .25s;
+  }
+  .inst-card:hover{border-color:rgba(217,164,65,0.4); transform:translateY(-3px);}
+  .inst-media{height:170px; overflow:hidden;}
+  .inst-media img{width:100%; height:100%; object-fit:cover; display:block;}
+  .inst-icon-media{
+    height:170px; display:flex; align-items:center; justify-content:center;
+    font-size:3.4rem; background:linear-gradient(135deg, rgba(217,164,65,0.12), rgba(179,90,53,0.12));
+  }
+  .inst-body{padding:22px 24px;}
+  .inst-tag{
+    display:inline-block; color:var(--gold-soft); font-size:0.72rem; font-weight:800;
+    letter-spacing:0.4px; text-transform:uppercase; margin-bottom:10px;
+  }
+  .inst-body h3{color:var(--sand); font-family:'Cairo',sans-serif; font-weight:800; font-size:1.1rem; margin-bottom:10px;}
+  .inst-body p{color:var(--fog); font-size:0.9rem; line-height:1.75; margin-bottom:14px;}
+  .inst-addr{display:block; color:var(--terracotta); font-size:0.82rem; font-weight:700;}
+  @media(max-width:700px){
+    .inst-grid{grid-template-columns:1fr;}
+  }
   .donate-options a{
     display:flex; align-items:center; justify-content:space-between;
     background:rgba(233,220,194,0.06); border:1px solid rgba(233,220,194,0.15);
@@ -652,6 +790,32 @@
   footer .domain{
     margin-top:8px; font-size:0.75rem; color:var(--fog); letter-spacing:1px;
   }
+  .footer-contact{
+    display:inline-block; margin-top:22px; color:var(--gold-soft); font-weight:700;
+    font-size:0.88rem; text-decoration:none; transition:color .2s;
+  }
+  .footer-contact:hover{color:var(--sand);}
+  .footer-share{
+    display:flex; align-items:center; justify-content:center; gap:12px;
+    margin-top:22px; font-size:0.82rem; color:var(--fog);
+  }
+  .footer-share a, .footer-share button{
+    background:rgba(233,220,194,0.06); border:1px solid rgba(233,220,194,0.15);
+    width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:0.95rem; text-decoration:none; cursor:pointer; transition:all .2s; color:inherit;
+  }
+  .footer-share a:hover, .footer-share button:hover{border-color:var(--gold); background:rgba(217,164,65,0.1);}
+
+  .back-to-top{
+    position:fixed; bottom:24px; inset-inline-end:24px; z-index:120;
+    width:46px; height:46px; border-radius:50%; border:1px solid rgba(217,164,65,0.35);
+    background:var(--ink-2); color:var(--gold-soft); font-size:1.3rem; font-weight:800;
+    cursor:pointer; box-shadow:0 10px 26px rgba(0,0,0,0.4);
+    opacity:0; visibility:hidden; transform:translateY(12px);
+    transition:all .3s ease;
+  }
+  .back-to-top.show{opacity:1; visibility:visible; transform:translateY(0);}
+  .back-to-top:hover{border-color:var(--gold); color:var(--sand);}
 
   /* SURVEY SECTION */
   .survey-section{background:var(--ink); border-bottom:1px solid rgba(233,220,194,0.08);}
@@ -738,6 +902,9 @@
     <a href="#articles" data-i18n="nav.articles">مقالات</a>
     <a href="#life" data-i18n="nav.life">الحياة</a>
     <a href="#survey" data-i18n="nav.survey">استطلاع</a>
+    <a href="#domains" data-i18n="nav.domains">المجالات</a>
+    <a href="#institutions" data-i18n="nav.institutions">المؤسسات</a>
+    <a href="#places">📸 أجمل الأماكن</a>
   </nav>
   <div class="header-right">
     <div class="lang-switch" id="langSwitch">
@@ -776,34 +943,44 @@
     }
     if(scrim){ scrim.addEventListener('click', closeMobileNav); }
 
+    const PAGE_IDS = ['news','videos','history','origin','landmarks','beaches','view3d','articles','life','survey','domains','institutions','places','donate'];
+
+    function showPage(id, opts){
+      opts = opts || {};
+      if(PAGE_IDS.indexOf(id) === -1) id = 'news';
+      document.querySelectorAll('.page-section').forEach(function(sec){
+        sec.classList.remove('active');
+      });
+      const target = document.getElementById(id);
+      if(target){ target.classList.add('active'); }
+      document.querySelectorAll('nav a[href^="#"]').forEach(function(a){
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+      if(!opts.silent){
+        try{ history.pushState({page:id}, '', '#' + id); }catch(e){}
+      }
+      if(!opts.noScroll){
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+    }
+
     const navAnchors = document.querySelectorAll('a[href^="#"]');
     navAnchors.forEach(function(a){
+      const targetId = a.getAttribute('href').slice(1);
+      if(PAGE_IDS.indexOf(targetId) === -1) return;
       a.addEventListener('click', function(e){
-        const id = a.getAttribute('href').slice(1);
-        const target = document.getElementById(id);
-        if(target){
-          e.preventDefault();
-          closeMobileNav();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-          try{ history.pushState(null, '', '#' + id); }catch(err){}
-        }
+        e.preventDefault();
+        closeMobileNav();
+        showPage(targetId);
       });
     });
 
-    const sections = Array.from(document.querySelectorAll('section[id]'));
-    const headerNavLinks = document.querySelectorAll('nav a[href^="#"]');
-    function updateActiveNav(){
-      let current = null;
-      const scrollPos = window.scrollY + 140;
-      sections.forEach(function(sec){
-        if(sec.offsetTop <= scrollPos) current = sec.id;
-      });
-      headerNavLinks.forEach(function(a){
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-      });
-    }
-    window.addEventListener('scroll', updateActiveNav, {passive:true});
-    updateActiveNav();
+    const initialId = (location.hash || '').slice(1);
+    showPage(PAGE_IDS.indexOf(initialId) !== -1 ? initialId : 'news', {silent:true, noScroll:true});
+    window.addEventListener('popstate', function(e){
+      const id = (e.state && e.state.page) || (location.hash || '#news').slice(1);
+      showPage(id, {silent:true});
+    });
 
     const bar = document.getElementById('pageLoadingBar');
     function updateProgressBar(){
@@ -816,11 +993,34 @@
     window.addEventListener('scroll', updateProgressBar, {passive:true});
     updateProgressBar();
 
-    if(location.hash){
-      const initial = document.getElementById(location.hash.slice(1));
-      if(initial){ setTimeout(function(){ initial.scrollIntoView({block:'start'}); }, 50); }
+    const backToTop = document.getElementById('backToTop');
+    if(backToTop){
+      function toggleBackToTop(){
+        backToTop.classList.toggle('show', window.scrollY > 600);
+      }
+      window.addEventListener('scroll', toggleBackToTop, {passive:true});
+      toggleBackToTop();
+      backToTop.addEventListener('click', function(){
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
     }
   });
+
+  function copySiteLink(btn){
+    const url = 'https://www.annabazdf.com';
+    const done = function(){
+      const original = btn.textContent;
+      btn.textContent = '✓';
+      setTimeout(function(){ btn.textContent = original; }, 1500);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(done).catch(function(){
+        prompt('انسخ الرابط:', url);
+      });
+    }else{
+      prompt('انسخ الرابط:', url);
+    }
+  }
 </script>
 
 <section class="hero">
@@ -846,306 +1046,7 @@
   <div class="scroll-cue" data-i18n="hero.scroll">تابع القراءة</div>
 </section>
 
-<style>
-  .quick-info{padding:34px 28px 6px; max-width:1200px; margin:0 auto;}
-  .qi-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
-  .qi-card{background:var(--ink-2); border:1px solid rgba(217,164,65,0.18); padding:20px 22px; display:flex; align-items:center; gap:16px;}
-  .qi-icon{font-size:2rem; line-height:1;}
-  .qi-label{font-size:0.78rem; color:var(--fog); margin-bottom:4px;}
-  .qi-value{font-size:1.2rem; font-weight:800; color:var(--sand); font-family:'Cairo',sans-serif;}
-  .qi-sub{font-size:0.76rem; color:var(--gold-soft); margin-top:2px;}
-</style>
-<section class="quick-info" id="quickInfo">
-  <div class="qi-grid">
-    <div class="qi-card">
-      <span class="qi-icon" id="qiWeatherIcon">🌤️</span>
-      <div>
-        <div class="qi-label" data-i18n="qi.weather">الطقس الآن في عنابة</div>
-        <div class="qi-value" id="qiWeatherValue">—</div>
-        <div class="qi-sub" id="qiWeatherSub"></div>
-      </div>
-    </div>
-    <div class="qi-card">
-      <span class="qi-icon">🕌</span>
-      <div>
-        <div class="qi-label" data-i18n="qi.nextPrayer">الصلاة القادمة</div>
-        <div class="qi-value" id="qiPrayerValue">—</div>
-        <div class="qi-sub" id="qiPrayerSub"></div>
-      </div>
-    </div>
-    <div class="qi-card">
-      <span class="qi-icon">🕒</span>
-      <div>
-        <div class="qi-label" data-i18n="qi.clock">الساعة الآن في عنابة</div>
-        <div class="qi-value" id="qiClockValue">—</div>
-        <div class="qi-sub" id="qiClockSub"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .forecast{padding:0 28px 34px; max-width:1200px; margin:0 auto;}
-  .fc-strip{display:flex; gap:10px; overflow-x:auto; padding-bottom:4px;}
-  .fc-day{flex:0 0 auto; min-width:88px; background:var(--ink-2); border:1px solid rgba(217,164,65,0.18); padding:14px 10px; text-align:center;}
-  .fc-day .fc-name{font-size:0.78rem; color:var(--gold-soft); margin-bottom:6px;}
-  .fc-day .fc-icon{font-size:1.4rem; margin-bottom:6px;}
-  .fc-day .fc-temps{font-size:0.85rem; color:var(--sand); font-weight:700;}
-  .fc-day .fc-temps span{color:var(--fog); font-weight:400;}
-</style>
-<section class="forecast" id="forecast">
-  <div class="fc-strip" id="fcStrip">
-    <div class="fc-day"><div class="fc-name">—</div><div class="fc-icon">🌤️</div><div class="fc-temps">—</div></div>
-  </div>
-</section>
-<script>
-  async function loadAnnabaForecast(){
-    const strip = document.getElementById('fcStrip');
-    if(!strip) return;
-    try{
-      const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=36.9&longitude=7.77&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Africa%2FAlgiers&forecast_days=7');
-      const data = await res.json();
-      const lang = document.documentElement.getAttribute('lang') || 'ar';
-      const localeMap = {ar:'ar-DZ', fr:'fr-DZ', en:'en-GB'};
-      const days = data.daily.time;
-      const max = data.daily.temperature_2m_max;
-      const min = data.daily.temperature_2m_min;
-      const codes = data.daily.weather_code;
-      strip.innerHTML = days.map(function(d, i){
-        const date = new Date(d + 'T12:00:00');
-        const name = date.toLocaleDateString(localeMap[lang] || 'ar-DZ', {weekday:'short'});
-        const icon = WEATHER_ICONS[codes[i]] || '🌤️';
-        return '<div class="fc-day"><div class="fc-name">' + name + '</div><div class="fc-icon">' + icon + '</div><div class="fc-temps">' + Math.round(max[i]) + '° <span>/ ' + Math.round(min[i]) + '°</span></div></div>';
-      }).join('');
-    }catch(e){ /* تبقى القيمة الافتراضية دون كسر الواجهة */ }
-  }
-  document.addEventListener('DOMContentLoaded', function(){
-    loadAnnabaForecast();
-    setInterval(loadAnnabaForecast, 60 * 60 * 1000);
-  });
-</script>
-
-<script>
-  function tickAnnabaClock(){
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const localeMap = {ar:'ar-DZ', fr:'fr-DZ', en:'en-GB'};
-    const val = document.getElementById('qiClockValue');
-    const sub = document.getElementById('qiClockSub');
-    if(val){
-      val.textContent = new Date().toLocaleTimeString(localeMap[lang] || 'ar-DZ', {timeZone:'Africa/Algiers', hour:'2-digit', minute:'2-digit', second:'2-digit'});
-    }
-    if(sub){
-      const subMap = {ar:'توقيت الجزائر (UTC+1)', fr:'Heure d\'Algérie (UTC+1)', en:'Algeria time (UTC+1)'};
-      sub.textContent = subMap[lang] || subMap.ar;
-    }
-  }
-  document.addEventListener('DOMContentLoaded', function(){
-    tickAnnabaClock();
-    setInterval(tickAnnabaClock, 1000);
-  });
-</script>
-<script>
-  // بطاقة الطقس الحيّة لعنابة عبر Open-Meteo (مجانية، بلا مفتاح API، بلا وسيط CORS)
-  const WEATHER_ICONS = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌦️',61:'🌧️',63:'🌧️',65:'🌧️',71:'🌨️',73:'🌨️',75:'🌨️',80:'🌦️',81:'🌧️',82:'⛈️',95:'⛈️',96:'⛈️',99:'⛈️'};
-  async function loadAnnabaWeather(){
-    try{
-      const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=36.9&longitude=7.77&current=temperature_2m,weather_code&timezone=Africa%2FAlgiers');
-      const data = await res.json();
-      const t = Math.round(data.current.temperature_2m);
-      const code = data.current.weather_code;
-      const lang = document.documentElement.getAttribute('lang') || 'ar';
-      const icon = document.getElementById('qiWeatherIcon');
-      const val = document.getElementById('qiWeatherValue');
-      const sub = document.getElementById('qiWeatherSub');
-      if(icon) icon.textContent = WEATHER_ICONS[code] || '🌤️';
-      if(val) val.textContent = t + '°C';
-      const subMap = {ar:'تحديث مباشر', fr:'Mise à jour en direct', en:'Live update'};
-      if(sub) sub.textContent = subMap[lang] || subMap.ar;
-    }catch(e){
-      const val = document.getElementById('qiWeatherValue');
-      if(val) val.textContent = '—';
-    }
-  }
-
-  // بطاقة مواقيت الصلاة القادمة لعنابة عبر Aladhan API (مجانية، بلا مفتاح API)
-  const PRAYER_NAMES = {
-    ar:{Fajr:'الفجر',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'},
-    fr:{Fajr:'Fajr',Dhuhr:'Dhuhr',Asr:'Asr',Maghrib:'Maghrib',Isha:'Isha'},
-    en:{Fajr:'Fajr',Dhuhr:'Dhuhr',Asr:'Asr',Maghrib:'Maghrib',Isha:'Isha'}
-  };
-  async function loadAnnabaPrayerTimes(){
-    try{
-      const res = await fetch('https://api.aladhan.com/v1/timingsByCity?city=Annaba&country=Algeria&method=3');
-      const data = await res.json();
-      const t = data.data.timings;
-      const order = ['Fajr','Dhuhr','Asr','Maghrib','Isha'];
-      const now = new Date();
-      const nowMin = now.getHours()*60 + now.getMinutes();
-      let next = order[0], nextTime = t[order[0]];
-      for(const name of order){
-        const parts = t[name].split(':').map(Number);
-        if(parts[0]*60+parts[1] > nowMin){ next = name; nextTime = t[name]; break; }
-      }
-      const lang = document.documentElement.getAttribute('lang') || 'ar';
-      const names = PRAYER_NAMES[lang] || PRAYER_NAMES.ar;
-      const val = document.getElementById('qiPrayerValue');
-      const sub = document.getElementById('qiPrayerSub');
-      if(val) val.textContent = names[next] + ' — ' + nextTime;
-      const subMap = {ar:'حسب توقيت مدينة عنابة', fr:"Heure d'Annaba", en:'Annaba local time'};
-      if(sub) sub.textContent = subMap[lang] || subMap.ar;
-    }catch(e){
-      const val = document.getElementById('qiPrayerValue');
-      if(val) val.textContent = '—';
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function(){
-    loadAnnabaWeather();
-    loadAnnabaPrayerTimes();
-    setInterval(loadAnnabaWeather, 30 * 60 * 1000);
-    setInterval(loadAnnabaPrayerTimes, 30 * 60 * 1000);
-  });
-</script>
-
-<style>
-  .daily-hub{padding:10px 28px 34px; max-width:1200px; margin:0 auto;}
-  .dh-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;}
-  .dh-card{background:var(--ink-2); border:1px solid rgba(217,164,65,0.18); padding:22px 24px;}
-  .dh-card .dh-eyebrow{font-size:0.72rem; letter-spacing:.05em; color:var(--gold-soft); text-transform:uppercase; margin-bottom:10px; display:flex; align-items:center; gap:6px;}
-  .dh-card h4{font-size:1.05rem; color:var(--sand); margin-bottom:8px; line-height:1.6;}
-  .dh-card p{font-size:0.9rem; color:var(--fog); line-height:1.75; margin:0;}
-  .dh-card a.dh-link{display:inline-flex; align-items:center; gap:6px; margin-top:12px; color:var(--gold); text-decoration:none; font-weight:700; font-size:0.9rem;}
-  .dh-card a.dh-link:hover{opacity:0.85;}
-</style>
-<section class="daily-hub" id="dailyHub">
-  <div class="dh-grid">
-    <div class="dh-card">
-      <div class="dh-eyebrow">💡 <span data-i18n="dh.factEyebrow">هل تعلم؟</span></div>
-      <p id="dhFactText">—</p>
-    </div>
-    <div class="dh-card">
-      <div class="dh-eyebrow">🧭 <span data-i18n="dh.pickEyebrow">اقتراح اليوم</span></div>
-      <h4 id="dhPickText">—</h4>
-      <a class="dh-link" id="dhPickLink" href="#landmarks">اكتشف الآن <span id="dhArrow">←</span></a>
-    </div>
-    <div class="dh-card">
-      <div class="dh-eyebrow">🌤️ <span data-i18n="dh.tipEyebrow">نصيحة اليوم</span></div>
-      <p id="dhTipText">—</p>
-    </div>
-    <div class="dh-card">
-      <div class="dh-eyebrow">🎲 <span data-i18n="dh.randomEyebrow">استكشاف عشوائي</span></div>
-      <p data-i18n="dh.randomDesc" style="margin-bottom:14px;">اضغط للانتقال إلى ركن عشوائي من الموقع</p>
-      <a class="dh-link" id="dhRandomBtn" href="javascript:void(0)" data-i18n="dh.randomCta">فاجئني <span>🎯</span></a>
-    </div>
-  </div>
-</section>
-<script>
-  const DH_FACTS = {
-    ar: [
-      "تُعرف عنابة تاريخياً باسم «بونة»، وهي من أقدم المدن في شمال إفريقيا.",
-      "احتضنت منطقة عنابة مدينة هيبون الأثرية التي عاش فيها القديس أوغسطينوس في القرن الرابع الميلادي.",
-      "يضم محيط عنابة مركّب الحجار للحديد والصلب، من أكبر المجمعات الصناعية في الجزائر.",
-      "يمتد ساحل عنابة عشرات الكيلومترات بين شواطئ رملية ذهبية ومناطق صخرية مرجانية.",
-      "ترتفع بلدية سرايدي الجبلية فوق عنابة، وتشتهر بغاباتها ومناخها المعتدل صيفاً.",
-      "يُلقَّب جمهور نادي اتحاد عنابة بـ«الهوليڨانز»، وهو من الأندية العريقة في كرة القدم الجزائرية.",
-      "ميناء عنابة من أهم الموانئ التجارية في الجزائر، ويُستخدم أساساً لتصدير الحديد والفوسفات.",
-      "تُعد عنابة من كبرى مدن الشرق الجزائري من حيث عدد السكان والنشاط الاقتصادي."
-    ],
-    fr: [
-      "Annaba était historiquement connue sous le nom de « Bône », l'une des plus anciennes villes d'Afrique du Nord.",
-      "La région d'Annaba abrite le site antique d'Hippone, où vécut Saint Augustin au IVe siècle.",
-      "Le complexe sidérurgique d'El Hadjar, l'un des plus grands d'Algérie, se trouve près d'Annaba.",
-      "Le littoral d'Annaba s'étend sur des dizaines de kilomètres entre plages de sable doré et zones rocheuses coralliennes.",
-      "La commune montagneuse de Seraïdi domine Annaba et est réputée pour ses forêts et son climat estival doux.",
-      "Les supporters de l'USM Annaba sont surnommés les « Hooliganz », un club historique du football algérien.",
-      "Le port d'Annaba est l'un des plus importants ports commerciaux d'Algérie, notamment pour le fer et le phosphate.",
-      "Annaba est l'une des plus grandes villes de l'est algérien par sa population et son activité économique."
-    ],
-    en: [
-      "Annaba was historically known as 'Bône', one of the oldest cities in North Africa.",
-      "The Annaba region is home to the ancient site of Hippo Regius, where Saint Augustine lived in the 4th century.",
-      "The El Hadjar steel complex, one of Algeria's largest industrial sites, is located near Annaba.",
-      "Annaba's coastline stretches for dozens of kilometers between golden sandy beaches and rocky coral areas.",
-      "The mountain town of Seraïdi overlooks Annaba and is known for its forests and mild summer climate.",
-      "Fans of USM Annaba are nicknamed the 'Hooliganz', one of Algeria's historic football clubs.",
-      "The Port of Annaba is one of Algeria's most important commercial ports, mainly for iron and phosphate exports.",
-      "Annaba is one of the largest cities in eastern Algeria by population and economic activity."
-    ]
-  };
-
-  const DH_SECTIONS = ['history','videos','origin','landmarks','beaches','view3d','articles','life'];
-  const DH_SECTION_LABEL_KEY = {history:'nav.history', videos:'nav.videos', origin:'nav.origin', landmarks:'nav.landmarks', beaches:'nav.beaches', view3d:null, articles:'nav.articles', life:'nav.life'};
-  const DH_SECTION_FALLBACK = {ar:{view3d:'جولة ثلاثية الأبعاد'}, fr:{view3d:'Visite 3D'}, en:{view3d:'3D tour'}};
-
-  function dhDayIndex(){ return Math.floor(Date.now() / (24 * 60 * 60 * 1000)); }
-
-  function renderDailyFact(){
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const list = DH_FACTS[lang] || DH_FACTS.ar;
-    const el = document.getElementById('dhFactText');
-    if(el && list.length) el.textContent = list[dhDayIndex() % list.length];
-  }
-
-  function renderDailyPick(){
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const sectionId = DH_SECTIONS[dhDayIndex() % DH_SECTIONS.length];
-    const key = DH_SECTION_LABEL_KEY[sectionId];
-    let label = (key && typeof I18N !== 'undefined' && I18N[lang] && I18N[lang][key]) ? I18N[lang][key] : ((DH_SECTION_FALLBACK[lang] && DH_SECTION_FALLBACK[lang][sectionId]) || sectionId);
-    label = String(label).replace(/<[^>]*>/g, '').trim();
-    const introMap = {ar:'اليوم نقترح عليك اكتشاف: ', fr:"Aujourd'hui, découvrez : ", en:'Today, discover: '};
-    const ctaMap = {ar:'انتقل الآن ', fr:'Voir maintenant ', en:'View now '};
-    const arrow = lang === 'ar' ? '←' : '→';
-    const textEl = document.getElementById('dhPickText');
-    const linkEl = document.getElementById('dhPickLink');
-    const arrowEl = document.getElementById('dhArrow');
-    if(textEl) textEl.textContent = (introMap[lang] || introMap.ar) + label;
-    if(linkEl) linkEl.setAttribute('href', '#' + sectionId);
-    if(linkEl && linkEl.childNodes.length) linkEl.childNodes[0].textContent = ctaMap[lang] || ctaMap.ar;
-    if(arrowEl) arrowEl.textContent = arrow;
-  }
-
-  function renderDailyTip(){
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const el = document.getElementById('dhTipText');
-    if(!el) return;
-    const tempEl = document.getElementById('qiWeatherValue');
-    const tempMatch = (tempEl && tempEl.textContent) ? parseInt(tempEl.textContent, 10) : NaN;
-    const isFriday = new Date().getDay() === 5;
-    const tips = {
-      ar: {friday:'اليوم الجمعة — وقت مناسب لصلاة الجمعة وزيارة أحد مساجد المدينة العريقة.', hot:'الجو حار اليوم — فرصة مثالية لزيارة شواطئ عنابة أو الصعود لمرتفعات سرايدي المنعشة.', mild:'طقس معتدل اليوم — مناسب تماماً للتجول في وسط المدينة وزيارة المعالم التاريخية سيراً.', default:'استغل هذا اليوم لاكتشاف ركن جديد من عنابة عبر أقسام الموقع أدناه.'},
-      fr: {friday:"C'est vendredi — un bon moment pour la prière et la visite d'une mosquée historique de la ville.", hot:"Il fait chaud aujourd'hui — l'occasion idéale de profiter des plages d'Annaba ou de la fraîcheur de Seraïdi.", mild:"Temps agréable aujourd'hui — parfait pour explorer le centre-ville et ses sites historiques à pied.", default:"Profitez de cette journée pour découvrir un nouveau coin d'Annaba via les sections du site."},
-      en: {friday:"It's Friday — a good time for prayer and a visit to one of the city's historic mosques.", hot:"It's hot today — a great chance to enjoy Annaba's beaches or the cool heights of Seraïdi.", mild:'Pleasant weather today — perfect for exploring downtown and its historic sites on foot.', default:"Use today to discover a new corner of Annaba through the site's sections below."}
-    };
-    const set = tips[lang] || tips.ar;
-    let tip;
-    if(isFriday) tip = set.friday;
-    else if(!isNaN(tempMatch) && tempMatch >= 28) tip = set.hot;
-    else if(!isNaN(tempMatch)) tip = set.mild;
-    else tip = set.default;
-    el.textContent = tip;
-  }
-
-  function renderDailyHub(){
-    renderDailyFact();
-    renderDailyPick();
-    renderDailyTip();
-  }
-
-  document.addEventListener('DOMContentLoaded', function(){
-    renderDailyHub();
-    setTimeout(renderDailyTip, 4000);
-    const randomBtn = document.getElementById('dhRandomBtn');
-    if(randomBtn){
-      randomBtn.addEventListener('click', function(){
-        const pick = DH_SECTIONS[Math.floor(Math.random() * DH_SECTIONS.length)];
-        const target = document.getElementById(pick);
-        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    }
-  });
-</script>
-
-<section class="news" id="news">
+<section class="news page-section" id="news">
   <div class="wrap">
     <div class="news-head">
       <div class="news-title-group">
@@ -1160,30 +1061,34 @@
     <div class="bulletin">
       <div class="bulletin-top">
         <span class="b-name" data-i18n="news.bname">نشرة عنابة اليوم</span>
-        <span class="b-date" id="newsBdate">الخميس ٢٣ يوليو ٢٠٢٦</span>
+        <span class="b-date" data-i18n="news.bdate">الخميس ٢٣ يوليو ٢٠٢٦</span>
       </div>
       <div class="bulletin-lead">
         <span class="b-kicker" data-i18n="news.kicker">عاجل</span>
-        <h3 id="newsLeadTitle">حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة</h3>
+        <h3 data-i18n="news.lead.h3">حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة</h3>
         <p data-i18n="news.lead.p1">
-          تُعرض هنا أبرز عناوين اليوم عن مدينة عنابة، تُجمَّع تلقائياً من عدة مصادر إخبارية وتتجدّد بشكل دوري كل يوم من أيام الأسبوع. اضغط على الرابط أدناه للاطلاع على التفاصيل الكاملة من المصدر الأصلي.
+          تواصل مصالح الحماية المدنية والجيش الوطني الشعبي منذ منتصف الأسبوع الماضي عمليات مكافحة حرائق غابية متفرقة اندلعت في المرتفعات الجبلية لبلدية سرايدي بولاية عنابة، وتوسّعت ليلة الثلاثاء الماضي بشكل حاد بفعل ارتفاع درجات الحرارة وهبوب رياح قوية، ما اضطر السلطات إلى إجلاء أكثر من مئة مريض من مؤسسة إعادة التأهيل الوظيفي بسرايدي نحو مستشفيي الحجار والبوني تحسّباً لاقتراب ألسنة اللهب من محيط المنشأة.
         </p>
-        <a class="bulletin-source" id="newsLeadSource" href="https://alarabyalasil.com/2026/07/22/%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D9%87%D9%88%D9%84-%D9%81%D9%8A-%D8%BA%D8%A7%D8%A8%D8%A7%D8%AA-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9-%D9%8A%D9%85%D8%AA/" target="_blank" rel="noopener">المصدر: العربي الأصيل ←</a>
+        <p data-i18n="news.lead.p2">
+          كما لجأت مؤسسة سونلغاز إلى قطع الكهرباء والغاز احترازياً عن كامل بلدية سرايدي، فيما زار وزير الداخلية والجماعات المحلية والنقل، السعيد سعيود، المنطقة وأكد متابعة رئيس الجمهورية عبد المجيد تبون للملف بشكل آني، مع الإعلان عن تعويض كامل للمتضررين وإعادة بناء نحو ١٥٠ مسكناً متضرراً. وبعد السيطرة على جزء من الحرائق، شرعت السلطات في إعادة نقل المرضى تدريجياً إلى مستشفى سرايدي.
+        </p>
+        <a class="bulletin-source" href="https://alarabyalasil.com/2026/07/22/%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D9%87%D9%88%D9%84-%D9%81%D9%8A-%D8%BA%D8%A7%D8%A8%D8%A7%D8%AA-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9-%D9%8A%D9%85%D8%AA/" target="_blank" rel="noopener" data-i18n="news.source1">المصدر: العربي الأصيل ←</a>
       </div>
       <div class="bulletin-items">
         <div class="b-item">
           <span class="b-kicker-alt" data-i18n="news.item1.kicker">محليات</span>
-          <h4 id="newsItem1Title">سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز</h4>
-          <a class="bulletin-source" id="newsItem1Source" href="https://www.awras.com/%D8%AD%D8%B1%D8%A7%D8%A6%D9%82-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%AA%D8%B6%D8%B1%D8%A8-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%88/" target="_blank" rel="noopener">المصدر: أوراس ←</a>
+          <h4 data-i18n="news.item1.h4">سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز</h4>
+          <p data-i18n="news.item1.p">باشرت مديرية توزيع سونلغاز بعنابة معاينة ميدانية للشبكات الكهربائية والغازية التي طالها الحريق في سرايدي، تمهيداً لإعادة الخدمة تدريجياً بعد تراجع الخطر عن المنشآت الحيوية.</p>
+          <a class="bulletin-source" href="https://www.awras.com/%D8%AD%D8%B1%D8%A7%D8%A6%D9%82-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%AA%D8%B6%D8%B1%D8%A8-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%88/" target="_blank" rel="noopener" data-i18n="news.source2">المصدر: أوراس ←</a>
         </div>
         <div class="b-item">
           <span class="b-kicker-alt" data-i18n="news.item2.kicker">رياضة</span>
-          <h4 id="newsItem2Title">اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً</h4>
-          <a class="bulletin-source" id="newsItem2Source" href="https://news.google.com/search?q=%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9&hl=ar" target="_blank" rel="noopener">المصدر ←</a>
+          <h4 data-i18n="news.item2.h4">اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً</h4>
+          <p data-i18n="news.item2.p">أنهى اتحاد عنابة، الملقب جمهوره بـ«الهوليڨانز»، موسم ٢٠٢٥-٢٠٢٦ في المركز السادس ضمن مجموعة الوسط الشرقي للرابطة الثانية المحترفة، ويترقب أنصاره تعزيزات صيفية تعيد الفريق إلى دائرة المنافسة على الصعود.</p>
         </div>
       </div>
       <div class="bulletin-note" data-i18n="news.note">
-        تتحدّث هذه النشرة تلقائياً كل ١٥ دقيقة من عدة مصادر إخبارية متنوعة، وتختلف عناوينها من يوم لآخر على مدار الأسبوع.
+        هذه النشرة تُحرَّر يدوياً وتعكس أبرز مستجدات المدينة عند آخر تحديث للصفحة. للاطلاع على عناوين إضافية محدَّثة تلقائياً، تابع القائمة أدناه.
       </div>
     </div>
 
@@ -1271,163 +1176,113 @@
   // كل خبر هنا حقيقي وموثّق بمصدره — وليس نصاً افتراضياً. عند غياب تاريخ
   // دقيق موثوق للخبر يُترك التاريخ فارغاً بدل اختلاق تاريخ غير صحيح.
   const FALLBACK_NEWS_ITEMS = [
+    // الأحد (0) — بيئة وصحة
     {
+      day: 0,
       title: 'حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة',
+      category: 'environment',
       link: 'https://alarabyalasil.com/2026/07/22/%D8%AD%D8%B1%D9%8A%D9%82-%D9%85%D9%87%D9%88%D9%84-%D9%81%D9%8A-%D8%BA%D8%A7%D8%A8%D8%A7%D8%AA-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9-%D9%8A%D9%85%D8%AA/',
       pubDate: '2026-07-22'
     },
     {
+      day: 0,
       title: 'مديرية الصحة بعنابة تعيد نقل مرضى مستشفى سرايدي بعد إخماد الحرائق',
+      category: 'health',
       link: 'https://www.aljazairalyoum.dz/',
       pubDate: '2026-07-22'
     },
+    // الاثنين (1) — بنية تحتية وأمن
     {
+      day: 1,
       title: 'سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز بسرايدي',
+      category: 'economy',
       link: 'https://www.awras.com/%D8%AD%D8%B1%D8%A7%D8%A6%D9%82-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%AA%D8%B6%D8%B1%D8%A8-%D8%A7%D9%84%D8%B4%D8%A8%D9%83%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A6%D9%8A%D8%A9-%D9%88/',
       pubDate: '2026-07-22'
     },
     {
+      day: 1,
       title: 'تنصيب عميد أول للشرطة كافي عبد الجليل رئيساً جديداً لأمن ولاية عنابة',
+      category: 'security',
       link: 'https://www.aps.dz/ar/regions/tag/%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9',
       pubDate: ''
     },
+    // الثلاثاء (2) — طبيعة ورياضة
     {
+      day: 2,
       title: 'هزة أرضية بقوة 3.5 درجة تضرب منطقة شطيبة بولاية عنابة',
+      category: 'environment',
       link: 'https://www.aps.dz/ar/regions/tag/%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9',
       pubDate: ''
     },
     {
+      day: 2,
       title: 'الفاف يستدعي مدربين ولاعبين من اتحاد عنابة للتحقيق في نزاهة المنافسة',
+      category: 'sports',
       link: 'https://ultraalgeria.ultrasawt.com/%D8%A7%D9%84%D9%81%D8%A7%D9%81-%D8%AA%D8%AD%D8%B1%D9%83-%D9%85%D9%84%D9%81-%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A7%D8%B3%D8%AA%D8%AF%D8%B9%D8%A7%D8%A1-%D9%85%D8%AF%D8%B1%D8%A8%D9%8A%D9%86-%D9%88%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86-%D9%84%D9%84%D8%AA%D8%AD%D9%82%D9%8A%D9%82/%D9%81%D8%B1%D9%8A%D9%82-%D8%A7%D9%84%D8%AA%D8%AD%D8%B1%D9%8A%D8%B1/%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9',
       pubDate: '2026-05-13'
     },
+    // الأربعاء (3) — أمن ورياضة
     {
+      day: 3,
       title: 'درك عنابة يوجّه نداءً للجمهور في قضية تتعلق باستيراد سيارات من الصين',
+      category: 'security',
       link: 'https://www.ennaharonline.com/algeria/',
       pubDate: ''
     },
     {
+      day: 3,
       title: 'اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً',
+      category: 'sports',
       link: 'https://news.google.com/search?q=%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9&hl=ar',
       pubDate: ''
+    },
+    // الخميس (4) — اقتصاد
+    {
+      day: 4,
+      title: 'توسعة ميناء عنابة: نحو مضاعفة الطاقة التصديرية إلى أكثر من 6 ملايين طن سنوياً',
+      category: 'economy',
+      link: 'https://reveildalgerie.com/ar/%D8%AA%D9%88%D8%B3%D8%B9%D8%A9-%D9%85%D9%8A%D9%86%D8%A7%D8%A1-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D9%86%D8%AD%D9%88-%D9%85%D8%B6%D8%A7%D8%B9%D9%81%D8%A9-%D8%A7%D9%84/',
+      pubDate: '2026-02-07'
+    },
+    {
+      day: 4,
+      title: 'الوزير الأول يقف على مدى تقدم أشغال مشروع توسعة ميناء عنابة',
+      category: 'economy',
+      link: 'https://www.entv.dz/ar/news/%D8%A7%D9%84%D9%88%D8%B2%D9%8A%D8%B1-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%8A%D9%82%D9%81-%D8%B9%D9%84%D9%89-%D9%85%D8%AF%D9%89-%D8%AA%D9%82%D8%AF%D9%85-%D8%A3%D8%B4%D8%BA%D8%A7%D9%84-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D9%88%D8%B3%D8%B9%D8%A9-%D9%85%D9%8A%D9%86%D8%A7%D8%A1-%D8%B9%D9%86%D8%A7%D8%A8%D8%A9',
+      pubDate: '2026-02-07'
+    },
+    // الجمعة (5) — ثقافة
+    {
+      day: 5,
+      title: 'شهر التراث بعنابة: برنامج متنوع لإبراز الموروث الثقافي والحضاري',
+      category: 'culture',
+      link: 'https://www.elitihadcom.dz/%D8%B4%D9%87%D8%B1-%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%AB-%D8%A8%D8%B9%D9%86%D8%A7%D8%A8%D8%A9-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D9%85%D8%AA%D9%86%D9%88%D8%B9-%D9%84%D8%A5%D8%A8%D8%B1%D8%A7%D8%B2/',
+      pubDate: '2026-04-22'
+    },
+    // السبت (6) — ثقافة وسينما
+    {
+      day: 6,
+      title: 'السينما الجزائرية في قلب الحوار المتوسطي: عنابة تصنع "مجد الصورة" على امتداد المتوسط',
+      category: 'culture',
+      link: 'https://www.elitihadcom.dz/%D8%A7%D9%84%D8%B3%D9%8A%D9%86%D9%85%D8%A7-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A%D8%A9-%D9%81%D9%8A-%D9%82%D9%84%D8%A8-%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D8%AA%D9%88/',
+      pubDate: '2026-04-25'
     }
   ];
 
-  // تدوير القائمة الاحتياطية حسب اليوم الحالي (وليس فقط كل 15 دقيقة)
-  // بحيث يختلف الترتيب المعروض فعلياً من يوم لآخر على مدار الأسبوع
+  // نعرض أخبار يوم الأسبوع الحالي تحديداً (لا يتكرر نفس المحتوى كل يوم)،
+  // ونُدوّرها إضافياً كل 15 دقيقة ضمن نفس اليوم حتى يبقى الترتيب حيوياً.
+  // إن لم يكن لليوم الحالي أخبار كافية، نُكمل من بقية الأسبوع لضمان تنوّع لا يقل عن 3 عناصر.
   function rotateFallbackNews(){
-    const dayIndex = Math.floor(Date.now() / (24 * 60 * 60 * 1000));
-    const offset = dayIndex % FALLBACK_NEWS_ITEMS.length;
-    return FALLBACK_NEWS_ITEMS.slice(offset).concat(FALLBACK_NEWS_ITEMS.slice(0, offset));
-  }
-
-  // رابط خلاصة RSS يتغيّر حسب لغة الموقع الحالية، لتنويع مصادر الأخبار
-  // (عربية/فرنسية/إنجليزية) بدل الاعتماد على مصدر واحد بلغة واحدة فقط
-  function newsFeedUrl(){
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const feeds = {
-      ar: 'https://news.google.com/rss/search?q=%D8%B9%D9%86%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1&hl=ar&gl=DZ&ceid=DZ:ar',
-      fr: 'https://news.google.com/rss/search?q=Annaba%20Alg%C3%A9rie&hl=fr&gl=DZ&ceid=DZ:fr',
-      en: 'https://news.google.com/rss/search?q=Annaba%20Algeria&hl=en&gl=DZ&ceid=DZ:en'
-    };
-    return feeds[lang] || feeds.ar;
-  }
-
-  // تحديث النشرة الرئيسية (العنوان + التاريخ + الروابط) تلقائياً من نفس العناوين
-  // المستخدَمة في القائمة المتحركة، بدل تركها نصاً ثابتاً يظل كما هو لأيام
-  const NEWS_SOURCE_LABEL = {ar: 'المصدر: ', fr: 'Source : ', en: 'Source: '};
-  function updateBulletinFromItems(items){
-    if(!items || !items.length) return;
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const arrow = lang === 'ar' ? '←' : '→';
-    const localeMap = {ar: 'ar-DZ', fr: 'fr-DZ', en: 'en-GB'};
-    const bdate = document.getElementById('newsBdate');
-    if(bdate){
-      bdate.textContent = new Date().toLocaleDateString(localeMap[lang] || 'ar-DZ', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+    const today = new Date().getDay();
+    const todays = FALLBACK_NEWS_ITEMS.filter(item => item.day === today);
+    let pool = todays.slice();
+    if(pool.length < 3){
+      const rest = FALLBACK_NEWS_ITEMS.filter(item => item.day !== today);
+      pool = pool.concat(rest).slice(0, Math.max(3, pool.length));
     }
-    function fillSlot(item, titleId, sourceId){
-      if(!item) return;
-      const titleEl = document.getElementById(titleId);
-      const sourceEl = document.getElementById(sourceId);
-      if(titleEl){
-        titleEl.textContent = (item.title || '').split(' - ')[0];
-        titleEl.style.cursor = 'pointer';
-        titleEl.onclick = function(){ openNewsDetail(item); };
-      }
-      if(sourceEl){
-        let host = '';
-        try{ host = new URL(item.link).hostname.replace('www.',''); }catch(e){}
-        sourceEl.href = 'javascript:void(0)';
-        sourceEl.textContent = NEWS_SOURCE_LABEL[lang] + (host || '') + ' ' + arrow;
-        sourceEl.onclick = function(e){ e.preventDefault(); openNewsDetail(item); };
-      }
-    }
-    fillSlot(items[0], 'newsLeadTitle', 'newsLeadSource');
-    fillSlot(items[1], 'newsItem1Title', 'newsItem1Source');
-    fillSlot(items[2], 'newsItem2Title', 'newsItem2Source');
-  }
-
-  // مجموعة مصادر متنوعة جداً تغطي عنابة في مجالات مختلفة (رياضة، اقتصاد، أمن، ثقافة، صحة، بلديات)
-  // تُجلب كلها بالتوازي (وليس تباعاً) لضمان تحديث آني وتنوّع حقيقي في كل زر ضغط
-  function newsFeedUrls(){
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const domainsByLang = {
-      ar: ['عنابة', 'عنابة رياضة', 'عنابة اقتصاد', 'عنابة أمن', 'عنابة ثقافة', 'عنابة صحة', 'عنابة بلدية'],
-      fr: ['Annaba', 'Annaba sport', 'Annaba économie', 'Annaba sécurité', 'Annaba culture', 'Annaba santé', 'Annaba municipalité'],
-      en: ['Annaba', 'Annaba sports', 'Annaba economy', 'Annaba security', 'Annaba culture', 'Annaba health', 'Annaba municipal']
-    };
-    const hlMap = {ar:'ar', fr:'fr', en:'en'};
-    const ceidMap = {ar:'DZ:ar', fr:'DZ:fr', en:'DZ:en'};
-    const domains = domainsByLang[lang] || domainsByLang.ar;
-    const hl = hlMap[lang] || 'ar';
-    const ceid = ceidMap[lang] || 'DZ:ar';
-    return domains.map(function(q){
-      return 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=' + hl + '&gl=DZ&ceid=' + ceid;
-    });
-  }
-
-  // محاولة سريعة: نُطلق كل الوسطاء المعتمدين معاً لهذا المصدر ونأخذ أول رد ناجح (Promise.any)
-  // بدل الانتظار التتابعي، فيصبح التحديث آنياً فعلياً بمجرد استجابة أول وسيط
-  const FAST_FETCHERS = [fetchViaRss2Json, fetchViaAllOrigins, fetchViaCodetabs];
-  async function fetchOneFeedFast(feedUrl){
-    try{
-      return await Promise.any(FAST_FETCHERS.map(function(f){ return f(feedUrl); }));
-    }catch(e){
-      for(const fetcher of NEWS_FETCHERS){
-        try{ const r = await fetcher(feedUrl); if(r && r.length) return r; }catch(e2){ /* التالي */ }
-      }
-      return null;
-    }
-  }
-
-  // جلب كل المجالات بالتوازي ودمجها مع تناوب المصادر لضمان تنوّع حقيقي
-  // (بدل تكديس كل مصدر تلو الآخر) وإزالة التكرار حسب الرابط
-  async function fetchAnnabaNewsMulti(){
-    const feeds = newsFeedUrls();
-    const results = await Promise.all(feeds.map(function(url){
-      return fetchOneFeedFast(url).catch(function(){ return null; });
-    }));
-    const lists = results.filter(Boolean).map(function(r){ return r.slice(0, 4); });
-    if(!lists.length) return null;
-    const merged = [];
-    const seen = new Set();
-    let idx = 0, more = true;
-    while(more && merged.length < 18){
-      more = false;
-      for(const list of lists){
-        if(idx < list.length){
-          more = true;
-          const item = list[idx];
-          const key = ((item && (item.link || item.title)) || '').split('?')[0];
-          if(item && key && !seen.has(key)){
-            seen.add(key);
-            merged.push(item);
-          }
-        }
-      }
-      idx++;
-    }
-    return merged.length ? merged : null;
+    const slot = Math.floor(Date.now() / (15 * 60 * 1000));
+    const offset = pool.length ? (slot % pool.length) : 0;
+    return pool.slice(offset).concat(pool.slice(0, offset));
   }
 
   async function fetchAnnabaNewsItems(feedUrl){
@@ -1452,7 +1307,7 @@
     let source = '';
     try{ source = new URL(item.link).hostname.replace('www.',''); }catch(e){}
     const title = (item.title || '').split(' - ')[0];
-    return `<a class="nc-slide" href="javascript:void(0)" onclick="openNewsDetail(ncItems[${i}])">
+    return `<a class="nc-slide" href="${item.link}" target="_blank" rel="noopener">
       <span class="news-idx">${String(i+1).padStart(2,'0')}</span>
       <span class="news-body">
         <h4>${title}</h4>
@@ -1520,12 +1375,6 @@
     const carousel = document.getElementById('newsCarousel');
     const track = document.getElementById('newsCarouselTrack');
     const updated = document.getElementById('newsUpdated');
-    const refreshBtn = document.getElementById('refreshNewsBtn');
-    if(refreshBtn && !isAuto){
-      refreshBtn.disabled = true;
-      refreshBtn.dataset.origText = refreshBtn.dataset.origText || refreshBtn.textContent;
-      refreshBtn.textContent = '⏳ ...جارٍ التحديث الآن';
-    }
     const isFirstLoad = ncItems.length === 0;
     if(!isFirstLoad){
       carousel.classList.add('ng-fade');
@@ -1534,12 +1383,17 @@
     if(ncAutoTimer) clearInterval(ncAutoTimer);
     if(ncRetryTimer) clearTimeout(ncRetryTimer);
     track.innerHTML = '<div class="news-skeleton" style="flex:0 0 100%;"></div>';
-    let rawItems = await fetchAnnabaNewsMulti();
+    const feed = 'https://news.google.com/rss/search?q=%D8%B9%D9%86%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1&hl=ar&gl=DZ&ceid=DZ:ar';
+    let rawItems = await fetchAnnabaNewsItems(feed);
+    if(!rawItems){
+      // محاولة ثانية بعد فاصل قصير في حال كان الفشل مؤقتاً (تقييد معدل الطلبات على أحد الوسطاء)
+      await new Promise(r => setTimeout(r, 1800));
+      rawItems = await fetchAnnabaNewsItems(feed);
+    }
     try{
       if(!rawItems) throw new Error('no source available');
-      ncItems = rawItems.slice(0, 16);
+      ncItems = rawItems.slice(0, 8);
       ncBuildCarousel();
-      updateBulletinFromItems(ncItems);
       carousel.classList.remove('ng-fade');
       updated.textContent = 'آخر تحديث: ' + new Date().toLocaleTimeString('ar-DZ', {hour:'2-digit', minute:'2-digit'}) + (isAuto ? ' (تلقائي)' : '');
       updated.classList.remove('pulse');
@@ -1547,18 +1401,13 @@
       updated.classList.add('pulse');
     }catch(e){
       // تعذّر الوصول لكل الوسطاء الخارجيين: نعرض قائمة محلية موثوقة ومتنوعة بدل ترك الواجهة فارغة،
-      // مع تدوير ترتيبها حسب اليوم الحالي حتى لا تبدو ثابتة على مدار الأسبوع
+      // مع تدوير ترتيبها حسب الدورة الزمنية الحالية حتى لا تبدو ثابتة عند كل تحديث
       ncItems = rotateFallbackNews();
       ncBuildCarousel();
-      updateBulletinFromItems(ncItems);
       carousel.classList.remove('ng-fade');
       updated.innerHTML = '⚠️ تعذّر التحديث المباشر حالياً — تُعرض آخر عناوين مؤكدة';
       // إعادة محاولة ذاتية بعد دقيقتين في حال استمر تعذّر الاتصال، دون انتظار الدورة الكاملة (١٥ دقيقة)
       ncRetryTimer = setTimeout(function(){ loadAnnabaNews(true); }, 2 * 60 * 1000);
-    }
-    if(refreshBtn && !isAuto){
-      refreshBtn.disabled = false;
-      refreshBtn.textContent = refreshBtn.dataset.origText || 'تحديث الأخبار';
     }
   }
 
@@ -1627,7 +1476,7 @@
   document.addEventListener('DOMContentLoaded', loadVisitorCounter);
 </script>
 
-<section class="videos" id="videos">
+<section class="videos page-section" id="videos">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="videos.title">شاهد عنابة مباشرة</h2>
@@ -1656,7 +1505,7 @@
   </div>
 </section>
 
-<section class="deep-history" id="history">
+<section class="deep-history page-section" id="history">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="history.title">تاريخ عنابة العريق</h2>
@@ -1742,7 +1591,7 @@
 
 
 
-<section class="origin" id="origin">
+<section class="origin page-section" id="origin">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="origin.title">من بونة إلى عنابة</h2>
@@ -1782,7 +1631,7 @@
   </div>
 </section>
 
-<section class="landmarks" id="landmarks">
+<section class="landmarks page-section" id="landmarks">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="landmarks.title">معالم لا تُنسى</h2>
@@ -1841,7 +1690,7 @@
   </div>
 </section>
 
-<section class="beaches" id="beaches">
+<section class="beaches page-section" id="beaches">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="beaches.title">🌊 بحار عنابة الخلابة</h2>
@@ -1871,7 +1720,7 @@
   </div>
 </section>
 
-<section class="view3d" id="view3d">
+<section class="view3d page-section" id="view3d">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="view3d.title">عنابة كما لم ترها من قبل</h2>
@@ -1894,7 +1743,7 @@
   </div>
 </section>
 
-<section class="articles" id="articles">
+<section class="articles page-section" id="articles">
   <div class="wrap">
     <div class="section-head">
       <h2 data-i18n="articles.title">مقالات موسّعة</h2>
@@ -2013,55 +1862,8 @@
     </div>
   </div>
 </section>
-<style>
-  details.article.article-featured{border-color: var(--dh-accent, #d9a441) !important; box-shadow: 0 0 0 1px var(--dh-accent, #d9a441) inset;}
-  .a-featured-badge{display:inline-block; background:var(--dh-accent, #d9a441); color:#0d1520; font-size:0.68rem; font-weight:800; padding:3px 10px; border-radius:20px; margin-bottom:8px;}
-</style>
-<script>
-  const ARTICLE_ACCENTS = ['#d9a441', '#c9855a', '#7fa88f', '#5f92ad'];
-  const ARTICLE_BADGE_TEXT = {ar:'⭐ مقال اليوم', fr:'⭐ Article du jour', en:"⭐ Article of the day"};
 
-  function rotateArticlesDaily(){
-    const list = document.querySelector('.article-list');
-    if(!list) return;
-    const articles = Array.from(list.children).filter(function(el){ return el.matches && el.matches('details.article'); });
-    if(!articles.length) return;
-    const dayIdx = (typeof dhDayIndex === 'function') ? dhDayIndex() : Math.floor(Date.now() / 86400000);
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const featuredPos = dayIdx % articles.length;
-    const accent = ARTICLE_ACCENTS[dayIdx % ARTICLE_ACCENTS.length];
-    document.documentElement.style.setProperty('--dh-accent', accent);
-
-    // إعادة ترتيب المقالات دائرياً كل يوم بحيث يتصدّر مقال مختلف يومياً
-    const rotated = articles.slice(featuredPos).concat(articles.slice(0, featuredPos));
-    rotated.forEach(function(el){ list.appendChild(el); });
-
-    // تنظيف أي تمييز سابق قبل إعادة التطبيق
-    articles.forEach(function(el){
-      el.classList.remove('article-featured');
-      el.open = false;
-      const oldBadge = el.querySelector('.a-featured-badge');
-      if(oldBadge) oldBadge.remove();
-    });
-
-    const featured = rotated[0];
-    if(featured){
-      featured.classList.add('article-featured');
-      featured.open = true;
-      const summary = featured.querySelector(':scope > summary');
-      if(summary && !summary.querySelector('.a-featured-badge')){
-        const badge = document.createElement('span');
-        badge.className = 'a-featured-badge';
-        badge.textContent = ARTICLE_BADGE_TEXT[lang] || ARTICLE_BADGE_TEXT.ar;
-        summary.prepend(badge);
-      }
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', rotateArticlesDaily);
-</script>
-
-<section class="split" id="life">
+<section class="split page-section" id="life">
   <div class="quote-band">
     <blockquote>
       <span data-i18n="quote.text">"عنابة مدينة كلما امتدت في الزمن كلما زادت صغراً، فهي طفلة حسناء"</span>
@@ -2100,7 +1902,7 @@
   </div>
 </section>
 
-<section class="survey-section" id="survey">
+<section class="survey-section page-section" id="survey">
   <div class="wrap">
     <div class="survey-box">
       <div class="section-head">
@@ -2179,7 +1981,329 @@
   });
 </script>
 
-<section class="donate-section" id="donate">
+<section class="domains page-section" id="domains">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="domains.title">🗂️ مجالات عنابة</h2>
+      <p data-i18n="domains.desc">تصفّح مدينة عنابة من زوايا مختلفة — لكل مجال معلومات أساسية وأحدث ما يتعلق به من مستجدات.</p>
+    </div>
+    <div class="domains-grid">
+      <button type="button" class="domain-card" data-domain="sports">
+        <span class="dc-icon">⚽</span><span class="dc-title" data-i18n="domains.sports.title">الرياضة</span>
+      </button>
+      <button type="button" class="domain-card" data-domain="economy">
+        <span class="dc-icon">🏗️</span><span class="dc-title" data-i18n="domains.economy.title">الاقتصاد</span>
+      </button>
+      <button type="button" class="domain-card" data-domain="culture">
+        <span class="dc-icon">🎭</span><span class="dc-title" data-i18n="domains.culture.title">الثقافة</span>
+      </button>
+      <button type="button" class="domain-card" data-domain="environment">
+        <span class="dc-icon">🌲</span><span class="dc-title" data-i18n="domains.environment.title">البيئة والصحة</span>
+      </button>
+      <button type="button" class="domain-card" data-domain="security">
+        <span class="dc-icon">🛡️</span><span class="dc-title" data-i18n="domains.security.title">الأمن والمجتمع</span>
+      </button>
+      <button type="button" class="domain-card" data-domain="governance">
+        <span class="dc-icon">🏛️</span><span class="dc-title" data-i18n="domains.governance.title">الإدارة المحلية</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="domain-modal-overlay" id="domainModalOverlay">
+  <div class="domain-modal">
+    <button type="button" class="dm-close" id="domainModalClose">✕</button>
+    <span class="dc-icon" id="domainModalIcon" style="font-size:2.2rem;"></span>
+    <h3 id="domainModalTitle"></h3>
+    <p id="domainModalDesc"></p>
+    <div class="domain-modal-news" id="domainModalNews"></div>
+  </div>
+</div>
+
+<script>
+  const DOMAIN_INFO = {
+    sports: {
+      icon: '⚽',
+      title: { ar: 'الرياضة', fr: 'Sport', en: 'Sports' },
+      desc: {
+        ar: 'يتصدر اتحاد عنابة (USM Annaba) المشهد الرياضي منذ تأسيسه سنة 1983، ويلعب مبارياته على ملعب 19 ماي 1956، ثاني أكبر ملعب في الجزائر. يُعرف جمهوره بحماسه الكبير ولقبه الشعبي "الهوليڨانز".',
+        fr: "L'USM Annaba domine la scène sportive locale depuis sa fondation en 1983, jouant au stade du 19 mai 1956, le deuxième plus grand d'Algérie. Son public est réputé pour sa passion et son surnom populaire, les « Hooligans ».",
+        en: 'USM Annaba has led the local sports scene since its founding in 1983, playing at the May 19, 1956 Stadium, Algeria\'s second-largest. Its fans are known for their passion and popular nickname, the "Hooligans."'
+      }
+    },
+    economy: {
+      icon: '🏗️',
+      title: { ar: 'الاقتصاد', fr: 'Économie', en: 'Economy' },
+      desc: {
+        ar: 'تُعد عنابة قطباً صناعياً رئيسياً بفضل مركب الحجار للحديد والصلب، أكبر مجمع من نوعه في أفريقيا. يشهد ميناء عنابة حالياً مشروع توسعة كبيراً يهدف لمضاعفة طاقته التصديرية إلى أكثر من 6 ملايين طن سنوياً ضمن مشروع الفوسفات المتكامل.',
+        fr: "Annaba est un pôle industriel majeur grâce au complexe sidérurgique d'El Hadjar, le plus grand d'Afrique. Le port d'Annaba fait actuellement l'objet d'un vaste projet d'extension visant à doubler sa capacité d'exportation à plus de 6 millions de tonnes par an dans le cadre du projet phosphate intégré.",
+        en: "Annaba is a major industrial hub thanks to the El Hadjar iron and steel complex, the largest of its kind in Africa. Annaba's port is currently undergoing a major expansion aiming to double its export capacity to over 6 million tons a year as part of the integrated phosphate project."
+      }
+    },
+    culture: {
+      icon: '🎭',
+      title: { ar: 'الثقافة', fr: 'Culture', en: 'Culture' },
+      desc: {
+        ar: 'تحتضن عنابة فعاليات ثقافية سنوية بارزة، من مهرجان السينما الجزائرية بطابعه المتوسطي، إلى شهر التراث الذي يبرز الصناعات التقليدية والموسيقى الأندلسية "الملوف" التي تشتهر بها المدينة.',
+        fr: "Annaba accueille des événements culturels annuels majeurs, du festival du cinéma algérien à caractère méditerranéen au mois du patrimoine, qui met en valeur l'artisanat traditionnel et la musique andalouse « malouf » pour laquelle la ville est réputée.",
+        en: "Annaba hosts major annual cultural events, from the Mediterranean-themed Algerian Cinema Festival to Heritage Month, which showcases traditional crafts and the Andalusian \"malouf\" music the city is known for."
+      }
+    },
+    environment: {
+      icon: '🌲',
+      title: { ar: 'البيئة والصحة', fr: 'Environnement et santé', en: 'Environment & Health' },
+      desc: {
+        ar: 'تجمع عنابة بين شريط ساحلي بطول 80 كم وغابات سرايدي الكثيفة على جبل الإيدوغ. تتابع مصالح الحماية المدنية والصحة عن كثب أي طارئ بيئي، كحرائق الغابات في فصل الصيف، لضمان سلامة السكان والمصطافين.',
+        fr: "Annaba combine un littoral de 80 km et les forêts denses de Seraïdi sur le mont Edough. Les services de la Protection civile et de la Santé suivent de près toute urgence environnementale, comme les feux de forêt estivaux, pour assurer la sécurité des habitants et des vacanciers.",
+        en: "Annaba combines an 80 km coastline with the dense forests of Seraïdi on Mount Edough. Civil Protection and health services closely monitor any environmental emergency, such as summer forest fires, to ensure the safety of residents and holidaymakers."
+      }
+    },
+    security: {
+      icon: '🛡️',
+      title: { ar: 'الأمن والمجتمع', fr: 'Sécurité et société', en: 'Security & Society' },
+      desc: {
+        ar: 'تعمل مصالح الأمن والدرك الوطني بولاية عنابة على متابعة الملفات الأمنية اليومية للسكان، من قضايا الاحتيال إلى تأمين المناسبات الكبرى، مع تعيينات دورية لقيادات أمنية جديدة على رأس الولاية.',
+        fr: "Les services de sécurité et la Gendarmerie nationale de la wilaya d'Annaba suivent au quotidien les dossiers sécuritaires des habitants, des affaires de fraude à la sécurisation des grands événements, avec des nominations périodiques de nouveaux responsables sécuritaires.",
+        en: 'Security services and the National Gendarmerie in Annaba province handle residents\' day-to-day security matters, from fraud cases to securing major events, with periodic appointments of new security leadership.'
+      }
+    },
+    governance: {
+      icon: '🏛️',
+      title: { ar: 'الإدارة المحلية', fr: 'Administration locale', en: 'Local Administration' },
+      desc: {
+        ar: 'يتولى إدارة ولاية عنابة والٍ يُعيَّن من الحكومة المركزية، يُعاون بمجلس شعبي ولائي ومجالس بلدية منتخبة. تولى عبد الكريم لعموري منصب والي عنابة منذ أكتوبر 2025، خلفاً لعبد القادر جلاوي، ويشرف على ملفات التنمية المحلية والمشاريع الكبرى بالولاية.',
+        fr: "La wilaya d'Annaba est administrée par un wali nommé par le gouvernement central, assisté d'une assemblée populaire de wilaya et de conseils municipaux élus. Abdelkrim Laamouri occupe le poste de wali d'Annaba depuis octobre 2025, succédant à Abdelkader Djellaoui, et supervise les dossiers de développement local et les grands projets de la wilaya.",
+        en: "Annaba province is administered by a wali (governor) appointed by the central government, assisted by a provincial people's assembly and elected municipal councils. Abdelkrim Laamouri has held the position of wali of Annaba since October 2025, succeeding Abdelkader Djellaoui, and oversees local development files and major projects in the province."
+      }
+    }
+  };
+
+  function getCurrentLang(){
+    return document.documentElement.getAttribute('lang') || 'ar';
+  }
+
+  function renderDomainNews(category){
+    const container = document.getElementById('domainModalNews');
+    if(typeof FALLBACK_NEWS_ITEMS === 'undefined'){ container.innerHTML = ''; return; }
+    const items = FALLBACK_NEWS_ITEMS.filter(item => item.category === category).slice(0, 3);
+    if(!items.length){ container.innerHTML = ''; return; }
+    const label = { ar: 'أحدث ما يتعلق بهذا المجال:', fr: 'Actualités liées à ce domaine :', en: 'Related news in this domain:' }[getCurrentLang()];
+    container.innerHTML = '<div class="dmn-label">' + label + '</div>' + items.map(function(item){
+      return '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.title + '</a>';
+    }).join('');
+  }
+
+  function openDomainModal(key){
+    const info = DOMAIN_INFO[key];
+    if(!info) return;
+    const lang = getCurrentLang();
+    document.getElementById('domainModalIcon').textContent = info.icon;
+    document.getElementById('domainModalTitle').textContent = info.title[lang] || info.title.ar;
+    document.getElementById('domainModalDesc').textContent = info.desc[lang] || info.desc.ar;
+    renderDomainNews(key);
+    document.getElementById('domainModalOverlay').classList.add('open');
+  }
+
+  function closeDomainModal(){
+    document.getElementById('domainModalOverlay').classList.remove('open');
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.domain-card').forEach(function(card){
+      card.addEventListener('click', function(){ openDomainModal(card.getAttribute('data-domain')); });
+    });
+    const overlay = document.getElementById('domainModalOverlay');
+    document.getElementById('domainModalClose').addEventListener('click', closeDomainModal);
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) closeDomainModal(); });
+  });
+</script>
+
+<section class="institutions page-section" id="institutions">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="inst.title">🏢 مؤسسات ولاية عنابة</h2>
+      <p data-i18n="inst.desc">أبرز المؤسسات الرسمية والاقتصادية والخدماتية في مختلف المجالات بولاية عنابة.</p>
+    </div>
+    <div class="inst-grid">
+
+      <div class="inst-card">
+        <div class="inst-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D8%AF%D8%AE%D9%84%20%D8%AC%D8%A7%D9%85%D8%B9%D8%A9%20%D8%A8%D8%A7%D8%AC%D9%8A%20%D9%85%D8%AE%D8%AA%D8%A7%D8%B1%20%D8%A8%D9%88%D9%84%D8%A7%D9%8A%D8%A9%20%D8%B9%D9%86%D9%91%D8%A7%D8%A8%D8%A9%20-%20%D8%A7%D9%84%D8%A8%D9%88%D9%86%D9%8A.jpg?width=700" alt="جامعة باجي مختار عنابة" loading="lazy"></div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i1.tag">التعليم العالي</span>
+          <h3 data-i18n="inst.i1.h3">جامعة باجي مختار – عنابة</h3>
+          <p data-i18n="inst.i1.p">أُسست سنة 1975، وتُعد من أكبر الجامعات الجزائرية بسبع كليات ومئات التخصصات، وتنتشر مرافقها بين البوني وسيدي عمار ووسط المدينة.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i1.addr">ص.ب 12، عنابة 23000 — الحرم الرئيسي بالبوني وسيدي عمار</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-icon-media">🏥</div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i2.tag">الصحة</span>
+          <h3 data-i18n="inst.i2.h3">المركز الاستشفائي الجامعي ابن رشد</h3>
+          <p data-i18n="inst.i2.p">أكبر المؤسسات الاستشفائية بالولاية من حيث عدد المصالح الطبية والجراحية، ويخدم عنابة والولايات المجاورة.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i2.addr">مدينة عنابة — هاتف: 038 83 56 30</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-icon-media">🏛️</div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i3.tag">الإدارة المحلية</span>
+          <h3 data-i18n="inst.i3.h3">مقر ولاية عنابة</h3>
+          <p data-i18n="inst.i3.p">المقر التنفيذي لوالي الولاية، ويشرف على تنسيق مختلف المديريات والمشاريع التنموية الكبرى بالولاية.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i3.addr">وسط مدينة عنابة</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-icon-media">🏙️</div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i4.tag">الإدارة المحلية</span>
+          <h3 data-i18n="inst.i4.h3">بلدية عنابة (المجلس الشعبي البلدي)</h3>
+          <p data-i18n="inst.i4.p">الهيئة المنتخبة المسؤولة عن الشؤون البلدية اليومية للسكان، من النظافة والتعمير إلى الحالة المدنية.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i4.addr">وسط مدينة عنابة</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-media"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Wilaya%20de%20annaba%202.jpg?width=700" alt="مركب الحجار للحديد والصلب" loading="lazy"></div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i5.tag">الصناعة</span>
+          <h3 data-i18n="inst.i5.h3">مركب الحجار للحديد والصلب</h3>
+          <p data-i18n="inst.i5.p">أكبر مركب للحديد والصلب في أفريقيا، دخل الإنتاج الفعلي سنة 1969، ويُشغّل آلاف العمال من الولاية والولايات المجاورة.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i5.addr">منطقة الحجار، جنوب مدينة عنابة</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-icon-media">⚓</div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i6.tag">الاقتصاد والنقل البحري</span>
+          <h3 data-i18n="inst.i6.h3">ميناء عنابة</h3>
+          <p data-i18n="inst.i6.p">ميناء تجاري تاريخي يخضع حالياً لمشروع توسعة كبير يهدف لمضاعفة طاقته التصديرية ضمن مشروع الفوسفات المتكامل.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i6.addr">المرفأ البحري، وسط مدينة عنابة</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-icon-media">🏟️</div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i7.tag">الرياضة</span>
+          <h3 data-i18n="inst.i7.h3">ملعب 19 ماي 1956</h3>
+          <p data-i18n="inst.i7.p">ثاني أكبر ملعب في الجزائر بعد ملعب 5 جويلية بالعاصمة، ويحتضن مباريات اتحاد عنابة أمام جمهوره الغفير.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i7.addr">مدينة عنابة</span></span>
+        </div>
+      </div>
+
+      <div class="inst-card">
+        <div class="inst-icon-media">✈️</div>
+        <div class="inst-body">
+          <span class="inst-tag" data-i18n="inst.i8.tag">النقل</span>
+          <h3 data-i18n="inst.i8.h3">مطار رابح بيطاط – عنابة</h3>
+          <p data-i18n="inst.i8.p">المطار الدولي الذي يربط عنابة برحلات داخلية وخارجية، ويحمل اسم الشهيد رابح بيطاط.</p>
+          <span class="inst-addr">📍 <span data-i18n="inst.i8.addr">جنوب شرق مدينة عنابة</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="places page-section" id="places">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>📸 أجمل الأماكن التي يجب زيارتها</h2>
+      <p>من الكورنيش الذهبي إلى مرتفعات سرايدي الخضراء، ومن آثار هيبون الرومانية إلى مسجد سيدي بومروان الأندلسي — جولة مصوّرة على أبرز وجهات المدينة.</p>
+    </div>
+    <div class="places-grid">
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20La%20Corniche.jpg?width=700" alt="كورنيش عنابة" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">ساحل</span>
+          <h3>كورنيش عنابة</h3>
+          <p>الواجهة البحرية النابضة بالحياة في قلب المدينة، ممشى طويل يجمع المقاهي والمطاعم بإطلالة مباشرة على المتوسط — أفضل مكان لنزهة مسائية أو مشاهدة غروب الشمس.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/St%20Augustine%27s%20Basilica%2C%20Hippo%20Regius%20(15708457209).jpg?width=700" alt="كنيسة القديس أوغسطينوس وآثار هيبون" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">تاريخ وآثار</span>
+          <h3>كنيسة القديس أوغسطينوس وآثار هيبون</h3>
+          <p>تعلو ربوة هيبون الأثرية، وتضم تمثالاً برونزياً للقديس أوغسطينوس الذي عاش في المدينة. أسفلها موقع أثري روماني نوميدي يعود لأكثر من ثلاثة آلاف عام، مع متحف صغير يضم فسيفساء وتماثيل نادرة.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mosqu%C3%A9e%20de%20Sidi%20Bou%20Merouane.jpg?width=700" alt="مسجد سيدي بومروان" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">تاريخ وعمارة</span>
+          <h3>مسجد سيدي بومروان</h3>
+          <p>بُني سنة 1033 في العهد الزيري بطراز أندلسي أصيل معتمداً على أعمدة رومانية أعيد توظيفها، ويحمل اسم الولي الصالح سيدي أبو مروان — من أقدم وأجمل المعالم الدينية في المدينة القديمة.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20-%20Seraidi.jpg?width=700" alt="مرتفعات سرايدي" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">جبل وطبيعة</span>
+          <h3>مرتفعات سرايدي</h3>
+          <p>منطقة جبلية خضراء على جبل الإيدوغ تطل مباشرة على خليج عنابة، تجمع بين غابات الأوكالبتوس والصنوبر وطريق جبلي متعرج يمنح بانوراما ساحرة على المدينة والبحر معاً.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chetaybi%20Annaba%20plage%20sable%20d%27or.jpg?width=700" alt="شاطئ شطايبي الذهبي" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">شاطئ</span>
+          <h3>شاطئ شطايبي الذهبي</h3>
+          <p>يقع غرب عنابة على طريق ساحلي جبلي خلاب، ويتميز برماله الذهبية الناعمة ومياهه الصافية، ويُعد من أكثر الشواطئ المحافظة على طابعها الطبيعي البكر في المنطقة.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sun%20Set%20Chetaibi%20Annaba.jpg?width=700" alt="غروب الشمس بشطايبي" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">مناظر طبيعية</span>
+          <h3>غروب الشمس بشطايبي</h3>
+          <p>من أكثر المشاهد التي يقصدها المصورون وعشاق الطبيعة في عنابة — غروب ذهبي يصطبغ به البحر والصخور معاً، خاصة من الارتفاعات المطلة على الشاطئ.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Plage%20oued%20bokrat%20Annaba.jpg?width=700" alt="شاطئ واد بقرط" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">شاطئ</span>
+          <h3>شاطئ واد بقرط</h3>
+          <p>شاطئ هادئ يجمع بين الرمال الذهبية ومصب أحد الوديان الصغيرة، وجهة مفضلة للعائلات بعيداً عن الازدحام، خصوصاً في غير أوقات الذروة الصيفية.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20beach.jpg?width=700" alt="شاطئ عنابة" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">شاطئ</span>
+          <h3>شاطئ عنابة</h3>
+          <p>امتداد رملي واسع قريب من وسط المدينة، سهل الوصول إليه ومجهّز بمرافق بسيطة، ما يجعله الخيار الأقرب لسكان المدينة لقضاء وقت على البحر.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <div class="place-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Annaba%20cote.jpg?width=700" alt="الساحل العنابي" loading="lazy"></div>
+        <div class="place-body">
+          <span class="place-tag">ساحل</span>
+          <h3>الساحل العنابي</h3>
+          <p>امتداد ساحلي يفوق 80 كيلومتراً بين الصخور والرمال والمياه الفيروزية، يختصر تنوّع الطبيعة الساحلية لشرق الجزائر في مشهد واحد.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="donate-section page-section" id="donate">
   <div class="wrap">
     <div class="donate-box">
       <div class="eyebrow" data-i18n="donate.eyebrow">ادعموا الموقع</div>
@@ -2193,36 +2317,6 @@
   </div>
 </section>
 
-<div class="donate-modal-overlay" id="newsDetailModal">
-  <div class="donate-modal" style="max-width:520px;">
-    <button class="dm-close" onclick="closeNewsDetail()">✕</button>
-    <span class="b-kicker-alt" id="ndMeta" style="display:inline-block; margin-bottom:12px;"></span>
-    <h3 id="ndTitle" style="margin-bottom:20px;"></h3>
-    <div class="donate-options">
-      <a id="ndLink" href="#" target="_blank" rel="noopener" data-i18n="news.modal.readMore">قراءة الخبر كاملاً من المصدر الأصلي <span>→</span></a>
-    </div>
-  </div>
-</div>
-<script>
-  function openNewsDetail(item){
-    if(!item) return;
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const localeMap = {ar:'ar-DZ', fr:'fr-DZ', en:'en-GB'};
-    const d = new Date((item.pubDate || '').replace(' ', 'T'));
-    const dateStr = isNaN(d) ? '' : d.toLocaleDateString(localeMap[lang] || 'ar-DZ', {day:'numeric', month:'long', year:'numeric'});
-    let host = '';
-    try{ host = new URL(item.link).hostname.replace('www.',''); }catch(e){}
-    document.getElementById('ndTitle').textContent = (item.title || '').split(' - ')[0];
-    document.getElementById('ndMeta').textContent = [dateStr, host].filter(Boolean).join(' · ');
-    document.getElementById('ndLink').href = item.link;
-    document.getElementById('newsDetailModal').classList.add('open');
-  }
-  function closeNewsDetail(){ document.getElementById('newsDetailModal').classList.remove('open'); }
-  document.getElementById('newsDetailModal').addEventListener('click', function(e){
-    if(e.target === this) closeNewsDetail();
-  });
-</script>
-
 <div class="donate-modal-overlay" id="donateModal">
   <div class="donate-modal">
     <button class="dm-close" onclick="closeDonateModal()">✕</button>
@@ -2232,7 +2326,7 @@
       <!-- ⚠️ يرجى استبدال الروابط أدناه بروابط الدفع الحقيقية الخاصة بكم (PayPal / Buy Me a Coffee / بطاقة بنكية...) -->
       <a href="https://www.paypal.com/donate" target="_blank" rel="noopener">PayPal <span>→</span></a>
       <a href="https://www.buymeacoffee.com/" target="_blank" rel="noopener">Buy Me a Coffee <span>→</span></a>
-      <a href="mailto:zaynoue@gmail.com?subject=Don%20/%20Donation" data-i18n="donate.modal.email">تواصل معنا مباشرة <span>→</span></a>
+      <a href="mailto:zaynoue@gmail.com?subject=تواصل%20/%20تبرع%20-%20annabazdf.com" data-i18n="donate.modal.email">تواصل معنا مباشرة <span>→</span></a>
     </div>
   </div>
 </div>
@@ -2244,89 +2338,21 @@
   });
 </script>
 
-<style>
-  .emergency{padding:34px 28px 6px; max-width:900px; margin:0 auto;}
-  .em-title{text-align:center; font-size:1.25rem; color:var(--sand); margin-bottom:6px; font-family:'Cairo',sans-serif; font-weight:800;}
-  .em-sub{text-align:center; color:var(--fog); font-size:0.85rem; margin-bottom:22px;}
-  .em-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px;}
-  .em-card{background:var(--ink-2); border:1px solid rgba(217,164,65,0.18); padding:18px; text-align:center;}
-  .em-card .em-num{font-size:1.6rem; font-weight:900; color:var(--gold); letter-spacing:.03em; direction:ltr;}
-  .em-card .em-label{font-size:0.8rem; color:var(--fog); margin-top:6px;}
-  .faq{padding:34px 28px; max-width:800px; margin:0 auto;}
-  .faq-title{text-align:center; font-size:1.25rem; color:var(--sand); margin-bottom:22px; font-family:'Cairo',sans-serif; font-weight:800;}
-  .faq details{background:var(--ink-2); border:1px solid rgba(217,164,65,0.18); padding:16px 20px; margin-bottom:10px;}
-  .faq summary{cursor:pointer; font-weight:700; color:var(--sand); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px;}
-  .faq summary::-webkit-details-marker{display:none;}
-  .faq summary::after{content:'+'; color:var(--gold); font-size:1.3rem; flex-shrink:0;}
-  .faq details[open] summary::after{content:'−';}
-  .faq p{color:var(--fog); font-size:0.9rem; line-height:1.8; margin-top:12px;}
-</style>
-<section class="emergency" id="emergency">
-  <div class="em-title" data-i18n="em.title">أرقام الطوارئ في الجزائر</div>
-  <div class="em-sub" data-i18n="em.sub">أرقام وطنية مجانية تعمل على مدار الساعة</div>
-  <div class="em-grid">
-    <div class="em-card"><div class="em-num">14</div><div class="em-label" data-i18n="em.civil">الحماية المدنية</div></div>
-    <div class="em-card"><div class="em-num">17</div><div class="em-label" data-i18n="em.police">الشرطة</div></div>
-    <div class="em-card"><div class="em-num">1548</div><div class="em-label" data-i18n="em.gendarmerie">الدرك الوطني</div></div>
-    <div class="em-card"><div class="em-num">15</div><div class="em-label" data-i18n="em.samu">الإسعاف SAMU</div></div>
-  </div>
-</section>
-
-<section class="faq" id="faq">
-  <div class="faq-title" data-i18n="faq.title">أسئلة شائعة</div>
-  <details>
-    <summary data-i18n="faq.q1">ما هو هذا الموقع؟</summary>
-    <p data-i18n="faq.a1">موقع تعريفي غير رسمي مخصص لمدينة عنابة الجزائرية، يقدّم محتوى عن تاريخها ومعالمها وشواطئها وأخبارها اليومية.</p>
-  </details>
-  <details>
-    <summary data-i18n="faq.q2">هل الأخبار المعروضة محدَّثة تلقائياً؟</summary>
-    <p data-i18n="faq.a2">نعم، تُجلب الأخبار والطقس ومواقيت الصلاة تلقائياً من مصادر حية وتتحدّث دورياً دون أي تدخل يدوي.</p>
-  </details>
-  <details>
-    <summary data-i18n="faq.q3">كيف أتواصل معكم أو أدعم الموقع؟</summary>
-    <p data-i18n="faq.a3">عبر زر «تبرّع» في الأعلى، أو مباشرة عبر البريد الإلكتروني zaynoue@gmail.com.</p>
-  </details>
-  <details>
-    <summary data-i18n="faq.q4">وجدت معلومة غير دقيقة، ماذا أفعل؟</summary>
-    <p data-i18n="faq.a4">يسعدنا تصويبها — راسلونا عبر البريد الإلكتروني أو عبر استطلاع الرأي أسفل الصفحة.</p>
-  </details>
-</section>
-
-<style>
-  .footer-links{display:flex; flex-wrap:wrap; justify-content:center; gap:10px 18px; margin:18px 0; font-size:0.85rem;}
-  .footer-links a{color:var(--fog); text-decoration:none; transition:color .2s;}
-  .footer-links a:hover{color:var(--gold);}
-  .footer-updated{font-size:0.75rem; color:var(--gold-soft); margin-top:6px;}
-</style>
 <footer>
   <div class="brand">عناب<span style="color:var(--gold)">ة</span></div>
   <p data-i18n="footer.desc">بونة القديمة، جوهرة المتوسط، ومدينة الحاضر الصناعي والثقافي.</p>
-  <nav class="footer-links" id="footerLinks">
-    <a href="#news" data-i18n="nav.news">الأخبار</a>
-    <a href="#history" data-i18n="nav.history">التاريخ</a>
-    <a href="#landmarks" data-i18n="nav.landmarks">المعالم</a>
-    <a href="#beaches" data-i18n="nav.beaches">الشواطئ</a>
-    <a href="#articles" data-i18n="nav.articles">مقالات</a>
-    <a href="#life" data-i18n="nav.life">الحياة</a>
-    <a href="#faq" data-i18n="faq.title">أسئلة شائعة</a>
-    <a href="#survey" data-i18n="nav.survey">استطلاع</a>
-  </nav>
-  <div class="credit" data-i18n="footer.credit">تصميم: ق.زين الدين</div>
-  <div class="footer-updated" id="footerUpdated"></div>
+  <a class="footer-contact" href="mailto:zaynoue@gmail.com?subject=تواصل%20-%20annabazdf.com" data-i18n="footer.contact">✉️ للتواصل: zaynoue@gmail.com</a>
+  <div class="footer-share">
+    <span data-i18n="footer.share">شارك الموقع:</span>
+    <a href="https://wa.me/?text=%D8%A7%D9%83%D8%AA%D8%B4%D9%81%D9%88%D8%A7%20%D9%85%D9%88%D9%82%D8%B9%20%D8%B9%D9%86%D8%A7%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B1%D8%A7%D8%A6%D8%B9%3A%20https%3A%2F%2Fwww.annabazdf.com" target="_blank" rel="noopener" aria-label="مشاركة عبر واتساب">💬</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.annabazdf.com" target="_blank" rel="noopener" aria-label="مشاركة عبر فيسبوك">📘</a>
+    <button type="button" onclick="copySiteLink(this)" aria-label="نسخ الرابط">🔗</button>
+  </div>
+  <div class="credit" data-i18n="footer.credit">تصميم: زين الدين</div>
   <div class="domain">www.annabazdf.com</div>
 </footer>
-<script>
-  function renderFooterUpdated(){
-    const el = document.getElementById('footerUpdated');
-    if(!el) return;
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    const localeMap = {ar:'ar-DZ', fr:'fr-DZ', en:'en-GB'};
-    const labelMap = {ar:'آخر تحديث تلقائي للمحتوى: ', fr:'Dernière mise à jour automatique du contenu : ', en:'Content last auto-updated: '};
-    const dateStr = new Date().toLocaleDateString(localeMap[lang] || 'ar-DZ', {day:'numeric', month:'long', year:'numeric'});
-    el.textContent = (labelMap[lang] || labelMap.ar) + dateStr;
-  }
-  document.addEventListener('DOMContentLoaded', renderFooterUpdated);
-</script>
+
+<button type="button" class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
 
 <script>
 const I18N = {
@@ -2394,22 +2420,14 @@ const I18N = {
     "history.era8.p1": "عرفت عنابة بعد الاستقلال تحولاً اقتصادياً جذرياً، تُوّج بتأسيس الشركة الوطنية للصناعة السيدرالية في ٣ سبتمبر ١٩٦٤، وانطلاق الإنتاج الفعلي لمركب الحجار للحديد والصلب بعد افتتاحه في ١٩ يونيو ١٩٦٩، ليصبح أكبر مركب من نوعه في القارة الأفريقية.",
     "history.era8.p2": "واليوم، تجمع عنابة بين إرثها التاريخي الممتد لثلاثة آلاف عام وحاضرها كقطب صناعي واقتصادي رائد في الجزائر، محافظة على لقبيها التاريخيين: «جوهرة الشرق الجزائري» و«جوهرة المتوسط».",
     "news.title": "الأخبار اليومية <span class=\"live-badge\"><span class=\"live-dot\"></span>مباشر</span>",
-    "qi.weather": "الطقس الآن في عنابة",
-    "qi.nextPrayer": "الصلاة القادمة",
-    "qi.clock": "الساعة الآن في عنابة",
-    "dh.factEyebrow": "هل تعلم؟",
-    "dh.pickEyebrow": "اقتراح اليوم",
-    "dh.tipEyebrow": "نصيحة اليوم",
-    "dh.randomEyebrow": "استكشاف عشوائي",
-    "dh.randomDesc": "اضغط للانتقال إلى ركن عشوائي من الموقع",
-    "dh.randomCta": "فاجئني <span>🎯</span>",
     "news.desc": "كل ما يحدث حصرياً في مدينة عنابة، بتحديث مستمر: نشرة يومية مُحرَّرة + عناوين تتحدث تلقائياً في كل زيارة.",
     "news.refresh": "تحديث الأخبار",
     "news.bname": "نشرة عنابة اليوم",
     "news.bdate": "الخميس ٢٣ يوليو ٢٠٢٦",
     "news.kicker": "عاجل",
     "news.lead.h3": "حرائق غابة سرايدي تدخل أسبوعها الثاني وسط تعبئة برية وجوية واسعة",
-    "news.lead.p1": "تُعرض هنا أبرز عناوين اليوم عن مدينة عنابة، تُجمَّع تلقائياً من عدة مصادر إخبارية وتتجدّد بشكل دوري كل يوم من أيام الأسبوع. اضغط على الرابط أدناه للاطلاع على التفاصيل الكاملة من المصدر الأصلي.",
+    "news.lead.p1": "تواصل مصالح الحماية المدنية والجيش الوطني الشعبي منذ منتصف الأسبوع الماضي عمليات مكافحة حرائق غابية متفرقة اندلعت في المرتفعات الجبلية لبلدية سرايدي بولاية عنابة، وتوسّعت ليلة الثلاثاء الماضي بشكل حاد بفعل ارتفاع درجات الحرارة وهبوب رياح قوية، ما اضطر السلطات إلى إجلاء أكثر من مئة مريض من مؤسسة إعادة التأهيل الوظيفي بسرايدي نحو مستشفيي الحجار والبوني تحسّباً لاقتراب ألسنة اللهب من محيط المنشأة.",
+    "news.lead.p2": "كما لجأت مؤسسة سونلغاز إلى قطع الكهرباء والغاز احترازياً عن كامل بلدية سرايدي، فيما زار وزير الداخلية والجماعات المحلية والنقل، السعيد سعيود، المنطقة وأكد متابعة رئيس الجمهورية عبد المجيد تبون للملف بشكل آني، مع الإعلان عن تعويض كامل للمتضررين وإعادة بناء نحو ١٥٠ مسكناً متضرراً. وبعد السيطرة على جزء من الحرائق، شرعت السلطات في إعادة نقل المرضى تدريجياً إلى مستشفى سرايدي.",
     "news.source1": "المصدر: العربي الأصيل ←",
     "news.item1.kicker": "محليات",
     "news.item1.h4": "سونلغاز تعاين الشبكات المتضررة تمهيداً لإعادة التزويد بالكهرباء والغاز",
@@ -2418,8 +2436,7 @@ const I18N = {
     "news.item2.kicker": "رياضة",
     "news.item2.h4": "اتحاد عنابة يستعد لموسم جديد في الرابطة الثانية بعد إنهاء الموسم الماضي سادساً",
     "news.item2.p": "أنهى اتحاد عنابة، الملقب جمهوره بـ«الهوليڨانز»، موسم ٢٠٢٥-٢٠٢٦ في المركز السادس ضمن مجموعة الوسط الشرقي للرابطة الثانية المحترفة، ويترقب أنصاره تعزيزات صيفية تعيد الفريق إلى دائرة المنافسة على الصعود.",
-    "news.note": "تتحدّث هذه النشرة تلقائياً كل ١٥ دقيقة من عدة مصادر إخبارية متنوعة، وتختلف عناوينها من يوم لآخر على مدار الأسبوع.",
-    "news.modal.readMore": "قراءة الخبر كاملاً من المصدر الأصلي <span>→</span>",
+    "news.note": "هذه النشرة تُحرَّر يدوياً وتعكس أبرز مستجدات المدينة عند آخر تحديث للصفحة. للاطلاع على عناوين إضافية محدَّثة تلقائياً، تابع القائمة أدناه.",
     "news.moreTitle": "📰 آخر العناوين <span class=\"live-badge\"><span class=\"live-dot\"></span>تحديث تلقائي</span>",
     "origin.title": "من بونة إلى عنابة",
     "origin.desc": "ثلاثة آلاف عام من التاريخ، حيث تعاقبت الحضارات على هذه البقعة من الساحل الجزائري.",
@@ -2523,6 +2540,7 @@ const I18N = {
     "split.b.li3": "مهرجانات وفعاليات ثقافية سنوية",
     "donate.eyebrow": "ادعموا الموقع",
     "nav.survey": "استطلاع",
+    "nav.domains": "المجالات",
     "survey.title": "📋 استطلاع رأي حول مدينة عنابة",
     "survey.desc": "رأيك يهمّنا! شاركنا بدقيقة من وقتك لتقييم المدينة واقتراح ما يمكن تحسينه.",
     "survey.q1": "كيف تقيّم مدينة عنابة بشكل عام؟",
@@ -2545,6 +2563,49 @@ const I18N = {
     "survey.note": "إجابتك تُرسل بشكل مباشر وآمن ولا تُخزَّن على هذا الموقع.",
     "survey.success.title": "شكراً لمشاركتك!",
     "survey.success.desc": "تم إرسال إجابتك بنجاح. نقدّر وقتك في مساعدتنا على تحسين هذا الموقع.",
+    "domains.title": "🗂️ مجالات عنابة",
+    "domains.desc": "تصفّح مدينة عنابة من زوايا مختلفة — لكل مجال معلومات أساسية وأحدث ما يتعلق به من مستجدات.",
+    "domains.sports.title": "الرياضة",
+    "domains.economy.title": "الاقتصاد",
+    "domains.culture.title": "الثقافة",
+    "domains.environment.title": "البيئة والصحة",
+    "domains.security.title": "الأمن والمجتمع",
+    "domains.governance.title": "الإدارة المحلية",
+    "nav.institutions": "المؤسسات",
+    "inst.title": "🏢 مؤسسات ولاية عنابة",
+    "inst.desc": "أبرز المؤسسات الرسمية والاقتصادية والخدماتية في مختلف المجالات بولاية عنابة.",
+    "inst.i1.tag": "التعليم العالي",
+    "inst.i1.h3": "جامعة باجي مختار – عنابة",
+    "inst.i1.p": "أُسست سنة 1975، وتُعد من أكبر الجامعات الجزائرية بسبع كليات ومئات التخصصات، وتنتشر مرافقها بين البوني وسيدي عمار ووسط المدينة.",
+    "inst.i1.addr": "ص.ب 12، عنابة 23000 — الحرم الرئيسي بالبوني وسيدي عمار",
+    "inst.i2.tag": "الصحة",
+    "inst.i2.h3": "المركز الاستشفائي الجامعي ابن رشد",
+    "inst.i2.p": "أكبر المؤسسات الاستشفائية بالولاية من حيث عدد المصالح الطبية والجراحية، ويخدم عنابة والولايات المجاورة.",
+    "inst.i2.addr": "مدينة عنابة — هاتف: 038 83 56 30",
+    "inst.i3.tag": "الإدارة المحلية",
+    "inst.i3.h3": "مقر ولاية عنابة",
+    "inst.i3.p": "المقر التنفيذي لوالي الولاية، ويشرف على تنسيق مختلف المديريات والمشاريع التنموية الكبرى بالولاية.",
+    "inst.i3.addr": "وسط مدينة عنابة",
+    "inst.i4.tag": "الإدارة المحلية",
+    "inst.i4.h3": "بلدية عنابة (المجلس الشعبي البلدي)",
+    "inst.i4.p": "الهيئة المنتخبة المسؤولة عن الشؤون البلدية اليومية للسكان، من النظافة والتعمير إلى الحالة المدنية.",
+    "inst.i4.addr": "وسط مدينة عنابة",
+    "inst.i5.tag": "الصناعة",
+    "inst.i5.h3": "مركب الحجار للحديد والصلب",
+    "inst.i5.p": "أكبر مركب للحديد والصلب في أفريقيا، دخل الإنتاج الفعلي سنة 1969، ويُشغّل آلاف العمال من الولاية والولايات المجاورة.",
+    "inst.i5.addr": "منطقة الحجار، جنوب مدينة عنابة",
+    "inst.i6.tag": "الاقتصاد والنقل البحري",
+    "inst.i6.h3": "ميناء عنابة",
+    "inst.i6.p": "ميناء تجاري تاريخي يخضع حالياً لمشروع توسعة كبير يهدف لمضاعفة طاقته التصديرية ضمن مشروع الفوسفات المتكامل.",
+    "inst.i6.addr": "المرفأ البحري، وسط مدينة عنابة",
+    "inst.i7.tag": "الرياضة",
+    "inst.i7.h3": "ملعب 19 ماي 1956",
+    "inst.i7.p": "ثاني أكبر ملعب في الجزائر بعد ملعب 5 جويلية بالعاصمة، ويحتضن مباريات اتحاد عنابة أمام جمهوره الغفير.",
+    "inst.i7.addr": "مدينة عنابة",
+    "inst.i8.tag": "النقل",
+    "inst.i8.h3": "مطار رابح بيطاط – عنابة",
+    "inst.i8.p": "المطار الدولي الذي يربط عنابة برحلات داخلية وخارجية، ويحمل اسم الشهيد رابح بيطاط.",
+    "inst.i8.addr": "جنوب شرق مدينة عنابة",
     "donate.title": "ساعدونا في تطوير هذا الموقع",
     "donate.desc": "annabazdf.com موقع مستقل يُدار بشغف لتقديم محتوى موثوق عن مدينة عنابة. تبرعكم، مهما كان بسيطاً، يساعدنا على تحسين التصميم، إضافة محتوى جديد، وتغطية تكاليف الاستضافة والتشغيل.",
     "donate.cta": "💛 <span class=\"dtext\">تبرّع الآن</span>",
@@ -2553,22 +2614,9 @@ const I18N = {
     "donate.modal.desc": "يمكنكم دعم الموقع عبر إحدى الوسائل التالية. سيتم فتح الرابط في نافذة جديدة.",
     "donate.modal.email": "تواصل معنا مباشرة <span>→</span>",
     "footer.desc": "بونة القديمة، جوهرة المتوسط، ومدينة الحاضر الصناعي والثقافي.",
-    "footer.credit": "تصميم: ق.زين الدين",
-    "em.title": "أرقام الطوارئ في الجزائر",
-    "em.sub": "أرقام وطنية مجانية تعمل على مدار الساعة",
-    "em.civil": "الحماية المدنية",
-    "em.police": "الشرطة",
-    "em.gendarmerie": "الدرك الوطني",
-    "em.samu": "الإسعاف SAMU",
-    "faq.title": "أسئلة شائعة",
-    "faq.q1": "ما هو هذا الموقع؟",
-    "faq.a1": "موقع تعريفي غير رسمي مخصص لمدينة عنابة الجزائرية، يقدّم محتوى عن تاريخها ومعالمها وشواطئها وأخبارها اليومية.",
-    "faq.q2": "هل الأخبار المعروضة محدَّثة تلقائياً؟",
-    "faq.a2": "نعم، تُجلب الأخبار والطقس ومواقيت الصلاة تلقائياً من مصادر حية وتتحدّث دورياً دون أي تدخل يدوي.",
-    "faq.q3": "كيف أتواصل معكم أو أدعم الموقع؟",
-    "faq.a3": "عبر زر «تبرّع» في الأعلى، أو مباشرة عبر البريد الإلكتروني zaynoue@gmail.com.",
-    "faq.q4": "وجدت معلومة غير دقيقة، ماذا أفعل؟",
-    "faq.a4": "يسعدنا تصويبها — راسلونا عبر البريد الإلكتروني أو عبر استطلاع الرأي أسفل الصفحة."
+    "footer.contact": "✉️ للتواصل: zaynoue@gmail.com",
+    "footer.share": "شارك الموقع:",
+    "footer.credit": "تصميم: زين الدين"
   },
   "fr": {
     "intro.eyebrow": "Bienvenue",
@@ -2634,22 +2682,14 @@ const I18N = {
     "history.era8.p1": "Après l'indépendance, Annaba connut une transformation économique radicale, couronnée par la création de la Société nationale de sidérurgie le 3 septembre 1964, et le démarrage de la production effective du complexe sidérurgique d'El Hadjar après son inauguration le 19 juin 1969, en faisant le plus grand complexe de son genre sur le continent africain.",
     "history.era8.p2": "Aujourd'hui, Annaba conjugue un héritage historique de trois mille ans avec son présent de pôle industriel et économique de premier plan en Algérie, conservant ses deux titres historiques : « joyau de l'Orient algérien » et « joyau de la Méditerranée ».",
     "news.title": "Actualités du jour <span class=\"live-badge\"><span class=\"live-dot\"></span>En direct</span>",
-    "qi.weather": "Météo actuelle à Annaba",
-    "qi.nextPrayer": "Prochaine prière",
-    "qi.clock": "Heure actuelle à Annaba",
-    "dh.factEyebrow": "Le saviez-vous ?",
-    "dh.pickEyebrow": "Suggestion du jour",
-    "dh.tipEyebrow": "Conseil du jour",
-    "dh.randomEyebrow": "Découverte aléatoire",
-    "dh.randomDesc": "Cliquez pour aller vers un coin aléatoire du site",
-    "dh.randomCta": "Surprends-moi <span>🎯</span>",
     "news.desc": "Tout ce qui se passe en exclusivité dans la ville d'Annaba, avec une mise à jour continue : un bulletin quotidien rédigé + des titres actualisés automatiquement à chaque visite.",
     "news.refresh": "Actualiser les actualités",
     "news.bname": "Le bulletin d'Annaba aujourd'hui",
     "news.bdate": "Jeudi 23 juillet 2026",
     "news.kicker": "Urgent",
     "news.lead.h3": "Les incendies de la forêt de Seraïdi entrent dans leur deuxième semaine au milieu d'une vaste mobilisation terrestre et aérienne",
-    "news.lead.p1": "Voici les principaux titres du jour sur la ville d'Annaba, rassemblés automatiquement à partir de plusieurs sources d'actualité et actualisés chaque jour de la semaine. Cliquez sur le lien ci-dessous pour lire les détails complets à la source.",
+    "news.lead.p1": "Les services de la Protection civile et l'Armée nationale populaire poursuivent depuis la mi-semaine dernière la lutte contre des incendies de forêt dispersés qui se sont déclarés dans les hauteurs montagneuses de la commune de Seraïdi, dans la wilaya d'Annaba. Ils se sont étendus violemment dans la nuit de mardi dernier en raison de la hausse des températures et de vents forts, obligeant les autorités à évacuer plus de cent patients de l'établissement de réadaptation fonctionnelle de Seraïdi vers les hôpitaux d'El Hadjar et de Bouni, par précaution face à l'approche des flammes autour de l'établissement.",
+    "news.lead.p2": "La société Sonelgaz a également procédé à une coupure préventive de l'électricité et du gaz sur toute la commune de Seraïdi, tandis que le ministre de l'Intérieur, des Collectivités locales et des Transports, Saïd Sayoud, s'est rendu sur place et a affirmé le suivi immédiat du dossier par le président de la République Abdelmadjid Tebboune, avec l'annonce d'une indemnisation complète des sinistrés et de la reconstruction d'environ 150 logements endommagés. Après avoir maîtrisé une partie des incendies, les autorités ont entamé le retour progressif des patients vers l'hôpital de Seraïdi.",
     "news.source1": "Source : Al Arabi Al Assil ←",
     "news.item1.kicker": "Local",
     "news.item1.h4": "Sonelgaz inspecte les réseaux endommagés en vue du rétablissement de l'électricité et du gaz",
@@ -2658,8 +2698,7 @@ const I18N = {
     "news.item2.kicker": "Sport",
     "news.item2.h4": "Le USM Annaba se prépare pour une nouvelle saison en Ligue 2 après avoir terminé sixième la saison dernière",
     "news.item2.p": "Le USM Annaba, dont les supporters sont surnommés les « Hooligans », a terminé la saison 2025-2026 à la sixième place du groupe Centre-Est de la Ligue 2 professionnelle. Ses supporters attendent des renforts estivaux pour ramener l'équipe dans la course à la montée.",
-    "news.note": "Ce bulletin se met à jour automatiquement toutes les 15 minutes à partir de plusieurs sources d'actualité variées, et ses titres changent chaque jour de la semaine.",
-    "news.modal.readMore": "Lire l'article complet à la source <span>→</span>",
+    "news.note": "Ce bulletin est rédigé manuellement et reflète les principaux développements de la ville lors de la dernière mise à jour de la page. Pour consulter d'autres titres mis à jour automatiquement, suivez la liste ci-dessous.",
     "news.moreTitle": "📰 Derniers titres <span class=\"live-badge\"><span class=\"live-dot\"></span>Mise à jour automatique</span>",
     "origin.title": "De Bouna à Annaba",
     "origin.desc": "Trois mille ans d'histoire, où se sont succédé les civilisations sur ce point de la côte algérienne.",
@@ -2763,6 +2802,7 @@ const I18N = {
     "split.b.li3": "Festivals et événements culturels annuels",
     "donate.eyebrow": "Soutenez le site",
     "nav.survey": "Sondage",
+    "nav.domains": "Domaines",
     "survey.title": "📋 Sondage sur la ville d'Annaba",
     "survey.desc": "Votre avis compte ! Accordez-nous une minute pour évaluer la ville et suggérer des améliorations.",
     "survey.q1": "Comment évaluez-vous globalement la ville d'Annaba ?",
@@ -2785,6 +2825,49 @@ const I18N = {
     "survey.note": "Votre réponse est envoyée directement et en toute sécurité, et n'est pas stockée sur ce site.",
     "survey.success.title": "Merci pour votre participation !",
     "survey.success.desc": "Votre réponse a été envoyée avec succès. Nous apprécions votre temps pour nous aider à améliorer ce site.",
+    "domains.title": "🗂️ Domaines d'Annaba",
+    "domains.desc": "Explorez la ville d'Annaba sous différents angles — chaque domaine propose des informations essentielles et ses dernières actualités.",
+    "domains.sports.title": "Sport",
+    "domains.economy.title": "Économie",
+    "domains.culture.title": "Culture",
+    "domains.environment.title": "Environnement et santé",
+    "domains.security.title": "Sécurité et société",
+    "domains.governance.title": "Administration locale",
+    "nav.institutions": "Institutions",
+    "inst.title": "🏢 Institutions de la wilaya d'Annaba",
+    "inst.desc": "Les principales institutions publiques, économiques et de services dans divers domaines de la wilaya d'Annaba.",
+    "inst.i1.tag": "Enseignement supérieur",
+    "inst.i1.h3": "Université Badji Mokhtar – Annaba",
+    "inst.i1.p": "Fondée en 1975, l'une des plus grandes universités algériennes avec sept facultés et des centaines de spécialités, répartie entre El Bouni, Sidi Ammar et le centre-ville.",
+    "inst.i1.addr": "B.P. 12, Annaba 23000 — Campus principal à El Bouni et Sidi Ammar",
+    "inst.i2.tag": "Santé",
+    "inst.i2.h3": "CHU Ibn Rochd",
+    "inst.i2.p": "La plus grande institution hospitalière de la wilaya par le nombre de services médicaux et chirurgicaux, desservant Annaba et les wilayas voisines.",
+    "inst.i2.addr": "Ville d'Annaba — Tél : 038 83 56 30",
+    "inst.i3.tag": "Administration locale",
+    "inst.i3.h3": "Siège de la wilaya d'Annaba",
+    "inst.i3.p": "Le siège exécutif du wali, chargé de coordonner les différentes directions et les grands projets de développement de la wilaya.",
+    "inst.i3.addr": "Centre-ville d'Annaba",
+    "inst.i4.tag": "Administration locale",
+    "inst.i4.h3": "Commune d'Annaba (Assemblée populaire communale)",
+    "inst.i4.p": "L'organe élu responsable des affaires municipales quotidiennes des habitants, de la propreté et de l'urbanisme à l'état civil.",
+    "inst.i4.addr": "Centre-ville d'Annaba",
+    "inst.i5.tag": "Industrie",
+    "inst.i5.h3": "Complexe sidérurgique d'El Hadjar",
+    "inst.i5.p": "Le plus grand complexe sidérurgique d'Afrique, entré en production effective en 1969, employant des milliers de travailleurs de la wilaya et des wilayas voisines.",
+    "inst.i5.addr": "Zone d'El Hadjar, au sud d'Annaba",
+    "inst.i6.tag": "Économie et transport maritime",
+    "inst.i6.h3": "Port d'Annaba",
+    "inst.i6.p": "Port commercial historique actuellement en cours d'un vaste projet d'extension visant à doubler sa capacité d'exportation dans le cadre du projet phosphate intégré.",
+    "inst.i6.addr": "Port maritime, centre-ville d'Annaba",
+    "inst.i7.tag": "Sport",
+    "inst.i7.h3": "Stade du 19 mai 1956",
+    "inst.i7.p": "Le deuxième plus grand stade d'Algérie après le stade du 5 Juillet à Alger, qui accueille les matchs de l'USM Annaba devant son immense public.",
+    "inst.i7.addr": "Ville d'Annaba",
+    "inst.i8.tag": "Transport",
+    "inst.i8.h3": "Aéroport Rabah Bitat – Annaba",
+    "inst.i8.p": "L'aéroport international reliant Annaba à des vols intérieurs et internationaux, portant le nom du chahid Rabah Bitat.",
+    "inst.i8.addr": "Sud-est de la ville d'Annaba",
     "donate.title": "Aidez-nous à améliorer ce site",
     "donate.desc": "annabazdf.com est un site indépendant géré avec passion pour offrir un contenu fiable sur la ville d'Annaba. Votre don, aussi modeste soit-il, nous aide à améliorer le design, ajouter du nouveau contenu, et couvrir les frais d'hébergement et de fonctionnement.",
     "donate.cta": "💛 <span class=\"dtext\">Faire un don maintenant</span>",
@@ -2793,22 +2876,9 @@ const I18N = {
     "donate.modal.desc": "Vous pouvez soutenir le site via l'un des moyens suivants. Le lien s'ouvrira dans une nouvelle fenêtre.",
     "donate.modal.email": "Contactez-nous directement <span>→</span>",
     "footer.desc": "L'ancienne Bouna, joyau de la Méditerranée, et ville au présent industriel et culturel.",
-    "footer.credit": "Design : Zineddine",
-    "em.title": "Numéros d'urgence en Algérie",
-    "em.sub": "Numéros nationaux gratuits, disponibles 24h/24",
-    "em.civil": "Protection civile",
-    "em.police": "Police",
-    "em.gendarmerie": "Gendarmerie nationale",
-    "em.samu": "SAMU / Ambulance",
-    "faq.title": "Questions fréquentes",
-    "faq.q1": "Qu'est-ce que ce site ?",
-    "faq.a1": "Un site non officiel dédié à la ville d'Annaba, en Algérie, présentant son histoire, ses sites, ses plages et son actualité quotidienne.",
-    "faq.q2": "Les actualités affichées sont-elles mises à jour automatiquement ?",
-    "faq.a2": "Oui, les actualités, la météo et les horaires de prière sont récupérés automatiquement depuis des sources en direct et se mettent à jour périodiquement, sans intervention manuelle.",
-    "faq.q3": "Comment vous contacter ou soutenir le site ?",
-    "faq.a3": "Via le bouton « Don » en haut de page, ou directement par e-mail à zaynoue@gmail.com.",
-    "faq.q4": "J'ai trouvé une information inexacte, que faire ?",
-    "faq.a4": "Nous serons ravis de la corriger — contactez-nous par e-mail ou via le sondage en bas de page."
+    "footer.contact": "✉️ Contact : zaynoue@gmail.com",
+    "footer.share": "Partager le site :",
+    "footer.credit": "Design : Zineddine"
   },
   "en": {
     "intro.eyebrow": "Welcome",
@@ -2874,22 +2944,14 @@ const I18N = {
     "history.era8.p1": "After independence, Annaba underwent a radical economic transformation, crowned by the founding of the National Steel Industry Company on September 3, 1964, and the start of actual production at the El Hadjar steel complex after its inauguration on June 19, 1969, making it the largest complex of its kind on the African continent.",
     "history.era8.p2": "Today, Annaba combines a three-thousand-year historical legacy with its present as a leading industrial and economic hub in Algeria, preserving its two historic titles: \"Jewel of Eastern Algeria\" and \"Jewel of the Mediterranean.\"",
     "news.title": "Daily news <span class=\"live-badge\"><span class=\"live-dot\"></span>Live</span>",
-    "qi.weather": "Weather now in Annaba",
-    "qi.nextPrayer": "Next prayer",
-    "qi.clock": "Current time in Annaba",
-    "dh.factEyebrow": "Did you know?",
-    "dh.pickEyebrow": "Today's pick",
-    "dh.tipEyebrow": "Today's tip",
-    "dh.randomEyebrow": "Random discovery",
-    "dh.randomDesc": "Click to jump to a random corner of the site",
-    "dh.randomCta": "Surprise me <span>🎯</span>",
     "news.desc": "Everything happening exclusively in the city of Annaba, continuously updated: an edited daily bulletin + headlines refreshed automatically on every visit.",
     "news.refresh": "Refresh news",
     "news.bname": "Annaba Today Bulletin",
     "news.bdate": "Thursday, July 23, 2026",
     "news.kicker": "Breaking",
     "news.lead.h3": "Seraïdi forest fires enter their second week amid extensive ground and air mobilization",
-    "news.lead.p1": "Here are today's top headlines about the city of Annaba, gathered automatically from several news sources and refreshed periodically every day of the week. Click the link below to read the full details at the original source.",
+    "news.lead.p1": "Civil Protection services and the National People's Army have continued since the middle of last week to fight scattered forest fires that broke out in the mountainous heights of the Seraïdi commune in Annaba province, which spread sharply on Tuesday night due to rising temperatures and strong winds, forcing authorities to evacuate more than a hundred patients from the Seraïdi functional rehabilitation facility to El Hadjar and Bouni hospitals as a precaution against approaching flames near the facility.",
+    "news.lead.p2": "Sonelgaz also cut off electricity and gas as a precaution across the entire commune of Seraïdi, while the Minister of Interior, Local Authorities and Transport, Saïd Sayoud, visited the area and confirmed that President Abdelmadjid Tebboune was following the matter closely, announcing full compensation for those affected and the reconstruction of about 150 damaged homes. After bringing part of the fires under control, authorities began gradually returning patients to Seraïdi hospital.",
     "news.source1": "Source: Al Araby Al Assil ←",
     "news.item1.kicker": "Local",
     "news.item1.h4": "Sonelgaz inspects damaged networks ahead of restoring electricity and gas",
@@ -2898,8 +2960,7 @@ const I18N = {
     "news.item2.kicker": "Sport",
     "news.item2.h4": "USM Annaba prepares for a new Ligue 2 season after finishing sixth last season",
     "news.item2.p": "USM Annaba, whose fans are nicknamed the \"Hooligans,\" finished the 2025–2026 season in sixth place in the East-Central group of the professional Ligue 2. Its supporters are hoping for summer reinforcements to bring the team back into contention for promotion.",
-    "news.note": "This bulletin updates automatically every 15 minutes from several diverse news sources, and its headlines change from day to day throughout the week.",
-    "news.modal.readMore": "Read the full article at the source <span>→</span>",
+    "news.note": "This bulletin is edited manually and reflects the city's main developments as of the page's last update. For additional automatically updated headlines, follow the list below.",
     "news.moreTitle": "📰 Latest headlines <span class=\"live-badge\"><span class=\"live-dot\"></span>Auto-updating</span>",
     "origin.title": "From Bouna to Annaba",
     "origin.desc": "Three thousand years of history, where civilizations have succeeded one another on this stretch of the Algerian coast.",
@@ -3003,6 +3064,7 @@ const I18N = {
     "split.b.li3": "Annual festivals and cultural events",
     "donate.eyebrow": "Support the site",
     "nav.survey": "Survey",
+    "nav.domains": "Domains",
     "survey.title": "📋 Survey about Annaba",
     "survey.desc": "Your opinion matters! Give us a minute of your time to rate the city and suggest improvements.",
     "survey.q1": "How would you rate the city of Annaba overall?",
@@ -3025,6 +3087,49 @@ const I18N = {
     "survey.note": "Your response is sent directly and securely, and is not stored on this site.",
     "survey.success.title": "Thank you for participating!",
     "survey.success.desc": "Your response was sent successfully. We appreciate you taking the time to help us improve this site.",
+    "domains.title": "🗂️ Annaba Domains",
+    "domains.desc": "Explore the city of Annaba from different angles — each domain offers essential information and its latest updates.",
+    "domains.sports.title": "Sports",
+    "domains.economy.title": "Economy",
+    "domains.culture.title": "Culture",
+    "domains.environment.title": "Environment & Health",
+    "domains.security.title": "Security & Society",
+    "domains.governance.title": "Local Administration",
+    "nav.institutions": "Institutions",
+    "inst.title": "🏢 Institutions of Annaba Province",
+    "inst.desc": "The leading public, economic, and service institutions across various fields in Annaba province.",
+    "inst.i1.tag": "Higher Education",
+    "inst.i1.h3": "Badji Mokhtar University – Annaba",
+    "inst.i1.p": "Founded in 1975, one of Algeria's largest universities with seven faculties and hundreds of specializations, spread across El Bouni, Sidi Ammar, and the city center.",
+    "inst.i1.addr": "P.O. Box 12, Annaba 23000 — Main campus in El Bouni and Sidi Ammar",
+    "inst.i2.tag": "Health",
+    "inst.i2.h3": "Ibn Rochd University Hospital",
+    "inst.i2.p": "The province's largest hospital institution by number of medical and surgical departments, serving Annaba and neighboring provinces.",
+    "inst.i2.addr": "Annaba city — Tel: 038 83 56 30",
+    "inst.i3.tag": "Local Administration",
+    "inst.i3.h3": "Annaba Province Headquarters",
+    "inst.i3.p": "The executive headquarters of the wali, overseeing coordination of the province's various directorates and major development projects.",
+    "inst.i3.addr": "Downtown Annaba",
+    "inst.i4.tag": "Local Administration",
+    "inst.i4.h3": "Annaba Municipality (People's Municipal Assembly)",
+    "inst.i4.p": "The elected body responsible for residents' day-to-day municipal affairs, from sanitation and urban planning to civil status records.",
+    "inst.i4.addr": "Downtown Annaba",
+    "inst.i5.tag": "Industry",
+    "inst.i5.h3": "El Hadjar Iron and Steel Complex",
+    "inst.i5.p": "The largest iron and steel complex in Africa, having entered actual production in 1969, employing thousands of workers from the province and neighboring provinces.",
+    "inst.i5.addr": "El Hadjar area, south of Annaba",
+    "inst.i6.tag": "Economy & Maritime Transport",
+    "inst.i6.h3": "Port of Annaba",
+    "inst.i6.p": "A historic commercial port currently undergoing a major expansion project aiming to double its export capacity as part of the integrated phosphate project.",
+    "inst.i6.addr": "Seaport, downtown Annaba",
+    "inst.i7.tag": "Sports",
+    "inst.i7.h3": "May 19, 1956 Stadium",
+    "inst.i7.p": "Algeria's second-largest stadium after the July 5 Stadium in Algiers, hosting USM Annaba's matches in front of its massive fanbase.",
+    "inst.i7.addr": "Annaba city",
+    "inst.i8.tag": "Transport",
+    "inst.i8.h3": "Rabah Bitat Airport – Annaba",
+    "inst.i8.p": "The international airport connecting Annaba to domestic and international flights, named after the martyr Rabah Bitat.",
+    "inst.i8.addr": "Southeast of Annaba city",
     "donate.title": "Help us improve this site",
     "donate.desc": "annabazdf.com is an independent site run with passion to provide reliable content about the city of Annaba. Your donation, however small, helps us improve the design, add new content, and cover hosting and running costs.",
     "donate.cta": "💛 <span class=\"dtext\">Donate now</span>",
@@ -3033,22 +3138,9 @@ const I18N = {
     "donate.modal.desc": "You can support the site through one of the following methods. The link will open in a new window.",
     "donate.modal.email": "Contact us directly <span>→</span>",
     "footer.desc": "The old Bouna, jewel of the Mediterranean, and a city of industrial and cultural present.",
-    "footer.credit": "Design: Zineddine",
-    "em.title": "Emergency numbers in Algeria",
-    "em.sub": "Free national numbers, available around the clock",
-    "em.civil": "Civil Protection",
-    "em.police": "Police",
-    "em.gendarmerie": "National Gendarmerie",
-    "em.samu": "SAMU / Ambulance",
-    "faq.title": "Frequently asked questions",
-    "faq.q1": "What is this site?",
-    "faq.a1": "An unofficial informational site dedicated to the city of Annaba, Algeria, covering its history, landmarks, beaches, and daily news.",
-    "faq.q2": "Is the displayed news updated automatically?",
-    "faq.a2": "Yes, news, weather, and prayer times are fetched automatically from live sources and refresh periodically without any manual intervention.",
-    "faq.q3": "How do I contact you or support the site?",
-    "faq.a3": "Via the 'Donate' button at the top, or directly by email at zaynoue@gmail.com.",
-    "faq.q4": "I found an inaccurate piece of information, what should I do?",
-    "faq.a4": "We'd be happy to fix it — reach out by email or via the survey at the bottom of the page."
+    "footer.contact": "✉️ Contact: zaynoue@gmail.com",
+    "footer.share": "Share the site:",
+    "footer.credit": "Design: Zineddine"
   }
 };
 
@@ -3076,17 +3168,6 @@ function applyLanguage(lang){
   if(typeof ncGoTo === 'function' && typeof ncIndex === 'number' && ncItems && ncItems.length){
     ncGoTo(ncIndex, {keepTimer:true});
   }
-  if(typeof updateBulletinFromItems === 'function' && ncItems && ncItems.length){
-    updateBulletinFromItems(ncItems);
-  }
-  if(typeof loadAnnabaNews === 'function'){
-    loadAnnabaNews(false);
-  }
-  if(typeof loadAnnabaWeather === 'function') loadAnnabaWeather();
-  if(typeof loadAnnabaPrayerTimes === 'function') loadAnnabaPrayerTimes();
-  if(typeof renderDailyHub === 'function') renderDailyHub();
-  if(typeof renderFooterUpdated === 'function') renderFooterUpdated();
-  if(typeof rotateArticlesDaily === 'function') rotateArticlesDaily();
   if(typeof updateVisitorDisplay === 'function'){
     updateVisitorDisplay();
   }
@@ -3103,68 +3184,35 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 </script>
-<button id="backToTop" aria-label="Back to top" style="position:fixed; bottom:26px; inset-inline-end:26px; width:46px; height:46px; border-radius:50%; background:#d9a441; color:#0d1520; border:none; font-size:1.2rem; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,0.4); display:none; align-items:center; justify-content:center; z-index:500;">↑</button>
-<script>
-  document.addEventListener('DOMContentLoaded', function(){
-    const btn = document.getElementById('backToTop');
-    if(!btn) return;
-    window.addEventListener('scroll', function(){
-      btn.style.display = window.scrollY > 500 ? 'flex' : 'none';
-    });
-    btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-  });
-</script>
-<style>
-  html{scroll-behavior:smooth;}
-  #readProgress{position:fixed; top:0; inset-inline-start:0; height:3px; width:0%; background:linear-gradient(90deg,#d9a441,#e8c477); z-index:999; transition:width .12s linear;}
-  nav a.nav-active{color:var(--gold,#d9a441)!important; position:relative;}
-  nav a.nav-active::after{content:''; position:absolute; right:0; left:0; bottom:-6px; height:2px; background:var(--gold,#d9a441);}
-</style>
-<div id="readProgress"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', function(){
-    // شريط تقدّم القراءة أعلى الصفحة
-    const bar = document.getElementById('readProgress');
-    window.addEventListener('scroll', function(){
-      const h = document.documentElement;
-      const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-      if(bar) bar.style.width = (isFinite(pct) ? pct : 0) + '%';
-    });
-
-    // تمييز رابط القسم النشط في القائمة أثناء التمرير
-    const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
-    const sections = navLinks
-      .map(a => document.querySelector(a.getAttribute('href')))
-      .filter(Boolean);
-    if(sections.length && 'IntersectionObserver' in window){
-      const observer = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            const id = '#' + entry.target.id;
-            navLinks.forEach(function(a){
-              a.classList.toggle('nav-active', a.getAttribute('href') === id);
-            });
-          }
-        });
-      }, {rootMargin: '-45% 0px -50% 0px', threshold: 0});
-      sections.forEach(function(s){ observer.observe(s); });
-    }
-  });
-</script>
-<div id="fontControls" style="position:fixed; bottom:26px; inset-inline-start:26px; display:flex; gap:6px; z-index:500;">
-  <button id="fontDec" aria-label="Decrease font size" style="width:38px;height:38px;border-radius:50%;background:#17242f;color:#e9dcc3;border:1px solid rgba(217,164,65,0.35);cursor:pointer;font-size:0.82rem;">A-</button>
-  <button id="fontInc" aria-label="Increase font size" style="width:38px;height:38px;border-radius:50%;background:#17242f;color:#e9dcc3;border:1px solid rgba(217,164,65,0.35);cursor:pointer;font-size:1rem;">A+</button>
+<div class="reader-overlay" id="readerOverlay">
+  <button class="reader-back" id="readerBack">→ العودة</button>
+  <div class="reader-inner">
+    <div class="reader-content" id="readerContent"></div>
+  </div>
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function(){
-    let fontStep = 0;
-    const dec = document.getElementById('fontDec');
-    const inc = document.getElementById('fontInc');
-    function applyFontStep(){
-      document.documentElement.style.fontSize = (100 + fontStep * 8) + '%';
+    const overlay = document.getElementById('readerOverlay');
+    const content = document.getElementById('readerContent');
+    const backBtn = document.getElementById('readerBack');
+
+    document.querySelectorAll('.article > summary').forEach(function(summary){
+      summary.addEventListener('click', function(e){
+        e.preventDefault();
+        const details = summary.closest('.article');
+        const h3 = summary.querySelector('h3');
+        const body = details.querySelector('.article-body');
+        content.innerHTML = (h3 ? '<h2>' + h3.innerHTML + '</h2>' : '') + (body ? body.innerHTML : '');
+        overlay.classList.add('open');
+        overlay.scrollTop = 0;
+      });
+    });
+
+    if(backBtn){
+      backBtn.addEventListener('click', function(){
+        overlay.classList.remove('open');
+      });
     }
-    if(dec) dec.addEventListener('click', function(){ if(fontStep > -2){ fontStep--; applyFontStep(); } });
-    if(inc) inc.addEventListener('click', function(){ if(fontStep < 3){ fontStep++; applyFontStep(); } });
   });
 </script>
 </body>
